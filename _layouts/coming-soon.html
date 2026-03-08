@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <main class="container" style="min-height: 70vh; display:flex; align-items:center; padding: 2.2rem 0;">
+      <div class="hero-box" style="width:100%">
+        {{ content }}
+      </div>
+    </main>
+    <div class="container" style="padding-bottom: 2rem; color: var(--muted);">
+      <p style="margin:0">&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
+    </div>
+  </body>
+</html>
