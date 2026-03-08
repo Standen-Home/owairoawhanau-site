@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="prose">
+  <h1>{{ page.title }}</h1>
+
+  {% if page.public == false %}
+    <div class="protect-note" role="note">
+      <strong>For whānau use only.</strong>
+      <div>Please don’t share this waiata publicly.</div>
+    </div>
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+
+  <p>
+    {% if page.category %}<span class="badge">{{ page.category }}</span>{% endif %}
+    {% for t in page.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+  </p>
+
+  {% if page.audio %}
+    <h2>Audio</h2>
+    <audio controls preload="none" style="width:100%">
+      <source src="{{ page.audio | relative_url }}">
+      Your browser does not support the audio element.
+    </audio>
+  {% endif %}
+
+  {% if page.pdf %}
+    <p><a href="{{ page.pdf | relative_url }}">Download PDF</a></p>
+  {% endif %}
+
+  {% if page.video_url %}
+    <p><a href="{{ page.video_url }}" rel="noopener">Video link</a></p>
+  {% endif %}
+
+  {{ content }}
+</article>

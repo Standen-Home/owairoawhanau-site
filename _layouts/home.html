@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>{{ site.data.site-settings.hero_title }}</h1>
+    <p>{{ site.data.site-settings.hero_subtitle }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <h2>Next practice</h2>
+      <p>Add the next practice details here (or on the Calendar page).</p>
+    </div>
+    <div class="card">
+      <h2>Featured waiata</h2>
+      {% assign featured = site.waiata | where: "featured", true | where: "public", true | sort: "order" %}
+      {% if featured.size > 0 %}
+        <ul>
+          {% for w in featured limit:3 %}
+            <li><a href="{{ w.url | relative_url }}">{{ w.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">No featured waiata yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Latest pānui</h2>
+  {% assign posts = site.posts | slice: 0, 3 %}
+  {% if posts.size > 0 %}
+    <ul>
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="badge">{{ post.date | date: "%d %b %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No pānui yet.</p>
+  {% endif %}
+
+  <p><a href="{{ '/news/' | relative_url }}">See all pānui →</a></p>
+</section>

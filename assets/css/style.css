@@ -1,0 +1,92 @@
+:root{
+  --bg:#fbfaf7;
+  --ink:#1b1b1b;
+  --muted:#5b5b5b;
+  --accent:#2a6f5e;
+  --accent2:#b8860b;
+  --card:#ffffff;
+  --border:#e7e2d8;
+  --focus:#1d4ed8;
+  --max: 980px;
+  --radius: 14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem 1rem;background:#fff;border:2px solid var(--focus);border-radius:10px;z-index:999}
+
+a{color:var(--accent);text-decoration-thickness: 2px; text-underline-offset: 3px}
+a:hover{text-decoration-thickness:3px}
+a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 1rem}
+
+.site-header{position:sticky;top:0;background:rgba(251,250,247,.92);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem 0}
+.brand{display:flex;flex-direction:column;gap:.1rem}
+.brand a{color:var(--ink);text-decoration:none}
+.brand-title{font-weight:800;letter-spacing:.2px}
+.brand-sub{color:var(--muted);font-size:.9rem}
+
+.nav-toggle{display:none}
+.nav{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.nav a{padding:.35rem .55rem;border-radius:10px;text-decoration:none;color:var(--ink)}
+.nav a[aria-current="page"], .nav a:hover{background:#fff;border:1px solid var(--border)}
+
+@media (max-width: 760px){
+  .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--border);border-radius:12px;padding:.45rem .7rem}
+  .nav{display:none;flex-direction:column;align-items:stretch;padding:0 0 .9rem 0}
+  .nav.open{display:flex}
+  .nav a{border:1px solid var(--border);background:#fff}
+}
+
+.hero{padding:2.2rem 0 1.2rem 0}
+.hero-box{background:linear-gradient(135deg, #ffffff, #fff6e5);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem}
+.hero h1{margin:0 0 .35rem 0;font-size: clamp(1.6rem, 3.5vw, 2.4rem)}
+.hero p{margin:.2rem 0 0 0;color:var(--muted);max-width:60ch}
+
+.grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:1rem}
+.card{grid-column: span 6;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.card h2{margin:.1rem 0 .35rem 0;font-size:1.1rem}
+.card p{margin:0;color:var(--muted)}
+@media (max-width:760px){.card{grid-column: span 12}}
+
+.section{padding: 1rem 0 2rem 0}
+.section h2{margin:0 0 .6rem 0}
+
+.badge{display:inline-block;padding:.12rem .5rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted);font-size:.85rem}
+
+.waiata-controls{display:flex;gap:.7rem;flex-wrap:wrap;align-items:end}
+.field{display:flex;flex-direction:column;gap:.25rem}
+label{font-weight:650}
+input[type="search"], select{
+  padding:.55rem .65rem;border-radius:12px;border:1px solid var(--border);background:#fff;min-width: 220px
+}
+
+.waiata-list{display:grid;grid-template-columns:repeat(12, 1fr);gap:1rem;margin-top:1rem}
+.waiata-card{grid-column: span 6;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.waiata-card h3{margin:.1rem 0 .3rem 0}
+.waiata-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:.45rem 0 0 0}
+.waiata-meta .badge{font-size:.82rem}
+@media (max-width:760px){.waiata-card{grid-column: span 12}}
+
+.protect-note{margin:1rem 0;padding:.8rem 1rem;border-radius:12px;border:1px solid #f0d7a6;background:#fff6e5}
+
+.site-footer{border-top:1px solid var(--border);padding:1.6rem 0;color:var(--muted);font-size:.95rem}
+
+.prose h1,.prose h2,.prose h3{line-height:1.25}
+.prose img{max-width:100%;height:auto;border-radius:12px}
+.prose blockquote{margin:1rem 0;padding:.2rem 1rem;border-left:4px solid var(--border);color:var(--muted)}
+
+@media print{
+  .site-header,.site-footer,.waiata-controls{display:none !important}
+  body{background:#fff}
+  .hero-box,.card,.waiata-card{border:none}
+}

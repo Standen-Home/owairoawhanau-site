@@ -1,0 +1,36 @@
+title: "Owairoa Whānau"
+description: "He pae tukutuku mō te rōpū waiata o Owairoa Marae"
+url: "https://owairoawhanau.co.nz"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: pretty
+
+collections:
+  waiata:
+    output: true
+    permalink: /waiata/:slug/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "waiata"
+    values:
+      layout: waiata
+
+plugins: []
+
+exclude:
+  - README.md
