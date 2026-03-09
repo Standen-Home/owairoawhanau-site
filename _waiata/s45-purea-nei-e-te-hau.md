@@ -1,47 +1,42 @@
 ---
-layout: 'waiata'
-title: 'Purea nei e te hau'
-slug: 's45-purea-nei-e-te-hau'
-category: 'waiata'
+layout: waiata
+title: "Purea nei e te hau"
+slug: "s45-purea-nei-e-te-hau"
+category: karakia
 tags:
   - ppt-import
-composer: ''
-source: 'PowerPoint import'
+  - karakia
+composer: ""
+source: "PowerPoint import"
 featured: false
-public: false
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+public: true
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 45
 ---
 
 ## Kupu
+Purea nei e te hau
 Horoia e te ua
 Whitiwhitia e te rā
 Mahea ake ngā pōraruraru
-Makere ana ngā here.
+Makere ana ngā here
+
 E rere wairua, e rere
 Ki ngā ao o te rangi
-Whitiwhitia e te rā
-Mahea ake ngā pōraruraru
-Makere ana ngā here,
-Makere ana ngā here.
-Purea Nei
-Fly O free spirit, fly
-all restrictions cast aside.
 
 ## Meaning
-Cleansed by the wind
-washed by the rain
+Cleansed by the wind,
+washed by the rain,
 and warmed by the sun,
-all troubles are cleared away
-and all restraints got rid of.
-to the clouds in the heavens,
-warmed by the sun,
-with all troubles cleared away
-all restraints got rid of,
+troubles are cleared away
+and restraints are released.
+
+Fly, free spirit, fly,
+to the worlds of the heavens.
 
 ## Notes
-Link to
-Youtube Video
+- Slide 45 import.
+- Add a YouTube link in `video_url:` if you have the preferred version.

@@ -1,51 +1,40 @@
 ---
-layout: 'waiata'
-title: 'E minaka ana'
-slug: 's17-e-minaka-ana'
-category: 'waiata'
+layout: waiata
+title: "E minaka ana"
+slug: "s17-e-minaka-ana"
+category: waiata
 tags:
   - ppt-import
-composer: ''
-source: 'PowerPoint import'
+composer: ""
+source: "PowerPoint import"
 featured: false
-public: false
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+public: true
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 17
 ---
 
 ## Kupu
-Let us be staunch
-in speaking Māori!
-my noble language
-my precious inheritance.
-Astound me
-when speaking Māori.
-Let us be staunch
-in speaking Māori!
-Kia kaha tātou
-Ki te
-(Hī!)
-kōrero Māori!
 E minaka ana taku waha
 Ki te kai a te rangatira,
 Taku reo rangatira
 Taku kuru pounamu tuku iho.
+
 Mīharo kē ana
 Ki tōna pakari kia ora
 Tē memeha, te wairua
-ki te kōrero Māori
+Ki te kōrero Māori.
+
 Kia kaha tātou
-Ki te kōrero Māori!
+Ki te kōrero Māori! (Hī!)
 
 ## Meaning
-I desire that
-my talk be like that of a leader,
-with your maturity by
-the evanescence, the spirit you show
+Let us be staunch in speaking Māori.
+I desire my talk to be like that of a leader —
+my noble language, my precious inheritance.
 
 ## Notes
-Link to
-YouTube video
+- Slide 17 import.
+- Add a YouTube link in `video_url:` if you have the preferred recording.
