@@ -1,0 +1,70 @@
+---
+layout: 'waiata'
+title: 'Guide – mix and match your pepeha'
+slug: 's31-guide-mix-and-match-your-pepeha'
+category: 'haka'
+tags:
+  - ppt-import
+composer: ''
+source: 'PowerPoint import'
+featured: false
+public: false
+audio: ''
+pdf: ''
+video_url: ''
+image: ''
+order: 31
+---
+
+## Kupu
+Pepeha​
+Pepeha options for non-Māori
+Tēnā koutou katoa​
+Tēnā koutou katoa​
+Ko _ te maunga
+Te whakapaparanga mai_
+[Ko Kōtirana (Scotland/Scottish)]
+​
+Ko _ te awa/roto
+Ko _ te waka
+Engari
+but, however​
+Ko _ te iwi
+Ko _ te whenua tupu
+Placename
+Ko _ te hapū
+Ko _ te kāinga
+Place
+Ko _ te marae
+Kei _ au e noho ana
+place
+​
+I am from​
+He _au i _
+I am a
+job title
+at
+Ko _ tōku ingoa
+Ko _au
+I am
+name
+​
+Tēnā tātou katoa​
+Tēnā tātou katoa​
+
+## Meaning
+is the mountain
+is my ancestry ​
+is the river/lake​
+is the waka​
+are the tribe
+is where I grew up​
+are the subtribe​
+is my home​
+is the marae
+I am living in
+name of work
+my name is​
+
+## Notes
+nō _ ahau
