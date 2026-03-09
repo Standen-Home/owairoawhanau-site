@@ -19,7 +19,10 @@
         {% if current == item.url or (item.url != '/' and current contains item.url) %}
           {% assign is_current = true %}
         {% endif %}
-        <a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
+        <a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>
+          <span class="nav-mi">{{ item.title }}</span>
+          {% if item.title_en %}<span class="nav-en">{{ item.title_en }}</span>{% endif %}
+        </a>
       {% endfor %}
     </nav>
   </div>

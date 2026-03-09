@@ -37,7 +37,9 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 
 .nav-toggle{display:none}
 .nav{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
-.nav a{padding:.35rem .55rem;border-radius:10px;text-decoration:none;color:var(--ink)}
+.nav a{padding:.35rem .55rem;border-radius:10px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.05rem}
+.nav-mi{font-weight:650}
+.nav-en{font-size:.82rem;color:var(--muted)}
 .nav a[aria-current="page"], .nav a:hover{background:#fff;border:1px solid var(--border)}
 
 @media (max-width: 760px){
