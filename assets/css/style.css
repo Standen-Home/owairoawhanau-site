@@ -173,3 +173,9 @@ input[type="search"], select{
   border-radius: 12px;
   padding: .9rem 1rem;
 }
+
+/* Bilingual metadata lines (waiata) */
+.meta-line{margin:.4rem 0; display:flex; gap:.5rem; flex-wrap:wrap; align-items:baseline}
+.meta-mi{font-weight:800}
+.meta-en{color:var(--muted); font-size:.9rem}
+.meta-val{font-weight:650}

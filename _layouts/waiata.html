@@ -21,10 +21,10 @@ layout: default
   </p>
 
   {% if page.composer and page.composer != "" %}
-    <p><span class="badge">Composer</span> {{ page.composer }}</p>
+    <p class="meta-line"><span class="meta-mi">Kaitito</span><span class="meta-en">Composer</span> <span class="meta-val">{{ page.composer }}</span></p>
   {% endif %}
   {% if page.source and page.source != "" %}
-    <p><span class="badge">Source</span> {{ page.source }}</p>
+    <p class="meta-line"><span class="meta-mi">Pūtake</span><span class="meta-en">Source</span> <span class="meta-val">{{ page.source }}</span></p>
   {% endif %}
 
   {% if page.audio %}
