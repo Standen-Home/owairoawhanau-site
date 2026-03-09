@@ -92,3 +92,13 @@ input[type="search"], select{
   body{background:#fff}
   .hero-box,.card,.waiata-card{border:none}
 }
+
+/* Bilingual page headings */
+.page-head{margin: 0 0 1rem 0}
+.page-title{margin: 0}
+.page-title-en{color: var(--muted); font-size: 1rem; margin-top: .15rem}
+
+/* Bilingual footer */
+.footer-mi{margin:0 0 .35rem 0}
+.footer-en{margin:0 0 .8rem 0; color: var(--muted)}
+.footer-meta{margin:0}

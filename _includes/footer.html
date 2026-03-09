@@ -1,6 +1,9 @@
 <footer class="site-footer">
   <div class="container">
-    <p>{{ site.data.site-settings.site_note }}</p>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
+    <p class="footer-mi">{{ site.data.site-settings.site_note }}</p>
+    {% if site.data.site-settings.site_note_en %}
+      <p class="footer-en">{{ site.data.site-settings.site_note_en }}</p>
+    {% endif %}
+    <p class="footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
   </div>
 </footer>

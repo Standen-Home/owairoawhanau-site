@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Maramataka"
+title_en: "Calendar"
 permalink: /calendar/
 ---
 

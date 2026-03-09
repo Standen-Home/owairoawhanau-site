@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Waiata"
+title_en: "Songs"
 permalink: /waiata/
 ---
 

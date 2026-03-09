@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Rauemi"
+title_en: "Resources"
 permalink: /resources/
 ---
 

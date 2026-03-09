@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Whakapā"
+title_en: "Contact"
 permalink: /contact/
 ---
 

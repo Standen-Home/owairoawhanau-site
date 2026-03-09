@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Mō Mātou"
+title_en: "About"
 permalink: /about/
 ---
 

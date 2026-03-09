@@ -1,6 +1,7 @@
 ---
 layout: waiata
-title: "Toia Mai" 
+title: "Toia Mai"
+title_en: "(English title)" 
 slug: toia-mai
 category: waiata-tira
 tags:

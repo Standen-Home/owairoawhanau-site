@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Pānui"
+title_en: "News"
 permalink: /news/
 ---
 
