@@ -102,3 +102,18 @@ input[type="search"], select{
 .footer-mi{margin:0 0 .35rem 0}
 .footer-en{margin:0 0 .8rem 0; color: var(--muted)}
 .footer-meta{margin:0}
+
+/* Calendar embed (responsive) */
+.calendar-embed{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  overflow:hidden;
+}
+.calendar-embed iframe{
+  width: 100%;
+  height: min(75vh, 720px);
+  border: 0;
+  display:block;
+}
+.calendar-links{margin-top: .8rem}
