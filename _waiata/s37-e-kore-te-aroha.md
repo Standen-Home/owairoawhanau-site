@@ -17,6 +17,7 @@ order: 37
 ---
 
 ## Kupu
+<pre class="lyrics">
 E kore te aroha e taka e
 I waho i taku mānawa e
 
@@ -34,6 +35,8 @@ Ngā kupu mīharo e
 
 Ka hoki atu te tau
 Me whakarongo mai rā
+</pre>
+
 
 ## Notes
 - Slide 37 import.

@@ -161,3 +161,15 @@ input[type="search"], select{
 @media (max-width: 520px){
   .calendar-header{align-items:flex-start; flex-direction:column}
 }
+
+/* Lyrics formatting: preserve line breaks */
+.lyrics{
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .9rem 1rem;
+}

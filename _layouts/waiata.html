@@ -20,6 +20,13 @@ layout: default
     {% for t in page.tags %}<span class="badge">{{ t }}</span>{% endfor %}
   </p>
 
+  {% if page.composer and page.composer != "" %}
+    <p><span class="badge">Composer</span> {{ page.composer }}</p>
+  {% endif %}
+  {% if page.source and page.source != "" %}
+    <p><span class="badge">Source</span> {{ page.source }}</p>
+  {% endif %}
+
   {% if page.audio %}
     <h2>Audio</h2>
     <audio controls preload="none" style="width:100%">

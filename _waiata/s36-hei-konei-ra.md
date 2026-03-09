@@ -18,6 +18,7 @@ order: 36
 ---
 
 ## Kupu
+<pre class="lyrics">
 Hei konei rā
 Ki ngā tini aituā e
 Kua haere ki te kāinga e
@@ -30,6 +31,8 @@ E noho mai rā
 Tēnei mātou ko te rōpū o Owairoa e
 Kei te waiata, me haka pūkana
 Kei te mihi atu — hei konei rā
+</pre>
+
 
 ## Notes
 - Slide 36 import. The PowerPoint has extra performance notes (tāne/wāhine splits, kapa haka references). Add them back here if you want them published.

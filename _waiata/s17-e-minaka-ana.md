@@ -17,6 +17,7 @@ order: 17
 ---
 
 ## Kupu
+<pre class="lyrics">
 E minaka ana taku waha
 Ki te kai a te rangatira,
 Taku reo rangatira
@@ -29,6 +30,8 @@ Ki te kōrero Māori.
 
 Kia kaha tātou
 Ki te kōrero Māori! (Hī!)
+</pre>
+
 
 ## Meaning
 Let us be staunch in speaking Māori.

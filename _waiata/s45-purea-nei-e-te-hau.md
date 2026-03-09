@@ -18,6 +18,7 @@ order: 45
 ---
 
 ## Kupu
+<pre class="lyrics">
 Purea nei e te hau
 Horoia e te ua
 Whitiwhitia e te rā
@@ -26,6 +27,8 @@ Makere ana ngā here
 
 E rere wairua, e rere
 Ki ngā ao o te rangi
+</pre>
+
 
 ## Meaning
 Cleansed by the wind,

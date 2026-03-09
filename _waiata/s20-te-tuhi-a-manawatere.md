@@ -18,11 +18,14 @@ order: 20
 ---
 
 ## Kupu
+<pre class="lyrics">
 Nō Ngāi Tai te tupuna e
 Te waka, he huruhuru
 Te pōhutukawa i Wairoa
 He tohu, he whakataukī
 Mā te rāpa ka kitea (x2)
+</pre>
+
 
 ## Meaning
 The mark of Manawatere.
