@@ -165,7 +165,6 @@ input[type="search"], select{
 /* Lyrics formatting: preserve line breaks */
 .lyrics{
   white-space: pre-wrap;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1rem;
   line-height: 1.6;
   background: #fff;

@@ -32,7 +32,7 @@ O Te Ao
 (o Te Ao)
 </pre>
 
-## Translation Meaning
+## Meaning
 I Sing
 To Mary
 The woman who agreed
@@ -46,5 +46,5 @@ She is the Mother
 Of the world
 (of the world)
 
-## Additional Information
+## Notes
 Richard Puanaki (1941-2021) taghut at Catholic schools at Wairoa.  In the mid 1980s he composed several himene, including Ka Waiata, with the help of his whanau singing group Te Whetu o te Rawhiti.
