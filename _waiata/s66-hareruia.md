@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hareruia'
-slug: 's66-hareruia'
+slug: "hareruia"
 category: 'haka'
 tags:
   - ppt-import
@@ -33,4 +33,7 @@ Hareruia
 
 
 ## Meaning
+<div class="meaning">
 were penned by Rev Te Hira Paenga, who is of Ngati Porou and Ngapuhi descent.
+</div>
+

@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Māku rā pea'
-slug: 's44-maku-ra-pea'
+slug: "maku-ra-pea"
 category: 'waiata'
 tags:
   - ppt-import
@@ -31,4 +31,7 @@ I will indeed enfold you. x 2
 
 
 ## Meaning
+<div class="meaning">
 On the pathway of spiritual growth
+</div>
+

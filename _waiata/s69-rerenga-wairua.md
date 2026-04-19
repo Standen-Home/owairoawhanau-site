@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Rerenga Wairua'
-slug: 's69-rerenga-wairua'
+slug: "rerenga-wairua"
 category: 'waiata'
 tags:
   - ppt-import
@@ -39,6 +39,7 @@ Kua huri taku tira ki taku whenua tupu Kua hora te marino, kua tupu te aroha Tee
 
 
 ## Meaning
+<div class="meaning">
 The spirit flies the path of the departing spirits
 Fly now and listen to this
 The tides/waves of Tokerau are crashing on the shore
@@ -50,7 +51,8 @@ It was Reitu who married Ueoneone
 As such, our story is finished
 My story of tikanga has been called out
 The spirit flies the path of the departing spirits
+</div>
 
-## Notes
+Notes
 Composer: Pumi Taituha
 Performed by: Te Taikura o Waikato Taniwharau

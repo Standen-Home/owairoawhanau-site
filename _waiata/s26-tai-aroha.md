@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Tai aroha'
-slug: 's26-tai-aroha'
+slug: "tai-aroha"
 category: 'waiata'
 tags:
   - ppt-import
@@ -44,10 +44,12 @@ a full tide.
 
 
 ## Meaning
+<div class="meaning">
 more info and video
 My love is like water
 a spring that will keep flowing
 Its source is deep within
+</div>
 
-## Notes
+Notes
 Link to

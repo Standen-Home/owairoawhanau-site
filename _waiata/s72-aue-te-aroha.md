@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Aue te aroha'
-slug: 's72-aue-te-aroha'
+slug: "aue-te-aroha"
 category: 'waiata'
 tags:
   - ppt-import

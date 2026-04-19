@@ -1,7 +1,7 @@
 ---
 layout: waiata
 title: "Te Tuhi a Manawatere"
-slug: "s20-te-tuhi-a-manawatere"
+slug: "te-tuhi-a-manawatere-20"
 category: waiata-tautoko
 tags:
   - local
@@ -36,14 +36,16 @@ Mā te rāpa ka kitea
 Mā te rāpa ka kitea
 </pre>
 
-
 ## Meaning
-The mark of Manawatere
-Ancestor of Ngāi Tai
-Astral travel... Waka a feather
-Pohutukawa... Howick (Cockle Bay)
-A proverb
-The mark left on the pōhutukawa tree
+<div class="meaning">
+The mark of Manawatere.
+Ancestor of Ngāi Tai.
+Astral travel… waka a feather.
+Pōhutukawa… Howick (Cockle Bay).
+A proverb.
+The mark left on the pōhutukawa tree.
+</div>
 
 ## Notes
-
+- Slide 20 import (edited for web).
+- Some lines in the PowerPoint were duplicated/annotated; adjust final wording as needed.

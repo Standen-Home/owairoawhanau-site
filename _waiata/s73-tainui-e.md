@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Tainui e'
-slug: 's73-tainui-e'
+slug: "tainui-e"
 category: 'waiata'
 tags:
   - ppt-import

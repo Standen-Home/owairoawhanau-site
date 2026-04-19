@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Haka Powhiri – Toia Mai'
-slug: 's65-haka-powhiri-toia-mai'
+slug: "haka-powhiri-toia-mai"
 category: 'haka'
 tags:
   - ppt-import

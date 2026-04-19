@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ngā Whakamoemiti'
-slug: 's27-nga-whakamoemiti'
+slug: "nga-whakamoemiti"
 category: 'haka'
 tags:
   - ppt-import
@@ -31,13 +31,15 @@ Lord everlasting peace
 
 
 ## Meaning
+<div class="meaning">
 Praising and giving thanks to Jesus
 For his blessings
 Up to the people who have assembled here
 You are the one that will bring us together
 And show us a better life
+</div>
 
-## Notes
+Notes
 Kaitito: Pumi Taituha (Maniapoto/Waikato
 Link to
 YouTube Video

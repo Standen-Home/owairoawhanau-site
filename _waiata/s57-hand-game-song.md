@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hand game song'
-slug: 's57-hand-game-song'
+slug: "hand-game-song"
 category: 'waiata'
 tags:
   - ppt-import

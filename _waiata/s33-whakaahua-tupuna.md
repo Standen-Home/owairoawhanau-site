@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Whakaahua Tupuna'
-slug: 's33-whakaahua-tupuna'
+slug: "whakaahua-tupuna"
 category: 'haka'
 tags:
   - ppt-import

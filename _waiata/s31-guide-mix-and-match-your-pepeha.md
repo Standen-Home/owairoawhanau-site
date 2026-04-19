@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Guide – mix and match your pepeha'
-slug: 's31-guide-mix-and-match-your-pepeha'
+slug: "guide-mix-and-match-your-pepeha-31"
 category: 'haka'
 tags:
   - ppt-import
@@ -56,6 +56,7 @@ Tēnā tātou katoa​
 
 
 ## Meaning
+<div class="meaning">
 is the mountain
 is my ancestry ​
 is the river/lake​
@@ -68,6 +69,7 @@ is the marae
 I am living in
 name of work
 my name is​
+</div>
 
-## Notes
+Notes
 nō _ ahau

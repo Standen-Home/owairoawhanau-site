@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Auē titiro mai ki taku poi'
-slug: 's34-aue-titiro-mai-ki-taku-poi'
+slug: "aue-titiro-mai-ki-taku-poi"
 category: 'haka'
 tags:
   - ppt-import
@@ -35,7 +35,9 @@ ki taku poi
 
 
 ## Meaning
+<div class="meaning">
 poi puritia nei (back to top)
+</div>
 
-## Notes
+Notes
 Kaitito: Carla Ruka

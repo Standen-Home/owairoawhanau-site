@@ -44,4 +44,30 @@ layout: default
   {% endif %}
 
   {{ content }}
+
+
+  {% comment %}Related waiata (by first non-system tag){% endcomment %}
+  {% assign rel_tag = nil %}
+  {% if page.tags %}
+    {% for t in page.tags %}
+      {% if t != 'ppt-import' %}
+        {% assign rel_tag = t %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if rel_tag %}
+    {% assign related = site.waiata | where: "public", true | where_exp: "w", "w.url != page.url" | where_exp: "w", "w.tags contains rel_tag" | sort: "order" %}
+    {% if related.size > 0 %}
+      <h2>Related waiata</h2>
+      <p class="note">More waiata tagged <span class="badge">{{ rel_tag }}</span></p>
+      <div class="waiata-list">
+        {% for waiata in related limit:6 %}
+          {% include waiata-card.html waiata=waiata %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+
 </article>

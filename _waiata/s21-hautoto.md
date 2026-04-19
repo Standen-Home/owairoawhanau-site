@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hautoto'
-slug: 's21-hautoto'
+slug: "hautoto-21"
 category: 'waiata'
 tags:
   - ppt-import

@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Waikato te awa'
-slug: 's55-waikato-te-awa'
+slug: "waikato-te-awa-55"
 category: 'haka'
 tags:
   - ppt-import
@@ -65,6 +65,7 @@ O Taupo-nui-a-tia e
 
 
 ## Meaning
+<div class="meaning">
 E hoe to waka ki Ngaruawahia
 Hoea to waka
 Titiro whakarunga to kanohi
@@ -74,3 +75,5 @@ E tere to waka, ko Pohaturoa
 Whaia te arawai a to tupuna a tia
 E to i to waka
 E tahuri ai to tupuna
+</div>
+

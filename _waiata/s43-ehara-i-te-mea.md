@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ehara i te mea'
-slug: 's43-ehara-i-te-mea'
+slug: "ehara-i-te-mea"
 category: 'haka'
 tags:
   - ppt-import
@@ -41,6 +41,7 @@ passed down, passed down.
 
 
 ## Meaning
+<div class="meaning">
 Not the thing
 of recent times, is love
 by the ancestors
@@ -49,8 +50,9 @@ the wellbeing of the people;
 by the ancestors
 and love;
 by the ancestors
+</div>
 
-## Notes
+Notes
 Nō ināianei te aroha te aroha e
 Nō ngā tūpuna
 Nō ngā tūpuna

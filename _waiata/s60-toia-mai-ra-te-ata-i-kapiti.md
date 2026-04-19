@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Tōia mai rā te ata i Kapiti'
-slug: 's60-toia-mai-ra-te-ata-i-kapiti'
+slug: "toia-mai-ra-te-ata-i-kapiti"
 category: 'waiata'
 tags:
   - ppt-import

@@ -178,3 +178,6 @@ input[type="search"], select{
 .meta-mi{font-weight:800}
 .meta-en{color:var(--muted); font-size:.9rem}
 .meta-val{font-weight:650}
+
+/* Meaning formatting: preserve line breaks, no box */
+.meaning{white-space: pre-line;}

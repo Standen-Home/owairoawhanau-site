@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Whakataka te hau ki te uru,'
-slug: 's30-whakataka-te-hau-ki-te-uru'
+slug: "whakataka-te-hau-ki-te-uru-30"
 category: 'haka'
 tags:
   - ppt-import
@@ -29,6 +29,9 @@ Whakataka te hau
 
 
 ## Meaning
+<div class="meaning">
 Cease oh winds of the west and of the south
 Let the bracing breezes flow, over the land and the sea.
 Let the red-tipped dawn come with a sharpened edge, a touch of frost, a promise of a glorious day
+</div>
+

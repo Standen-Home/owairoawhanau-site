@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Haere mai rā ngā iwi'
-slug: 's39-haere-mai-ra-nga-iwi'
+slug: "haere-mai-ra-nga-iwi"
 category: 'waiata'
 tags:
   - ppt-import

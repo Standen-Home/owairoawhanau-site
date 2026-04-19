@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Te Hokinga mai'
-slug: 's56-te-hokinga-mai'
+slug: "te-hokinga-mai"
 category: 'haka'
 tags:
   - ppt-import
@@ -56,6 +56,7 @@ again
 
 
 ## Meaning
+<div class="meaning">
 1986 and performed by Pakipaki primary school, Hastings
 The cry of the morepork
 keeps coming back to me.
@@ -77,6 +78,7 @@ while searching for the true path
 for us all.
 The Return Here
 The Return Here
+</div>
 
-## Notes
+Notes
 Kaitito: Te Taite Cooper and

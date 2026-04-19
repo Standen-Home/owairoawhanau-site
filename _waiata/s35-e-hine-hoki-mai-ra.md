@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'E HINE HOKI MAI RĀ'
-slug: 's35-e-hine-hoki-mai-ra'
+slug: "e-hine-hoki-mai-ra"
 category: 'waiata'
 tags:
   - ppt-import

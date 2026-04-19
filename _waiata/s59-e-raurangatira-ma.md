@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'E raurangatira mā'
-slug: 's59-e-raurangatira-ma'
+slug: "e-raurangatira-ma"
 category: 'haka'
 tags:
   - ppt-import

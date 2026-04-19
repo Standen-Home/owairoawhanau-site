@@ -45,6 +45,20 @@ permalink: /waiata/
   </div>
 </div>
 
+## Featured
+<div class="waiata-list">
+  {% assign featured = site.waiata | where: "public", true | where: "featured", true | sort: "order" %}
+  {% if featured.size > 0 %}
+    {% for waiata in featured limit:6 %}
+      {% include waiata-card.html waiata=waiata %}
+    {% endfor %}
+  {% else %}
+    <p class="note">No featured waiata yet.</p>
+  {% endif %}
+</div>
+
+<hr style="border:none; border-top:1px solid var(--border); margin: 1.2rem 0">
+
 <div class="waiata-list">
   {% assign waiata_public = site.waiata | where: "public", true | sort: "order" %}
   {% for waiata in waiata_public %}

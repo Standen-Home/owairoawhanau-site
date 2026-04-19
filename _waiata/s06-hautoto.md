@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hautoto'
-slug: 's06-hautoto'
+slug: "hautoto-6"
 category: 'waiata-tautoko'
 tags:
   - ppt-import

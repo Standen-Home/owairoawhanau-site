@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Whakawhanaungatanga/pepeha'
-slug: 's07-whakawhanaungatangapepeha'
+slug: "whakawhanaungatangapepeha"
 category: 'haka'
 tags:
   - ppt-import

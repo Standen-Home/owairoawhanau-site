@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'E tō mātou Matua i te rangi'
-slug: 's63-e-to-matou-matua-i-te-rangi'
+slug: "e-to-matou-matua-i-te-rangi"
 category: 'waiata'
 tags:
   - ppt-import
@@ -46,6 +46,7 @@ the pōwer and the glory
 
 
 ## Meaning
+<div class="meaning">
 The Lords Prayer
 The Lord’s Prayer
 Our Parent in the spirit world
@@ -58,6 +59,7 @@ So that we, the slaves of sin, may be with you again
 Through your chiefly position, is
 Forever and ever
 Amen
+</div>
 
-## Notes
+Notes
 nōu hoki te rāngatira-tanga,

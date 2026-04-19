@@ -1,7 +1,7 @@
 ---
 layout: waiata
 title: "Toia Mai"
-title_en: "" 
+title_en: ""
 slug: toia-mai
 category: waiata-tira
 tags:
@@ -58,21 +58,21 @@ Pipiwharauroa
   Hui e, Taiki e
 
   Hui e, Taiki e!
-
 </pre>
 
-
 ## Meaning
-Haul this canoe
+<div class="meaning">
+Haul this canoe,
 drag the canoe up here
 to its resting place;
 the Treaty gives us our autonomy.
 
 May the cry of the bird,
 the shining cuckoo
-- Quee! Quee! Quee! -
+– Quee! Quee! Quee! –
 signal a change for the better.
 Draw together, become intertwined!
+</div>
 
 ## Notes
-
+(Optional pronunciation cues, harmonies, actions, or reminders.)

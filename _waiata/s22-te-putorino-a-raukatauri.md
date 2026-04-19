@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Te Pūtōrino a Raukatauri'
-slug: 's22-te-putorino-a-raukatauri'
+slug: "te-putorino-a-raukatauri"
 category: 'waiata'
 tags:
   - ppt-import

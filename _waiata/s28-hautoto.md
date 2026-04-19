@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hautoto'
-slug: 's28-hautoto'
+slug: "hautoto-28"
 category: 'waiata'
 tags:
   - ppt-import
@@ -36,7 +36,9 @@ TOI TE HUATAHI
 
 
 ## Meaning
+<div class="meaning">
 Of Horouta waka
+</div>
 
-## Notes
+Notes
 Recited by Rangi-Tū-roua

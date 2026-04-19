@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Whakataka te hau'
-slug: 's03-whakataka-te-hau'
+slug: "whakataka-te-hau"
 category: 'karakia'
 tags:
   - ppt-import
@@ -25,4 +25,7 @@ Kia tau
 
 
 ## Meaning
+<div class="meaning">
 Opening karakia
+</div>
+

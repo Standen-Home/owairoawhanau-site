@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ngā Puhi waiata korero'
-slug: 's51-nga-puhi-waiata-korero'
+slug: "nga-puhi-waiata-korero"
 category: 'waiata'
 tags:
   - ppt-import
@@ -33,6 +33,7 @@ P
 
 
 ## Meaning
+<div class="meaning">
 to the voice that is crying out
 and see pouring out
 the tears.
@@ -56,3 +57,5 @@ He wrote it in 1983 whist he was teaching at Wainuiomata Intermediate, and his c
 This song was his way of expressing his view that Nga
 uhi whanau should stand up and fight for the right to speak the language of their ancestors.
 It was first recorded in 1994. Piripi died in 2001.
+</div>
+

@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Kei raro i te moana'
-slug: 's49-kei-raro-i-te-moana'
+slug: "kei-raro-i-te-moana"
 category: 'waiata'
 tags:
   - ppt-import

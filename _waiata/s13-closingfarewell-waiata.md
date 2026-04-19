@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Closing/farewell waiata'
-slug: 's13-closingfarewell-waiata'
+slug: "closingfarewell-waiata"
 category: 'poroporoaki'
 tags:
   - ppt-import
@@ -26,5 +26,8 @@ manuhiri.
 
 
 ## Meaning
+<div class="meaning">
 Closing/farewell waiata
 for when we are leaving as
+</div>
+

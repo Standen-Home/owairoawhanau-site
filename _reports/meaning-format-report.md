@@ -1,0 +1,39 @@
+# Meaning formatting report
+
+- Files updated (wrapped Meaning in `<div class="meaning">`): **35**
+
+- s03-whakataka-te-hau.md
+- s04-ka-waiata.md
+- s08-guide-mix-and-match-your-pepeha.md
+- s13-closingfarewell-waiata.md
+- s14-kia-tau-te-manaakitanga.md
+- s15-kia-tau-te-manaakitanga.md
+- s16-whakataka-te-hau-ki-te-uru.md
+- s17-e-minaka-ana.md
+- s20-te-tuhi-a-manawatere.md
+- s23-po-atarau.md
+- s24-kia-tau-ra.md
+- s25-he-honore.md
+- s26-tai-aroha.md
+- s27-nga-whakamoemiti.md
+- s28-hautoto.md
+- s29-te-tuhi-a-manawatere.md
+- s30-whakataka-te-hau-ki-te-uru.md
+- s31-guide-mix-and-match-your-pepeha.md
+- s34-aue-titiro-mai-ki-taku-poi.md
+- s40-e-te-tau.md
+- s41-te-roopu-e-tu-atu-nei.md
+- s43-ehara-i-te-mea.md
+- s44-maku-ra-pea.md
+- s45-purea-nei-e-te-hau.md
+- s51-nga-puhi-waiata-korero.md
+- s52-e-te-iwi.md
+- s54-waikato-te-awa.md
+- s55-waikato-te-awa.md
+- s56-te-hokinga-mai.md
+- s61-kotahi-te-kapua.md
+- s63-e-to-matou-matua-i-te-rangi.md
+- s66-hareruia.md
+- s68-ka-waiata.md
+- s69-rerenga-wairua.md
+- sample-waiata.md

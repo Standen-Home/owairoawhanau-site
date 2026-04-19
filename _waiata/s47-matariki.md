@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Matariki'
-slug: 's47-matariki'
+slug: "matariki"
 category: 'haka'
 tags:
   - ppt-import

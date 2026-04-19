@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Kia tau te manaakitanga'
-slug: 's14-kia-tau-te-manaakitanga'
+slug: "kia-tau-te-manaakitanga-14"
 category: 'karakia'
 tags:
   - ppt-import
@@ -23,4 +23,7 @@ Kia tau te manaakitanga
 
 
 ## Meaning
+<div class="meaning">
 Closing karakia
+</div>
+

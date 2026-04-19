@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ko te iwi Māori e ngunguru nei'
-slug: 's64-ko-te-iwi-maori-e-ngunguru-nei'
+slug: "ko-te-iwi-maori-e-ngunguru-nei"
 category: 'waiata'
 tags:
   - ppt-import

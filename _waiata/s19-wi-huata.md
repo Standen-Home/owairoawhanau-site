@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Wi Huata'
-slug: 's19-wi-huata'
+slug: "wi-huata"
 category: 'waiata'
 tags:
   - ppt-import

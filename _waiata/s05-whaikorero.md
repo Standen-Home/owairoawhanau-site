@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Whaikōrero'
-slug: 's05-whaikorero'
+slug: "whaikorero"
 category: 'waiata'
 tags:
   - ppt-import

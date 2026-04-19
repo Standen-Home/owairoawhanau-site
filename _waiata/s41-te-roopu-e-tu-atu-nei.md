@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Te roopu e Tū atu nei'
-slug: 's41-te-roopu-e-tu-atu-nei'
+slug: "te-roopu-e-tu-atu-nei"
 category: 'waiata'
 tags:
   - ppt-import
@@ -35,9 +35,11 @@ Homai tō ringa e
 
 
 ## Meaning
+<div class="meaning">
 Homai to ringa e
+</div>
 
-## Notes
+Notes
 nō roto e ngā iwi nui o Aotearoa e
 Kaitito: Piripi Taylor
 nō: Ngaai Tuuhoe

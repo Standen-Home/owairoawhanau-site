@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ka waiata'
-slug: 's04-ka-waiata'
+slug: "ka-waiata-4"
 category: 'himene'
 tags:
   - ppt-import
@@ -28,4 +28,7 @@ Hutia
 
 
 ## Meaning
+<div class="meaning">
 Hymn
+</div>
+

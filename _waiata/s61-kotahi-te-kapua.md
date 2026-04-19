@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Kotahi te kapua'
-slug: 's61-kotahi-te-kapua'
+slug: "kotahi-te-kapua"
 category: 'waiata'
 tags:
   - ppt-import
@@ -31,6 +31,9 @@ You tube link
 
 
 ## Meaning
+<div class="meaning">
 Just one cloud in the sky can give a life giving shower of rain on the land, on the land
 Just one cloud in the sky can give a life giving shower of rain on the land, on the land
 The sun has shone all over the blue sky so that you will not be lost my chiefly language.
+</div>
+

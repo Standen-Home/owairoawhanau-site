@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ko te whakapono'
-slug: 's38-ko-te-whakapono'
+slug: "ko-te-whakapono"
 category: 'haka'
 tags:
   - ppt-import

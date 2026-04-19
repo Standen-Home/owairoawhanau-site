@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'He aha te mea nui - Waiata pūrakau'
-slug: 's74-he-aha-te-mea-nui-waiata-purakau'
+slug: "he-aha-te-mea-nui-waiata-purakau"
 category: 'haka'
 tags:
   - ppt-import

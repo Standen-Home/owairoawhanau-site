@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'E te iwi'
-slug: 's52-e-te-iwi'
+slug: "e-te-iwi"
 category: 'haka'
 tags:
   - ppt-import
@@ -41,10 +41,12 @@ Rangi: auld lang syne
 
 
 ## Meaning
+<div class="meaning">
 Lead in guitar last line then hum
 Sing top to end
+</div>
 
-## Notes
+Notes
 Kaitito: Piripi Taylor
 nō: Tuhoe
 Chords: C G F C

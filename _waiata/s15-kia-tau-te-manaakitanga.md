@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Kia tau te manaakitanga'
-slug: 's15-kia-tau-te-manaakitanga'
+slug: "kia-tau-te-manaakitanga-15"
 category: 'haka'
 tags:
   - ppt-import
@@ -34,8 +34,11 @@ Karakia whakamutunga
 
 
 ## Meaning
+<div class="meaning">
 Settle the care and protection
 upon each of us
 May the health and
 Return well to ourselves and others
 Hold fast to your authenticy!
+</div>
+

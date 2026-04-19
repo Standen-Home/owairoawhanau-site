@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Kia tau rā'
-slug: 's24-kia-tau-ra'
+slug: "kia-tau-ra"
 category: 'waiata'
 tags:
   - ppt-import
@@ -37,6 +37,7 @@ gathered here
 
 
 ## Meaning
+<div class="meaning">
 Let the blessings
 of above descend upon
 each and everyone
@@ -44,3 +45,5 @@ and be bound
 and fastened
 amidst this gathering
 till it is so
+</div>
+

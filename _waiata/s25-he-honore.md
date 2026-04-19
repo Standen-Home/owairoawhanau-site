@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'He hōnore'
-slug: 's25-he-honore'
+slug: "he-honore"
 category: 'haka'
 tags:
   - ppt-import
@@ -36,6 +36,7 @@ He hōnore
 
 
 ## Meaning
+<div class="meaning">
 glory and
 to the land
 come to all people
@@ -43,3 +44,5 @@ for ever and ever,﻿ for ever and ever.
 Amen.
 The higher being is the refuge
 and my life.
+</div>
+

@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Te Reo Karanga'
-slug: 's18-te-reo-karanga'
+slug: "te-reo-karanga"
 category: 'waiata'
 tags:
   - ppt-import

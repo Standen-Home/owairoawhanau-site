@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Hutia'
-slug: 's70-hutia'
+slug: "hutia"
 category: 'waiata'
 tags:
   - ppt-import

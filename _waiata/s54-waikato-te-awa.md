@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Waikato te awa'
-slug: 's54-waikato-te-awa'
+slug: "waikato-te-awa-54"
 category: 'waiata'
 tags:
   - ppt-import
@@ -75,9 +75,11 @@ Kookiri!
 
 
 ## Meaning
+<div class="meaning">
 Auee whaia te ara wai a too tupuna a Tia
+</div>
 
-## Notes
+Notes
 Kaitito:Rangi Harrison 1962
 Link to
 Facebook Video

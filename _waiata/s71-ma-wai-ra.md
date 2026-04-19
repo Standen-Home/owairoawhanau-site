@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ma wai ra?'
-slug: 's71-ma-wai-ra'
+slug: "ma-wai-ra"
 category: 'haka'
 tags:
   - ppt-import

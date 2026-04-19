@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'E te tau'
-slug: 's40-e-te-tau'
+slug: "e-te-tau"
 category: 'haka'
 tags:
   - ppt-import
@@ -35,10 +35,12 @@ Tāne - hei titi hei mama (x2)
 
 
 ## Meaning
+<div class="meaning">
 Call me, call me and I will hurry home. Heart is yours, heart is yours
 To command, to command. So open up your heart and let me in
 Hold me tell me that you love me forever and ever my love
+</div>
 
-## Notes
+Notes
 Kaitito: Piripi Taylor
 nō: Ngaai Tuuhoe

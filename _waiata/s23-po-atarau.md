@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Pō atarau'
-slug: 's23-po-atarau'
+slug: "po-atarau"
 category: 'waiata'
 tags:
   - ppt-import
@@ -36,6 +36,7 @@ Pō atarau
 
 
 ## Meaning
+<div class="meaning">
 I see in a dream
 To a distant land
 Farewell,
@@ -45,3 +46,5 @@ Now is the hour
 Far across the sea
 Oh please remember me
 When you return you'll find me waiting here
+</div>
+

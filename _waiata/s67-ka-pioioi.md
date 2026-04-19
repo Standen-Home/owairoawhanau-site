@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ka pioioi'
-slug: 's67-ka-pioioi'
+slug: "ka-pioioi"
 category: 'waiata'
 tags:
   - ppt-import

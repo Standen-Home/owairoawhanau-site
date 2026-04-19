@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Waikato te awa'
-slug: 's53-waikato-te-awa'
+slug: "waikato-te-awa-53"
 category: 'waiata'
 tags:
   - ppt-import

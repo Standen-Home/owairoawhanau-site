@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Mā te Kahukura'
-slug: 's46-ma-te-kahukura'
+slug: "ma-te-kahukura"
 category: 'haka'
 tags:
   - ppt-import

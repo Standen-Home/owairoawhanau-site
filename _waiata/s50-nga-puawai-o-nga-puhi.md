@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ngā puāwai o Ngā Puhi'
-slug: 's50-nga-puawai-o-nga-puhi'
+slug: "nga-puawai-o-nga-puhi"
 category: 'haka'
 tags:
   - ppt-import

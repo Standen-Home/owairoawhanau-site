@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Tākiri Ko te Ata'
-slug: 's58-takiri-ko-te-ata'
+slug: "takiri-ko-te-ata"
 category: 'haka'
 tags:
   - ppt-import

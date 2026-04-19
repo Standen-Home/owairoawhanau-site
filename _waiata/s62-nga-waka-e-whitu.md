@@ -1,7 +1,7 @@
 ---
 layout: 'waiata'
 title: 'Ngā waka e whitu'
-slug: 's62-nga-waka-e-whitu'
+slug: "nga-waka-e-whitu"
 category: 'waiata'
 tags:
   - ppt-import
