@@ -5,6 +5,18 @@ title_en: "Songs"
 permalink: /waiata/
 ---
 
+## Featured
+<div class="waiata-list">
+  {% assign featured = site.waiata | where: "public", true | where: "featured", true | sort: "order" %}
+  {% if featured.size > 0 %}
+    {% for waiata in featured limit:6 %}
+      {% include waiata-card.html waiata=waiata %}
+    {% endfor %}
+  {% else %}
+    <p class="note">No featured waiata yet.</p>
+  {% endif %}
+</div>
+
 <div class="waiata-controls">
   <div class="field">
     <label for="waiata-q">Search</label>
@@ -43,18 +55,6 @@ permalink: /waiata/
     <label>Total</label>
     <div><span id="waiata-count">0</span> waiata</div>
   </div>
-</div>
-
-## Featured
-<div class="waiata-list">
-  {% assign featured = site.waiata | where: "public", true | where: "featured", true | sort: "order" %}
-  {% if featured.size > 0 %}
-    {% for waiata in featured limit:6 %}
-      {% include waiata-card.html waiata=waiata %}
-    {% endfor %}
-  {% else %}
-    <p class="note">No featured waiata yet.</p>
-  {% endif %}
 </div>
 
 <hr style="border:none; border-top:1px solid var(--border); margin: 1.2rem 0">

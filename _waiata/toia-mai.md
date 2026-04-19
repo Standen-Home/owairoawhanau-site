@@ -10,7 +10,7 @@ tags:
   - cockle bay school kapa haka rōpū
 composer: "Piri Poutapu"
 source: ""
-featured: true
+featured: false
 public: true
 audio: ""
 pdf: ""
