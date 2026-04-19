@@ -5,7 +5,7 @@ slug: "e-kore-te-aroha"
 category: waiata
 tags:
   - waiata
-  - wednesday waiata rōpū
+  - Waiata Wednesday rōpū
 composer: "Tuini Ngawai"
 source: "PowerPoint import"
 featured: true

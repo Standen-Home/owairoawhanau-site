@@ -5,7 +5,7 @@ slug: "ka-waiata-68"
 category: 'hīmene'
 tags:
   - hīmene
-  - wednesday waiata rōpū
+  - Waiata Wednesday rōpū
 composer: 'Richard Puanaki; Te Whetu o te Rawhiti'
 source: 'PowerPoint import'
 featured: false

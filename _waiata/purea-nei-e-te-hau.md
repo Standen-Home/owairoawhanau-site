@@ -5,7 +5,7 @@ slug: "purea-nei-e-te-hau"
 category: waiata
 tags:
   - waiata a ringa
-  - wednesday waiata rōpū
+  - Waiata Wednesday rōpū
 composer: ""
 source: "PowerPoint import"
 featured: false

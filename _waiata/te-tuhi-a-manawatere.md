@@ -6,7 +6,7 @@ category: waiata-tautoko
 tags:
   - local
   - waiata tautoko
-  - wednesday waiata rōpū
+  - Waiata Wednesday rōpū
 composer: "Taini Drummond"
 source: "PowerPoint import"
 featured: false

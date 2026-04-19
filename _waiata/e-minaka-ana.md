@@ -6,7 +6,7 @@ category: waiata
 tags:
   - waiata
   - waiata a ringa
-  - wednesday waiata rōpū
+  - Waiata Wednesday rōpū
   - cockle bay school kapa haka rōpū
 composer: ""
 source: "PowerPoint import"
