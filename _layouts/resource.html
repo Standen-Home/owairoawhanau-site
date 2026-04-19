@@ -16,4 +16,28 @@ layout: default
   {% endif %}
 
   {{ content }}
+
+
+  {% comment %}Related resources (by first tag){% endcomment %}
+  {% assign rel_tag = nil %}
+  {% if page.tags %}
+    {% for t in page.tags %}
+      {% assign rel_tag = t %}
+      {% break %}
+    {% endfor %}
+  {% endif %}
+
+  {% if rel_tag %}
+    {% assign related = site.resources | where_exp: "r", "r.url != page.url" | where_exp: "r", "r.tags contains rel_tag" | sort: "title" %}
+    {% if related.size > 0 %}
+      <h2>Related resources</h2>
+      <p class="note">More resources tagged <span class="badge">{{ rel_tag }}</span></p>
+      <div class="resource-list">
+        {% for r in related limit:6 %}
+          {% include resource-card.html r=r %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+
 </article>
