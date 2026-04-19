@@ -5,7 +5,7 @@ slug: "s36-hei-konei-ra"
 category: poroporoaki
 tags:
   - ppt-import
-  - poroporoaki
+  - waiata poroporoaki
 composer: ""
 source: "PowerPoint import"
 featured: false
@@ -19,21 +19,52 @@ order: 36
 
 ## Kupu
 <pre class="lyrics">
-Hei konei rā
 Ki ngā tini aituā e
-Kua haere ki te kāinga e
-Mahi i ō tūpuna rā
-Haere rā, haere rā
+Kua haere ki te kainga e    
+Mahi i o tupuna rā                 
+Haere rā haere rā                  
 
-Hei hei hei konei rā (x3)
+Hei hei hei konei rā        x3 Katoa
+
+E noho mai rā
+Nō reira ki ngā rōpū kapahaka
+Kia u kia mau kia kaha rā
+Ki ngā wāhi whakangahau
+Kia whakakotahi tatou katoa
+
+TANE: Hei hei hei konei rā   
+
+WAHINE: Hei e kui e koro mā
+Homai to aroha 
+Nō reira whakanuia
+
 E noho mai rā
 
-Tēnei mātou ko te rōpū o Owairoa e
-Kei te waiata, me haka pūkana
-Kei te mihi atu — hei konei rā
+
+Tenei matou ko te rōpū o 
+O Wairoa e
+Kei te waiata
+Me haka pūkana
+Kei te mihi atu hei konei rā
+                  
+TANE/WAHINE - Hei hei hei konei rā x3
+
+E nōho mai rā
+Me i aku raurangatira ma
+tenei te waiata whakamutunga
+Ki ngā hapū   Ki ngā waka
+Ki ngā iwi o ngā hau e whā
+
+TANE/WAHINE - Hei hei hei konei rā x3
+TANE/WAHINE - Hei hei hei konei rā x3
+
+E noho mai rā ee ee eee
+A HI!!!!!!
+
 </pre>
 
 
 ## Notes
-- Slide 36 import. The PowerPoint has extra performance notes (tāne/wāhine splits, kapa haka references). Add them back here if you want them published.
-- If you want this to stay whānau-only, set `public: false`.
+- The PowerPoint has extra performance notes (tāne/wāhine splits, kapa haka references).
+- Henare Mahanga; Ngā Puhi. 
+- Te Kupenga Kapa Haka Seniors.

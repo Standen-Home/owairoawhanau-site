@@ -19,18 +19,48 @@ order: 17
 
 ## Kupu
 <pre class="lyrics">
-E minaka ana taku waha
-Ki te kai a te rangatira,
+Kia kaha tātou
+Ki te (Hī!) kōrero Māori
+
+E minaka ana
+  E minaka ana taku waha
+  Ki te kai a te rangatira,
+
 Taku reo rangatira
-Taku kuru pounamu tuku iho.
+  Taku reo rangatira
+  Taku kuru pounamu tuku iho.
 
 Mīharo kē ana
-Ki tōna pakari kia ora
-Tē memeha, te wairua
-Ki te kōrero Māori.
+  Mīharo kē ana
+  Ki tōna pakari kia ora
+
+Tē memeha
+  Tē memeha, te wairua
+  Ki te kōrero Māori.
 
 Kia kaha tātou
-Ki te kōrero Māori! (Hī!)
+  Kia kaha tātou
+  Ki te kōrero Māori!
+  
+E minaka ana
+  E minaka ana taku waha
+  Ki te kai a te rangatira,
+
+Taku reo rangatira
+  Taku reo rangatira
+  Taku kuru pounamu tuku iho.
+
+Mīharo kē ana
+  Mīharo kē ana
+  Ki tōna pakari kia ora
+
+Tē memeha
+  Tē memeha, te wairua
+  Ki te kōrero Māori.
+
+Kia kaha tātou
+  Kia kaha tātou
+  Ki te kōrero Māori! (Hī!)
 </pre>
 
 

@@ -13,7 +13,7 @@ featured: true
 public: true
 audio: ""
 pdf: ""
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=1G_hIxdHvJQ&t=2s"
 image: ""
 order: 10
 keywords: ""
