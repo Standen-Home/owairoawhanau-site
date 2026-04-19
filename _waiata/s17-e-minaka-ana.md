@@ -4,7 +4,8 @@ title: "E minaka ana"
 slug: "s17-e-minaka-ana"
 category: waiata
 tags:
-  - ppt-import
+  - waiata
+  - waiata a ringa
 composer: ""
 source: "PowerPoint import"
 featured: false
