@@ -21,17 +21,3 @@ A simple outline of how our hui/practice time often runs.
 8. **Karakia whakamutunga** — closing karakia
 
 ---
-
-## Pepeha
-We’ve moved the full pepeha templates (including non‑Māori options) and tikanga notes onto their own page:
-
-- **[Pepeha](/resources/pepeha/)**
-
----
-
-## Whakahā (breathing)
-A short breathing moment to settle, warm up, and get our voices ready.
-
-- Take 2–3 slow breaths together.
-- Relax shoulders/jaw.
-- Gentle hum into the first waiata.

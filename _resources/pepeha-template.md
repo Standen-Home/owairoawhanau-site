@@ -15,9 +15,10 @@ keywords: "pepeha template tena koutou ko te maunga awa roto waka whenua tupu ka
 A few gentle guidelines for pepeha in our space:
 
 - **Your pepeha is personal.** Share what you’re comfortable sharing.
-- **Don’t claim iwi/hapū/marae links you don’t have.** If you’re still learning your connections, it’s okay to leave those lines out.
-- **If you’re non‑Māori, it’s normal to anchor to where you’re from and where you live now** (whenua tupu / kāinga), and to acknowledge ancestry honestly.
+- **For our māori whānau, it's normal to be learning your whakapapa at every age.** If you’re still learning your connections, it’s okay to leave lines out when you are unsure.
+- **For our non-māori whānau, it’s normal to anchor to where you’re from and where you live now** (whenua tupu / kāinga), and to acknowledge your distant ancestry honestly. Our templates can help you get started.
 - **Keep it simple and respectful.** You can always add more as you learn.
+- **Give it a go.** Even if it is simply "Hello, My name is _ ".
 
 If you’re unsure, ask a kaiako/kaumātua/whānau member — local guidance is best.
 
@@ -26,9 +27,33 @@ If you’re unsure, ask a kaiako/kaumātua/whānau member — local guidance is 
 ## Templates
 Mix and match what fits for you. It’s okay to keep it simple.
 
+A good starting point is below:
+
+Start with a greeting who is there..
+- **Tēnā koutou katoa** — Hello to you all
+
+Tell us about your ancestry - if you know it...
+- **Ko _ te iwi** — are my tribe
+- **Te whakapaparanga mai _** — is my ancestry *(e.g. Ko Kōtirana — Scotland/Scottish)*
+**Engari** — but, however
+**Ko _ te whenua tupu** — *Placename* is where I grew up.
+
+Tell us about where you are from...
+- **Nō _ ahau** — I’m from
+- **Ko _ te whenua tupu** — *Placename* is where I grew up.
+
+Tell us your name...
+- **Ko _ tōku ingoa** — My name is
+- **Ko _ au** — I am *Name*.
+
+Finish with a final greeting for everyone
+- **Tēnā tātou katoa** — Greetings everyone
+
+Feel free to add in any of the options below that fit with the connections you have.
+
 <div class="cols-2">
   <div>
-    <h3>Pepeha (general)</h3>
+    <h3>Options for Māori</h3>
     <ul>
       <li><strong>Tēnā koutou katoa</strong> — Hello to you all</li>
       <li><strong>Ko _ te maunga</strong> — is the mountain</li>
@@ -44,7 +69,7 @@ Mix and match what fits for you. It’s okay to keep it simple.
   </div>
 
   <div>
-    <h3>Options for non‑Māori</h3>
+    <h3>Options for Everyone</h3>
     <ul>
       <li><strong>Tēnā koutou katoa</strong> — Hello to you all</li>
       <li><strong>Te whakapaparanga mai _</strong> — is my ancestry <em>(e.g. Ko Kōtirana — Scotland/Scottish)</em></li>
