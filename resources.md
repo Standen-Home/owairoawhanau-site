@@ -69,6 +69,21 @@ A short breathing moment to settle, warm up, and get our voices ready.
         <input id="resource-q" type="search" placeholder="Search resources…" autocomplete="off">
       </div>
 
+      <div class="field">
+        <label for="resource-tag">Tag</label>
+        <select id="resource-tag">
+          <option value="">All</option>
+          {% assign tags = "" | split: "" %}
+          {% for r in site.resources %}
+            {% if r.tags %}{% assign tags = tags | concat: r.tags %}{% endif %}
+          {% endfor %}
+          {% assign tags = tags | uniq | sort %}
+          {% for t in tags %}
+            <option value="{{ t }}">{{ t }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
       <p class="note" style="margin:.6rem 0 0 0"><span id="resource-count">0</span> resources</p>
 
       <div class="resource-list">
