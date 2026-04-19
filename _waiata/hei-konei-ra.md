@@ -5,7 +5,7 @@ slug: "hei-konei-ra"
 category: poroporoaki
 tags:
   - waiata poroporoaki
-  - Waiata Wednesday rōpū
+  - Waiata Wednesday Rōpū
 composer: ""
 source: "PowerPoint import"
 featured: true
