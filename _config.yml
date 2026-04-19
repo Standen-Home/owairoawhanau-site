@@ -13,6 +13,9 @@ collections:
   waiata:
     output: true
     permalink: /waiata/:slug/
+  resources:
+    output: true
+    permalink: /resources/:slug/
 
 defaults:
   - scope:

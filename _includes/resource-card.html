@@ -1,0 +1,10 @@
+<article class="resource-card" data-resource-card
+  data-title="{{ r.title | escape }}"
+  data-keywords="{{ r.keywords | default: '' | escape }}"
+  data-tags="{{ r.tags | join: ',' | escape }}">
+  <h3><a href="{{ r.url | relative_url }}">{{ r.title }}</a></h3>
+  {% if r.summary %}<p class="muted">{{ r.summary }}</p>{% endif %}
+  <div class="waiata-meta">
+    {% for t in r.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+  </div>
+</article>

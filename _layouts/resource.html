@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="prose">
+  <header class="page-head">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.title_en %}
+      <div class="page-title-en">{{ page.title_en }}</div>
+    {% endif %}
+  </header>
+
+  {% if page.tags %}
+    <p>
+      {% for t in page.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+    </p>
+  {% endif %}
+
+  {{ content }}
+</article>
