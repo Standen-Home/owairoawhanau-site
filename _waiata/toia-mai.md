@@ -3,10 +3,11 @@ layout: waiata
 title: "Toia Mai"
 title_en: "" 
 slug: toia-mai
-category: waiata-tira
+category: waiata
 tags:
   - beginner
   - practice-set
+  - cockle bay school kapa haka rōpū
 composer: "Piri Poutapu"
 source: ""
 featured: true

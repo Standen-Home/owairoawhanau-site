@@ -10,7 +10,7 @@ tags:
 composer: "Piri Poutapu"
 source: ""
 featured: true
-public: true
+public: false
 audio: ""
 pdf: ""
 video_url: ""

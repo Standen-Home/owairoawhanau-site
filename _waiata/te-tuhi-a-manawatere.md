@@ -4,8 +4,9 @@ title: "Te Tuhi a Manawatere"
 slug: "s20-te-tuhi-a-manawatere"
 category: waiata-tautoko
 tags:
-  - ppt-import
-  - waiata-tautoko
+  - local
+  - waiata tautoko
+  - wednesday waiata rōpū
 composer: "Taini Drummond"
 source: "PowerPoint import"
 featured: false
@@ -32,7 +33,7 @@ Te waka, he huruhuru
 Te pōhutukawa i Wairoa
 He tohu, he whakataukī
 Mā te rāpa ka kitea 
-Mā te rāoa ka kitea
+Mā te rāpa ka kitea
 </pre>
 
 

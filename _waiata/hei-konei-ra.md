@@ -4,8 +4,8 @@ title: "Hei konei rā"
 slug: "s36-hei-konei-ra"
 category: poroporoaki
 tags:
-  - ppt-import
   - waiata poroporoaki
+  - wednesday waiata rōpū
 composer: ""
 source: "PowerPoint import"
 featured: false

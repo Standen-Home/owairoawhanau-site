@@ -5,6 +5,7 @@ slug: "s37-e-kore-te-aroha"
 category: waiata
 tags:
   - waiata
+  - wednesday waiata rōpū
 composer: "Tuini Ngawai"
 source: "PowerPoint import"
 featured: false

@@ -2,9 +2,10 @@
 layout: 'waiata'
 title: 'Ka Waiata'
 slug: 's68-ka-waiata'
-category: 'haka'
+category: 'hīmene'
 tags:
-  - ppt-import
+  - hīmene
+  - wednesday waiata rōpū
 composer: 'Richard Puanaki; Te Whetu o te Rawhiti'
 source: 'PowerPoint import'
 featured: false
