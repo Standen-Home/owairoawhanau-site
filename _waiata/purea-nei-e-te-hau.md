@@ -1,7 +1,7 @@
 ---
 layout: waiata
 title: "Purea nei e te hau"
-slug: "s45-purea-nei-e-te-hau"
+slug: "purea-nei-e-te-hau"
 category: waiata
 tags:
   - waiata a ringa
@@ -48,6 +48,7 @@ Makere
 
 
 ## Meaning
+<div class="meaning">
 Cleansed by the wind
 washed by the rain
 and warmed by the sun,
@@ -59,6 +60,7 @@ to the clouds in the heavens,
 warmed by the sun,
 with all troubles cleared away
 all restraints got rid of,
-all restrictions cast aside. 
+all restrictions cast aside.
+</div>
 
-## Notes
+Notes

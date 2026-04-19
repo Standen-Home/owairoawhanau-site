@@ -2,7 +2,7 @@
 layout: waiata
 title: "Toia Mai"
 title_en: "" 
-slug: toia-mai
+slug: "toia-mai-10"
 category: waiata
 tags:
   - beginner
@@ -64,6 +64,7 @@ Pipiwharauroa
 
 
 ## Meaning
+<div class="meaning">
 Haul this canoe
 drag the canoe up here
 to its resting place;
@@ -74,6 +75,7 @@ the shining cuckoo
 - Quee! Quee! Quee! -
 signal a change for the better.
 Draw together, become intertwined!
+</div>
 
-## Notes
+Notes
 

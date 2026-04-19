@@ -2,7 +2,7 @@
 layout: waiata
 title: "Toia Mai"
 title_en: ""
-slug: toia-mai
+slug: "toia-mai-10"
 category: waiata-tira
 tags:
   - beginner

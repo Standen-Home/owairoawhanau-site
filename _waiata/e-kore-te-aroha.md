@@ -1,7 +1,7 @@
 ---
 layout: waiata
 title: "E kore te aroha"
-slug: "s37-e-kore-te-aroha"
+slug: "e-kore-te-aroha"
 category: waiata
 tags:
   - waiata

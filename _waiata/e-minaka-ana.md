@@ -1,7 +1,7 @@
 ---
 layout: waiata
 title: "E minaka ana"
-slug: "s17-e-minaka-ana"
+slug: "e-minaka-ana"
 category: waiata
 tags:
   - waiata
@@ -67,11 +67,12 @@ Kia kaha tātou
 
 
 ## Meaning
+<div class="meaning">
 Let us be staunch
 in speaking Māori.
-I desire my talk 
+I desire my talk
 to be like that of a leader,
-my noble language, 
+my noble language,
 my precious inheritance.
 
 Astound me
@@ -79,8 +80,9 @@ with your maturity by
 the evanescence, the spiriti you show
 when speaking Māori.
 
-Let us be staunch 
+Let us be staunch
 in speaking Māori.
+</div>
 
-## Notes
+Notes
 - Youtube video from Nerehana Whanau
