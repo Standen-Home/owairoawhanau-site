@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<article class="prose">
+  <header class="page-head">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.title_en %}
+      <div class="page-title-en">{{ page.title_en }}</div>
+    {% endif %}
+  </header>
+
+  <div class="two-col">
+    <div>
+      {{ content }}
+    </div>
+
+    <aside class="sidebar" aria-label="Resource library">
+      <div class="sidebar-box">
+        <h2 style="margin-top:0">Resource library</h2>
+
+        <div class="field">
+          <label for="resource-q">Search</label>
+          <input id="resource-q" type="search" placeholder="Search resources…" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="resource-tag">Tag</label>
+          <select id="resource-tag">
+            <option value="">All</option>
+            {% assign tags = "" | split: "" %}
+            {% for r in site.resources %}
+              {% if r.tags %}{% assign tags = tags | concat: r.tags %}{% endif %}
+            {% endfor %}
+            {% assign tags = tags | uniq | sort %}
+            {% for t in tags %}
+              <option value="{{ t }}">{{ t }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <p class="note" style="margin:.6rem 0 0 0"><span id="resource-count">0</span> resources</p>
+
+        <div class="resource-list">
+          {% assign resources_sorted = site.resources | sort: "title" %}
+          {% for r in resources_sorted %}
+            {% include resource-card.html r=r %}
+          {% endfor %}
+        </div>
+
+        <script src="{{ '/assets/js/resource-filter.js' | relative_url }}" defer></script>
+      </div>
+    </aside>
+  </div>
+</article>
