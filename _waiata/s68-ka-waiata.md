@@ -5,10 +5,10 @@ slug: 's68-ka-waiata'
 category: 'haka'
 tags:
   - ppt-import
-composer: ''
+composer: 'Richard Puanaki; Te Whetu o te Rawhiti'
 source: 'PowerPoint import'
 featured: false
-public: false
+public: true
 audio: ''
 pdf: ''
 video_url: ''
@@ -29,19 +29,22 @@ Ko te Whaea
 Ko te Whaea
 O Te Ao
 (o Te Ao)
-I sing
-From her womb
-Woman who acquiesced
-Richard Puanaki
 
-## Meaning
+
+## Translation Meaning
+I Sing
 To Mary
-The woman who agreet
+The woman who agreed
 To bring forth life
+From her womb
+Woman who acquiseced
 Woman of great heart
 Woman of peace
 She is the Mother
 She is the Mother
 Of the world
 (of the world)
-(1949-2021) taught at Catholic schools at Wairoa. In the mid 1980s he composed several himene, including Ka Waiata, with the help of his whanau singing group Te Whetu o te Rawhiti.
+
+
+## Additional Information
+Richard Puanaki (1941-2021) taghut at Catholic schools at Wairoa.  In the mid 1980s he composed several himene, including Ka Waiata, with the help of his whanau singing group Te Whetu o te Rawhiti.
