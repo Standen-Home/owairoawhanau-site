@@ -5,7 +5,7 @@ title_en: "About"
 permalink: /about/
 ---
 
-This site was started to support the **Wednesday Waiata Rōpū and Whanau of Ō Wairoa Marae** — a place to learn, practise, and share waiata in a way that’s warm, respectful, and easy for our community to join.
+This site was started to support the **Waiata Wednesday Rōpū and Whanau of Ō Wairoa Marae** — a place to learn, practise, and share waiata in a way that’s warm, respectful, and easy for our community to join.
 
 ## How our rōpū often runs
 We meet on a Wednesday evening unless notifyed of a change.
