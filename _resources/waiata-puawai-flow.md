@@ -1,6 +1,6 @@
 ---
 layout: resource
-title: "Waiata Puāwai (session flow)"
+title: "Waiata Puāwai"
 title_en: "Session flow"
 slug: "waiata-puawai-flow"
 tags:

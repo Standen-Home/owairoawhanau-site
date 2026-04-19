@@ -5,6 +5,8 @@ title_en: "Resources"
 permalink: /resources/
 ---
 
+Quick guides to help you during Waiata Wednesday.
+
 ## Waiata Puāwai; Session Flow
 A simple outline of how our hui/practice time often runs.
 *This can be adapted depending on the kaupapa for the day.*
