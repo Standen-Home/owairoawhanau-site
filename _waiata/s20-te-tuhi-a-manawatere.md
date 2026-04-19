@@ -19,17 +19,30 @@ order: 20
 
 ## Kupu
 <pre class="lyrics">
+Mā te rāpa ka kitea
+
 Nō Ngāi Tai te tupuna e
 Te waka, he huruhuru
 Te pōhutukawa i Wairoa
 He tohu, he whakataukī
-Mā te rāpa ka kitea (x2)
+Mā te rāpa ka kitea
+
+Nō Ngāi Tai te tupuna e
+Te waka, he huruhuru
+Te pōhutukawa i Wairoa
+He tohu, he whakataukī
+Mā te rāpa ka kitea 
+Mā te rāoa ka kitea
 </pre>
 
 
 ## Meaning
-The mark of Manawatere.
+The mark of Manawatere
+Ancestor of Ngāi Tai
+Astral travel... Waka a feather
+Pohutukawa... Howick (Cockle Bay)
+A proverb
+The mark left on the pōhutukawa tree
 
 ## Notes
-- Slide 20 import.
-- Some lines in the PowerPoint were duplicated/annotated (e.g. place notes like Howick/Cockle Bay). Add/confirm final wording here.
+

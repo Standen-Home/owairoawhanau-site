@@ -11,7 +11,7 @@ featured: false
 public: true
 audio: ""
 pdf: ""
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=IBsU1l3y0DM"
 image: ""
 order: 17
 ---
@@ -34,10 +34,20 @@ Ki te kōrero Māori! (Hī!)
 
 
 ## Meaning
-Let us be staunch in speaking Māori.
-I desire my talk to be like that of a leader —
-my noble language, my precious inheritance.
+Let us be staunch
+in speaking Māori.
+I desire my talk 
+to be like that of a leader,
+my noble language, 
+my precious inheritance.
+
+Astound me
+with your maturity by
+the evanescence, the spiriti you show
+when speaking Māori.
+
+Let us be staunch 
+in speaking Māori.
 
 ## Notes
-- Slide 17 import.
-- Add a YouTube link in `video_url:` if you have the preferred recording.
+- Youtube video from Nerehana Whanau
