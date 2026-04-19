@@ -17,6 +17,7 @@ order: 67
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ka pīoioi
 e
 Tohu aroha haukāinga
@@ -36,3 +37,5 @@ Pupuhi ai e te hau
 Kapohia āku roimata.
 Ka pīoioi he
 tohu aroha haukāinga
+</pre>
+

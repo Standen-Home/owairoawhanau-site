@@ -17,6 +17,7 @@ order: 69
 ---
 
 ## Kupu
+<pre class="lyrics">
 From them came their descendants, us who live today
 Lie still my tupuna Ueoneone
 Being looked after/watched over
@@ -34,6 +35,8 @@ Toro mai too ringa kia hariruu te aroha
 E koro, e Ue, teenei too mokopuna Te Kiingi Maaori, te pouhere o ngaa waka e Ko te Mana Motuhake Noo ngaa tuupuna e.
 Noo reira e te iwi, kua mutu raa ngaa mihi Aku tangi koorero, aku tangi tiikapakapa Noho iho e koro e Ue, e taku ara Ngaa manaakitanga a te runga runga rawa e
 Kua huri taku tira ki taku whenua tupu Kua hora te marino, kua tupu te aroha Teeraa te waa ka tuutaki koe ki runga O Tuurangawaewae, ki roto o Waikato e.
+</pre>
+
 
 ## Meaning
 The spirit flies the path of the departing spirits

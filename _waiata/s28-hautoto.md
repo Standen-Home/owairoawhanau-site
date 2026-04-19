@@ -17,6 +17,7 @@ order: 28
 ---
 
 ## Kupu
+<pre class="lyrics">
 Hau toto
 , hau toto,
 Ko Tū, hekea ana,
@@ -31,6 +32,8 @@ Hara mai te toki,
 Haumi e, Hui e, Taiki e
 Waiata Tawhito
 TOI TE HUATAHI
+</pre>
+
 
 ## Meaning
 Of Horouta waka

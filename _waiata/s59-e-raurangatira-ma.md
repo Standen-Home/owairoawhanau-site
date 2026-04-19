@@ -17,6 +17,7 @@ order: 59
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kia matārā - E raurangatira mā
 Kia whakatōmuri, te haere whakamua
 Kia tipu ai, Kia puāwai, mō te iwi e
@@ -39,3 +40,5 @@ Rangatira
 Kia mākoha
 Kia mānawaroa x 4
 Chorus x 2
+</pre>
+

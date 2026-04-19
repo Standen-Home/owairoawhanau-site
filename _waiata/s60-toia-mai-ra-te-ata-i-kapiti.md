@@ -17,6 +17,7 @@ order: 60
 ---
 
 ## Kupu
+<pre class="lyrics">
 Engia ko te hoa, ko taku whenua tupu
 I kapakapa atu ai te tau o taku ate
 Nā Tūmata Pongia
@@ -28,6 +29,8 @@ I runga o Tītere
 He au herea tōroa na..
 Toia mai rā
 na Rangihaeata mo tona matua Te Rauparaha I te wa I noho herehere e ia
+</pre>
+
 
 ## Notes
 Kaitito:

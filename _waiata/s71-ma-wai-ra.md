@@ -17,6 +17,7 @@ order: 71
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ma wai ra e taurima
 te marae i waho nei?
 Ma te tika
@@ -41,3 +42,5 @@ te marae i waho nei?
 Ma te tika
 ma te pono
 me te aroha e.
+</pre>
+

@@ -17,6 +17,7 @@ order: 56
 ---
 
 ## Kupu
+<pre class="lyrics">
 Tangi a te ruru,
 kei te hokihoki mai e.
 E whaka-whero-whero
@@ -51,6 +52,8 @@ can
 stand tall
 again
 !
+</pre>
+
 
 ## Meaning
 1986 and performed by Pakipaki primary school, Hastings

@@ -17,6 +17,7 @@ order: 33
 ---
 
 ## Kupu
+<pre class="lyrics">
 Raranga
 , raranga harakeke ee
 Hei kete parareke kuumara ee
@@ -42,6 +43,8 @@ Whakairo
 , whakairo tootara ee
 Hei whakaahua tipuna ee
 Waiata tawhito
+</pre>
+
 
 ## Notes
 Kaitito:

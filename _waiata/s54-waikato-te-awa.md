@@ -17,6 +17,7 @@ order: 54
 ---
 
 ## Kupu
+<pre class="lyrics">
 Katohia he wai mau
 Ka eke ki te Puuaha
 Ko Waikato te awa
@@ -70,6 +71,8 @@ Ki roto ki ngaa wai marino
 O
 Taupoo-nui-a-Tia e
 Kookiri!
+</pre>
+
 
 ## Meaning
 Auee whaia te ara wai a too tupuna a Tia

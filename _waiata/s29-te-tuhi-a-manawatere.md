@@ -17,6 +17,7 @@ order: 29
 ---
 
 ## Kupu
+<pre class="lyrics">
 Te Waka... he huruhuru
 Te Pōhutukawa ..i Wairoa
 He tohu... he whaka-tauki
@@ -27,6 +28,8 @@ A proverb
 The mark left on the pōhutukawa
 tree.
 Te Tuhi waiata
+</pre>
+
 
 ## Meaning
 The mark of Manawatere

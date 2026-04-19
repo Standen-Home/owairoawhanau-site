@@ -17,6 +17,7 @@ order: 31
 ---
 
 ## Kupu
+<pre class="lyrics">
 Pepeha​
 Pepeha options for non-Māori
 Tēnā koutou katoa​
@@ -51,6 +52,8 @@ name
 ​
 Tēnā tātou katoa​
 Tēnā tātou katoa​
+</pre>
+
 
 ## Meaning
 is the mountain

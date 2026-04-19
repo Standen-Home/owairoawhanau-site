@@ -17,6 +17,7 @@ order: 50
 ---
 
 ## Kupu
+<pre class="lyrics">
 Whakarongo mai
 Ki te reo e tangi nei
 E ringihia mai ana
@@ -50,6 +51,8 @@ Anei rā ko ngā hua
 E puāwai ana mai
 Maranga mai...
 video
+</pre>
+
 
 ## Notes
 Chords: E

@@ -17,6 +17,7 @@ order: 47
 ---
 
 ## Kupu
+<pre class="lyrics">
 Matariki, Matariki, e ara e
 Te Maatahii o te tau,
 He kohinga Whetu, I te uma o Ranginui,
@@ -31,6 +32,8 @@ He kohinga Whetu, I te uma o Ranginui,
 E piiataata mai ana, Whakaataata I te rangi
 E tohu ana, I te tau hou Maaori e
 Matariki, Matariki e ara e
+</pre>
+
 
 ## Notes
 Link to

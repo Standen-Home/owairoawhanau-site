@@ -17,6 +17,7 @@ order: 34
 ---
 
 ## Kupu
+<pre class="lyrics">
 ki runga e rere
 Ki raro e rere
 ki te taha e rere
@@ -30,6 +31,8 @@ poi puritia nei - auē titiro mai ki taku pōi – Hī!
 Waiata poi
 Titiro mai
 ki taku poi
+</pre>
+
 
 ## Meaning
 poi puritia nei (back to top)

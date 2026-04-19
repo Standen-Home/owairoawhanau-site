@@ -17,6 +17,7 @@ order: 57
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kaea - Ka tahi
 Katoa - Hai tama Tū tama
 Kaea - Ka rua
@@ -36,6 +37,8 @@ Wahine - Oooo haere mai rā
 Ki ngā rangatahi e
 Oooo haere mai rā
 Ki te āwhina
+</pre>
+
 
 ## Notes
 Kaitito:

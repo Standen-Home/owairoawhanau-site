@@ -17,6 +17,7 @@ order: 19
 ---
 
 ## Kupu
+<pre class="lyrics">
 Tūtira mai ngā iwi
 Tatou tatou e
 Tūtira mai ngā iwi
@@ -28,3 +29,5 @@ Kia tapa tahi
 Kia kotahi rā
 Tatou tatou e
 Tūtira Mai Ngā Iwi
+</pre>
+

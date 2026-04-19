@@ -17,6 +17,7 @@ order: 39
 ---
 
 ## Kupu
+<pre class="lyrics">
 Haere mai rā ngā iwi
 ngā manuhiri e
 Huihui mai ki runga i te marae e
@@ -31,6 +32,8 @@ Te whakapono tūmanako me te aroha
 Kia ū kia mau kia kaha rā 2x (Kia kaha rā - hi aue hī)
 E (capo 2 DAG)
 Rangi: Baby blue
+</pre>
+
 
 ## Notes
 Kaitito: Raymond Wade

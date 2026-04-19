@@ -17,6 +17,7 @@ order: 55
 ---
 
 ## Kupu
+<pre class="lyrics">
 Katohia he wai mau
 Ka eke ki te Puuaha
 Ko Waikato te awa
@@ -60,6 +61,8 @@ Tihei mauri ora
 Tui ana mai he manu rere rangi
 Ki roto ki nga wai marino
 O Taupo-nui-a-tia e
+</pre>
+
 
 ## Meaning
 E hoe to waka ki Ngaruawahia

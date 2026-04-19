@@ -17,4 +17,7 @@ order: 5
 ---
 
 ## Kupu
+<pre class="lyrics">
 Speech of welcome
+</pre>
+

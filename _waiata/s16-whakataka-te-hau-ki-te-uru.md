@@ -17,6 +17,7 @@ order: 16
 ---
 
 ## Kupu
+<pre class="lyrics">
 Whakataka te hau ki te tonga.
 Kia mākinakina ki uta,
 Kia mātaratara ki tai.
@@ -24,6 +25,8 @@ E hī ake ana te ata kura
 he tio, he huka, he hauhū
 Haumi e! Hui e! Taiki e!
 Whakataka te hau
+</pre>
+
 
 ## Meaning
 Cease oh winds of the west and of the south

@@ -17,6 +17,7 @@ order: 40
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kaea - nō reira huakina mai to mānawa ki ahau
 E te tau, e te tau, tahuri mai, tahuri mai
 Karanga, karanga mai anei ahau
@@ -30,6 +31,8 @@ E te tau, e te tau, tahuri mai, tahuri mai
 Karanga, karanga mai anei ahau. nō reira
 Karanga karanga mai anei ahau-------------u
 Tāne - hei titi hei mama (x2)
+</pre>
+
 
 ## Meaning
 Call me, call me and I will hurry home. Heart is yours, heart is yours

@@ -17,10 +17,13 @@ order: 13
 ---
 
 ## Kupu
+<pre class="lyrics">
 Pō Atarau
 Te Pūtorino
 Hei Kōnei Rā
 manuhiri.
+</pre>
+
 
 ## Meaning
 Closing/farewell waiata

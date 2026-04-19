@@ -24,7 +24,10 @@ keywords: ""
 Short explanation of the waiata, where it is used, or what it means.
 
 ## Kupu
+<pre class="lyrics">
 (Full lyrics here.)
+</pre>
+
 
 ## Meaning
 (Optional plain-language explanation or translation.)

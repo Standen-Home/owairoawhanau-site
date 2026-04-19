@@ -17,6 +17,7 @@ order: 24
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kia tau rā
 ngā manaakitanga
 ā te
@@ -32,6 +33,8 @@ whakamaua
 Kia tina! TINA!
 Hui e! TĀIKI E!
 gathered here
+</pre>
+
 
 ## Meaning
 Let the blessings

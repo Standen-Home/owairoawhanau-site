@@ -17,6 +17,7 @@ order: 73
 ---
 
 ## Kupu
+<pre class="lyrics">
 Hoea rā te waka nei o Tainui e
 (te kei ........ Aue....)
 Ōhuiarangi te maunga
@@ -27,3 +28,5 @@ Ko Matariki te whare
 Hoea rā te waka nei o Tainui e
 Haumi ē Hui ē Taiki ē
 Rangiatea Minhinnick
+</pre>
+

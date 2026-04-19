@@ -17,6 +17,7 @@ order: 58
 ---
 
 ## Kupu
+<pre class="lyrics">
 Tākiri ko te ata ki runga Maungatapu
 Kei raro Whakatū, e tātari atu ana
 Kei a koe Koata, te mana motuhake
@@ -27,3 +28,5 @@ Ka whakawhiti Raukawa
 Tau ai ki Whakatū e te iwi Koata
 Ko te waka nei Tainui i tona ūranga e
 Ko te waka nei Tainui i tona ūranga e
+</pre>
+

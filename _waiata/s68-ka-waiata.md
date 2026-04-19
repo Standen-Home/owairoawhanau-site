@@ -17,6 +17,7 @@ order: 68
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ka waiata
 Ki a Maria
 Hine i whakaae
@@ -29,7 +30,7 @@ Ko te Whaea
 Ko te Whaea
 O Te Ao
 (o Te Ao)
-
+</pre>
 
 ## Translation Meaning
 I Sing
@@ -44,7 +45,6 @@ She is the Mother
 She is the Mother
 Of the world
 (of the world)
-
 
 ## Additional Information
 Richard Puanaki (1941-2021) taghut at Catholic schools at Wairoa.  In the mid 1980s he composed several himene, including Ka Waiata, with the help of his whanau singing group Te Whetu o te Rawhiti.

@@ -17,6 +17,7 @@ order: 15
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ki runga, ki tēnā ki tēnā o tātau
 Kia piki te ora
 Kia piki te māramatanga
@@ -29,6 +30,8 @@ Be firm!
 Join together! Gather together!
 Bind as one!
 Karakia whakamutunga
+</pre>
+
 
 ## Meaning
 Settle the care and protection

@@ -17,6 +17,7 @@ order: 25
 ---
 
 ## Kupu
+<pre class="lyrics">
 He korōria
 Maungārongo
 Ki te whenua
@@ -31,6 +32,8 @@ Honour,
 peace
 May good thoughts
 He hōnore
+</pre>
+
 
 ## Meaning
 glory and

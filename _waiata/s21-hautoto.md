@@ -17,6 +17,7 @@ order: 21
 ---
 
 ## Kupu
+<pre class="lyrics">
 Hau toto
 , hau toto,
 Ko Tū, hekea ana,
@@ -30,6 +31,8 @@ Whano, whana,
 Hara mai te toki,
 Haumi e, Hui e, Taiki e
 Mōteatea
+</pre>
+
 
 ## Notes
 Recited by Rangi-Tū-roua

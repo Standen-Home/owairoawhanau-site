@@ -17,6 +17,7 @@ order: 26
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ko te aroha anō he wai
 E pupū ake ana
 He awa e māpuna mai ana
@@ -39,6 +40,8 @@ an incoming tide
 a forceful tide
 a long-lasting tide
 a full tide.
+</pre>
+
 
 ## Meaning
 more info and video

@@ -17,6 +17,7 @@ order: 49
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kei raro i te moana
 Ko Mako me Tūatara
 Kei te matekai, kei te matekai
@@ -29,3 +30,5 @@ Taniwha Taniwha
 Taniwha Taniwha
 Ko Mako Tūatara
 Kei raro i te moana x2
+</pre>
+

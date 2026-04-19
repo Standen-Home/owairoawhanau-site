@@ -17,6 +17,7 @@ order: 44
 ---
 
 ## Kupu
+<pre class="lyrics">
 Māku rā pea
 I will perhaps
 Māku rā pea
@@ -26,6 +27,8 @@ I will support you
 Ki te ara, ara tupu
 Māku koe e awhi e x 2
 I will indeed enfold you. x 2
+</pre>
+
 
 ## Meaning
 On the pathway of spiritual growth

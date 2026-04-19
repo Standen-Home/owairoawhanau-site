@@ -17,6 +17,7 @@ order: 23
 ---
 
 ## Kupu
+<pre class="lyrics">
 E moea iho nei
 E haere ana
 Koe ki pāmamao
@@ -31,6 +32,8 @@ When we must say goodbye
 Soon you'll be sailing
 While your away
 Pō atarau
+</pre>
+
 
 ## Meaning
 I see in a dream

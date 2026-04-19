@@ -17,6 +17,7 @@ order: 22
 ---
 
 ## Kupu
+<pre class="lyrics">
 Te pūtōrino a Raukatauri
 Iri piri runga peka e
 Kei roto ko te puhi o te tangi
@@ -25,6 +26,8 @@ Te tangi hotuhotu, mokemoke
 Mō te tau
 Kua rere nei X2 (second time higher note) D G EM D, G A D
 video
+</pre>
+
 
 ## Notes
 Link to see

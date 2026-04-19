@@ -17,6 +17,7 @@ order: 72
 ---
 
 ## Kupu
+<pre class="lyrics">
 Aue te aroha, aue te aroha
 Ka rere atu nei taku reo powhiri nau mai haere mai
 Ko O Wairoa mātou e mihi atu nei, ki a koutou e
@@ -28,3 +29,5 @@ Aue te aroha, aue te aroha
 Aue te aroha
 Hine Reneti - Ngāti Awa ki Rangitaiki
 Edgecombe
+</pre>
+

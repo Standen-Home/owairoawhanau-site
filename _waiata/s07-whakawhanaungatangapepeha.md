@@ -17,4 +17,7 @@ order: 7
 ---
 
 ## Kupu
+<pre class="lyrics">
 Connecting our new whānau
+</pre>
+

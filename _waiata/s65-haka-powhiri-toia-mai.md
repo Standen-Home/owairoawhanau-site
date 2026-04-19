@@ -17,6 +17,7 @@ order: 65
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kaea: Hei runga hei raro
 Katoa: hī hā hī hā!
 Kaea: ā, tōia mai
@@ -28,3 +29,5 @@ katoa: te waka!
 Katoa: ki te takoto
 runga i takoto ai
 te waka! Hī!
+</pre>
+

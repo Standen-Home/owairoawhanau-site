@@ -17,12 +17,15 @@ order: 4
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ka waiata
 Ngā Whakamoemiti
 He Hōnore
 Hareruia
 Tai aroha
 Hutia
+</pre>
+
 
 ## Meaning
 Hymn

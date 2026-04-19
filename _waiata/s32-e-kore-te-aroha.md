@@ -17,6 +17,7 @@ order: 32
 ---
 
 ## Kupu
+<pre class="lyrics">
 E kore te aroha e taka e
 I waho i taku mānawa e
 Uia e hine, he aha rā, He aroha e
@@ -30,6 +31,8 @@ Ka hoki atu te tau
 Me whakarongo mai rā
 E kore--- D
 You Tūbe
+</pre>
+
 
 ## Notes
 Kaitito:Tuini Ngāwai

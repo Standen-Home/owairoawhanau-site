@@ -17,6 +17,7 @@ order: 35
 ---
 
 ## Kupu
+<pre class="lyrics">
 E PAPA WAIARI
 TAKU NEI MAHI
 TAKU NEI MAHI
@@ -29,3 +30,5 @@ MĀKU E KAUTE
 MĀKU E KAUTE
 Ō HĪKOITANGA
 E papa
+</pre>
+

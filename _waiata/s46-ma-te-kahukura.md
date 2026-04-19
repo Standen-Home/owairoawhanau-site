@@ -17,6 +17,7 @@ order: 46
 ---
 
 ## Kupu
+<pre class="lyrics">
 Echo
 Hōhepa Tamehana
 Mā te kahukura ka rere te manu
@@ -31,6 +32,8 @@ Rere tō tika rere pai
 Rere runga rāwa rā e (Repeat from top)
 Rere tō tika rere pai
 Rere runga rawa rā e
+</pre>
+
 
 ## Notes
 Kaitito:

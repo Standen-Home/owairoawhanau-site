@@ -17,6 +17,7 @@ order: 27
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ngā whakamoemiti
 Whakawhetai - E ihu e
 Mo ōu manaakitanga
@@ -26,6 +27,8 @@ Ka puta ki te oranga
 E te Ariki
 Pai mārire
 Lord everlasting peace
+</pre>
+
 
 ## Meaning
 Praising and giving thanks to Jesus

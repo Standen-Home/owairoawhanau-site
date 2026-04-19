@@ -17,7 +17,10 @@ order: 14
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kia tau te manaakitanga
+</pre>
+
 
 ## Meaning
 Closing karakia

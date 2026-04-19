@@ -17,6 +17,7 @@ order: 43
 ---
 
 ## Kupu
+<pre class="lyrics">
 Tuku iho, tuku iho e
 Te whenua te whenua
 Te oranga, mō te iwi e
@@ -36,6 +37,8 @@ passed down, passed down.
 Faith, hope
 they have been
 passed down, passed down.
+</pre>
+
 
 ## Meaning
 Not the thing

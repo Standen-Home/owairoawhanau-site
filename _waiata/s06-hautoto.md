@@ -17,9 +17,12 @@ order: 6
 ---
 
 ## Kupu
+<pre class="lyrics">
 Supporting waiata
 Hautoto
 Te Tuhi a Manawatere
 Ehara I te mea
 Mā wai rā
 Takiri ko te ata
+</pre>
+

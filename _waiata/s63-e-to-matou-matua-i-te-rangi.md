@@ -17,6 +17,7 @@ order: 63
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kia tapu tōu Ingoa
 Kia tae mai tōu rangatira-tanga.
 Kia meatia tau e pai ai
@@ -41,6 +42,8 @@ Give us back what we have lost
 Do nōt lead us into temptation
 May we be whole, away from things evil
 the pōwer and the glory
+</pre>
+
 
 ## Meaning
 The Lords Prayer

@@ -17,9 +17,12 @@ order: 3
 ---
 
 ## Kupu
+<pre class="lyrics">
 Whakataka te hau
 He hōnore
 Kia tau
+</pre>
+
 
 ## Meaning
 Opening karakia

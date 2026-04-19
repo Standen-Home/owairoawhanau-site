@@ -17,6 +17,7 @@ order: 51
 ---
 
 ## Kupu
+<pre class="lyrics">
 Listen
 from my eyes
 Don't hold any anger
@@ -28,6 +29,8 @@ i
 ripi Cope (Ngāti Pakau from Te Mahurehure, southern Hokianga).
 It was written because he was annoyed that the language of his people was nōt being taught enough.
 P
+</pre>
+
 
 ## Meaning
 to the voice that is crying out

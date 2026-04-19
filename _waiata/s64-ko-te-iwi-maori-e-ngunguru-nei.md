@@ -17,6 +17,9 @@ order: 64
 ---
 
 ## Kupu
+<pre class="lyrics">
 ī au au aue hā
 Ko te iwi Māori e ngunguru nei
 ī au au aue hāau au aue hā
+</pre>
+

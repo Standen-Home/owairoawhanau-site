@@ -17,6 +17,7 @@ order: 70
 ---
 
 ## Kupu
+<pre class="lyrics">
 Hutia te rito o te harakeke - Kei whea te kōmako, e ko - Kī mai ki ahau - He aha te mea nui, te mea nui o tēnei ao
 Māku e kī atu ki a koe - He tāngata he tāngata
 He aha te mea nui te mea nui o tēnei ao
@@ -35,3 +36,5 @@ O te harakeke
 Kei whea
 Te komako, e ko
 Ki mai ki ahau
+</pre>
+

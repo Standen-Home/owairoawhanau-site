@@ -17,6 +17,7 @@ order: 74
 ---
 
 ## Kupu
+<pre class="lyrics">
 He aha... te mea nui Ko huri te ao
 Me pēwhea te ako Te Kotahitanga
 Te Ao Kohatu O Nehera
@@ -26,3 +27,5 @@ Whakarongo whakapono he tohu manawa
 Mauria mai Te aroha na taonga tuku iho
 Pupuritia ngā korero x 2
 Taini Drummond
+</pre>
+

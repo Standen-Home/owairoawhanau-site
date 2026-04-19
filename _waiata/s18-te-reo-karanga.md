@@ -17,6 +17,7 @@ order: 18
 ---
 
 ## Kupu
+<pre class="lyrics">
 Te reo karanga o te rā
 Te wero te wero
 Te takina
@@ -33,3 +34,5 @@ Te mātauranga o te pakeha
 Me ngā tikanga Māori
 A o tīpuna e
 Hikitia manaakitia*
+</pre>
+

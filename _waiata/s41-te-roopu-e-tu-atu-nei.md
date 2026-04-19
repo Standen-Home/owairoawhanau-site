@@ -17,6 +17,7 @@ order: 41
 ---
 
 ## Kupu
+<pre class="lyrics">
 Te roopu e Tū atu nei
 Ehara nō konei
 Tāhurihuri noa ahau
@@ -30,6 +31,8 @@ Karanga mai rā kia mātou
 E noho pani nei
 Karanga mai rā kia mātou
 Homai tō ringa e
+</pre>
+
 
 ## Meaning
 Homai to ringa e

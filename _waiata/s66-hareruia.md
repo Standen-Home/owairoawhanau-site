@@ -17,6 +17,7 @@ order: 66
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ka Kooingo, ka mahara
 Ki te mauri o Te Atua
 E te kamaka e te kaiwhakaora
@@ -28,6 +29,8 @@ Hareruia, hareruia, hareruia, hareruia, hareruia
 You tube link
 The Māori lyrics to
 Hareruia
+</pre>
+
 
 ## Meaning
 were penned by Rev Te Hira Paenga, who is of Ngati Porou and Ngapuhi descent.

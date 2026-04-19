@@ -17,6 +17,7 @@ order: 61
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kotahi kapua ki te rangi
 He marangai ki te whenua (whenua)
 Kotahi kapua ki te rangi
@@ -26,6 +27,8 @@ E kore koe e ngaro
 Tāku reo rangatira
 Tāku reo rangatira
 You tube link
+</pre>
+
 
 ## Meaning
 Just one cloud in the sky can give a life giving shower of rain on the land, on the land

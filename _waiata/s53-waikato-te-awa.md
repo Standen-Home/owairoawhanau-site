@@ -17,7 +17,10 @@ order: 53
 ---
 
 ## Kupu
+<pre class="lyrics">
 (Add kupu here.)
+</pre>
+
 
 ## Notes
 Kaitito:Rangi Harrison 1962

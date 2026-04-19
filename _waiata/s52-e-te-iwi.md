@@ -17,6 +17,7 @@ order: 52
 ---
 
 ## Kupu
+<pre class="lyrics">
 Kia hiwa rā, kia hiwa rā
 Kia hiwa rā ki te Taitokerau
 Kia hiwa rā ki te Hauāuru
@@ -36,6 +37,8 @@ Hei whakāta ai
 C G AM F
 Wahine tane split
 Rangi: auld lang syne
+</pre>
+
 
 ## Meaning
 Lead in guitar last line then hum

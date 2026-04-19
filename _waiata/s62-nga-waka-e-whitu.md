@@ -17,6 +17,7 @@ order: 62
 ---
 
 ## Kupu
+<pre class="lyrics">
 Ngā waka e whitu
 E tau nei
 Hoea hoea rā
@@ -29,3 +30,5 @@ I hoea rā,
 O tātou tūpuna
 O tātou tūpuna
 You tube link
+</pre>
+
