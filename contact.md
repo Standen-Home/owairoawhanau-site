@@ -6,10 +6,21 @@ permalink: /contact/
 ---
 
 ## Contact
-- Name/Role: {{ site.data.contacts.primary.name }} {{ site.data.contacts.primary.role }}
-- Email: {{ site.data.contacts.primary.email }}
+If you need to get in touch, you can email us or use the form below.
 
-## Location
-{{ site.data.contacts.location.name }}
+- Email: <a href="mailto:kate@owairoawhanau.co.nz">kate@owairoawhanau.co.nz</a>
 
-{{ site.data.contacts.location.address }}
+---
+
+## Form
+<div class="form-embed">
+  <iframe
+    title="Contact form"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfdaMc2MHGhwRULXrqKbK99jAtct4xZAMV_bQ3qHg1opsbBFg/viewform?embedded=true"
+    loading="lazy"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+    Loading…
+  </iframe>
+</div>

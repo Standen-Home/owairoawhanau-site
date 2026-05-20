@@ -212,3 +212,7 @@ input[type="search"], select{
 .resource-card{background:#fff;border:1px solid var(--border);border-radius: var(--radius);padding:.9rem}
 .resource-card h3{margin:.1rem 0 .35rem 0}
 .resource-card p{margin:0;color:var(--muted)}
+
+/* Google Form embed */
+.form-embed{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden}
+.form-embed iframe{width:100%;height: min(85vh, 1904px); border:0; display:block}
