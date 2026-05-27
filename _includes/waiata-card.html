@@ -4,11 +4,12 @@
   data-category="{{ waiata.category | default: '' | escape }}"
   data-tags="{{ waiata.tags | join: ',' | escape }}">
 
-  {% if waiata.category %}
-    <div class="waiata-cat">{{ waiata.category | capitalize }}</div>
-  {% endif %}
-
-  <h3><a href="{{ waiata.url | relative_url }}">{{ waiata.title }}</a></h3>
+  <div class="waiata-title-row">
+    <h3><a href="{{ waiata.url | relative_url }}">{{ waiata.title }}</a></h3>
+    {% if waiata.category %}
+      <div class="waiata-cat">{{ waiata.category | capitalize }}</div>
+    {% endif %}
+  </div>
 
   <div class="waiata-meta">
     {% if waiata.video_url and waiata.video_url != "" %}

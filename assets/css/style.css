@@ -76,13 +76,13 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
   padding:1.6rem;
   box-shadow: 0 14px 40px rgba(0,0,0,.06);
 }
-.hero h1{margin:0 0 .35rem 0;font-size: clamp(1.8rem, 3.9vw, 2.7rem); letter-spacing: .2px; font-family: Fraunces, Inter, system-ui, serif}
+.hero h1{margin:0 0 .35rem 0;font-size: clamp(1.8rem, 3.9vw, 2.7rem); letter-spacing: .2px; font-family: "Noto Serif", Inter, system-ui, serif}
 .hero p{margin:.2rem 0 0 0;color:var(--muted);max-width:60ch}
 
 .grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:1rem}
 .card{grid-column: span 6;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow: 0 10px 26px rgba(0,0,0,.05)}
 .card:hover{box-shadow: 0 16px 44px rgba(0,0,0,.08); transform: translateY(-1px)}
-.card h2{margin:.1rem 0 .35rem 0;font-size:1.1rem; font-family: Fraunces, Inter, system-ui, serif}
+.card h2{margin:.1rem 0 .35rem 0;font-size:1.1rem; font-family: "Noto Serif", Inter, system-ui, serif}
 .card p{margin:0;color:var(--muted)}
 @media (max-width:760px){.card{grid-column: span 12}}
 
@@ -103,17 +103,23 @@ input[type="search"], select{
 .waiata-list{display:grid;grid-template-columns:repeat(12, 1fr);gap:1rem;margin-top:1rem}
 .waiata-card{grid-column: span 6;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow: 0 10px 26px rgba(0,0,0,.05); position: relative}
 .waiata-card:hover{box-shadow: 0 16px 44px rgba(0,0,0,.08); transform: translateY(-1px)}
-.waiata-card h3{margin:.1rem 0 .3rem 0; font-family: Fraunces, Inter, system-ui, serif}
+.waiata-card h3{margin:0; font-family: "Noto Serif", Inter, system-ui, serif}
 
-/* Category label (top-right, not a badge) */
+/* Title row: title left, category right */
+.waiata-title-row{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  margin: .1rem 0 .3rem 0;
+}
+
+/* Category label (small, inline, hard-right) */
 .waiata-cat{
-  position:absolute;
-  top:.85rem;
-  right:.9rem;
   font-size: .82rem;
   letter-spacing: .3px;
   color: color-mix(in srgb, var(--muted), var(--black) 12%);
-  background: transparent;
+  white-space: nowrap;
 }
 .waiata-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:.45rem 0 0 0}
 .waiata-meta .badge{font-size:.82rem}
