@@ -161,6 +161,13 @@ input[type="search"], select{
   background: color-mix(in srgb, var(--accent), var(--black) 12%);
 }
 
+/* Larger CTA button */
+.btn-lg{
+  padding: .7rem 1.05rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+}
+
 .btn-ghost{background:transparent}
 
 .calendar-shell{

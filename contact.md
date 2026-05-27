@@ -13,20 +13,7 @@ If you need to get in touch, you can email us or use the form below.
 ---
 
 <div class="footer-actions" style="margin: 1rem 0;">
-  <button class="btn btn-primary" type="button" data-modal-open="contact-modal">Get In Touch</button>
-</div>
-
-## Form
-<div class="form-embed">
-  <iframe
-    title="Contact form"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSeCnQPPgmWyy-47jS9Qcbg-_efgm-nqTvu1joSTnGytM7u2GQ/viewform?embedded=true"
-    loading="lazy"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0">
-    Loading…
-  </iframe>
+  <button class="btn btn-primary btn-lg" type="button" data-modal-open="contact-modal">Get In Touch</button>
 </div>
 
 <div class="modal" id="contact-modal" aria-hidden="true">
