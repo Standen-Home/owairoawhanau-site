@@ -1,6 +1,7 @@
 ---
 layout: waiata
 title: "Hei konei rā"
+title_en: "Hei konei rā"
 slug: "hei-konei-ra"
 category: poroporoaki
 tags:
