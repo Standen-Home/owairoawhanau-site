@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
+<section class="hero">
+  <div class="hero-box">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.title_en %}<div class="page-title-en">{{ page.title_en }}</div>{% endif %}
+  </div>
+</section>
+
 <article class="prose">
-  <header class="page-head">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {% if page.title_en %}<div class="page-title-en">{{ page.title_en }}</div>{% endif %}
-</header>
 
   {% if page.public == false %}
     <div class="protect-note" role="note">
