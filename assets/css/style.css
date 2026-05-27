@@ -101,9 +101,20 @@ input[type="search"], select{
 }
 
 .waiata-list{display:grid;grid-template-columns:repeat(12, 1fr);gap:1rem;margin-top:1rem}
-.waiata-card{grid-column: span 6;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow: 0 10px 26px rgba(0,0,0,.05)}
+.waiata-card{grid-column: span 6;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow: 0 10px 26px rgba(0,0,0,.05); position: relative}
 .waiata-card:hover{box-shadow: 0 16px 44px rgba(0,0,0,.08); transform: translateY(-1px)}
 .waiata-card h3{margin:.1rem 0 .3rem 0; font-family: Fraunces, Inter, system-ui, serif}
+
+/* Category label (top-right, not a badge) */
+.waiata-cat{
+  position:absolute;
+  top:.85rem;
+  right:.9rem;
+  font-size: .82rem;
+  letter-spacing: .3px;
+  color: color-mix(in srgb, var(--muted), var(--black) 12%);
+  background: transparent;
+}
 .waiata-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:.45rem 0 0 0}
 .waiata-meta .badge{font-size:.82rem}
 @media (max-width:760px){.waiata-card{grid-column: span 12}}
