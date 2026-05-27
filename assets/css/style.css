@@ -1,12 +1,21 @@
 :root{
-  --bg:#fbfaf7;
-  --ink:#1b1b1b;
-  --muted:#5b5b5b;
-  --accent:#2a6f5e;
-  --accent2:#b8860b;
-  --card:#ffffff;
-  --border:#e7e2d8;
-  --focus:#1d4ed8;
+  /* Brand palette (from wharenui photo) */
+  --gold: #d8b85f;   /* Metallic Gold */
+  --black: #090303;  /* Pitch Black */
+  --brandy: #85200e; /* Brandy (red/brown) */
+  --cyan: #0e92b0;   /* Pacific Cyan */
+  --khaki: #b09b80;  /* Khaki Beige */
+
+  /* Site theme (mapped from palette) */
+  --bg: #fbfaf7;            /* warm off-white background */
+  --ink: var(--black);      /* main text */
+  --muted: #5b524b;         /* softer ink (warm grey) */
+  --accent: var(--cyan);    /* links + primary accents */
+  --accent2: var(--gold);   /* secondary accent */
+  --card: #ffffff;
+  --border: #e7dfd2;        /* warm border to suit khaki/gold */
+  --focus: var(--cyan);     /* accessible focus ring */
+
   --max: 980px;
   --radius: 14px;
 }
@@ -23,7 +32,7 @@ body{
 .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem 1rem;background:#fff;border:2px solid var(--focus);border-radius:10px;z-index:999}
 
 a{color:var(--accent);text-decoration-thickness: 2px; text-underline-offset: 3px}
-a:hover{text-decoration-thickness:3px}
+a:hover{color: color-mix(in srgb, var(--accent), var(--black) 15%); text-decoration-thickness:3px}
 a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 
 .container{max-width:var(--max);margin:0 auto;padding:0 1rem}
@@ -130,7 +139,18 @@ input[type="search"], select{
   text-decoration:none;
   font-weight:650;
 }
-.btn:hover{border-color:#d7d0c3}
+.btn:hover{border-color: color-mix(in srgb, var(--border), var(--black) 18%)}
+
+/* Primary button (brand cyan) */
+.btn-primary{
+  background: var(--accent);
+  border-color: color-mix(in srgb, var(--accent), var(--black) 18%);
+  color: #fff;
+}
+.btn-primary:hover{
+  background: color-mix(in srgb, var(--accent), var(--black) 12%);
+}
+
 .btn-ghost{background:transparent}
 
 .calendar-shell{

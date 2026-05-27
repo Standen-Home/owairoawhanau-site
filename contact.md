@@ -13,7 +13,7 @@ If you need to get in touch, you can email us or use the form below.
 ---
 
 <div class="footer-actions" style="margin: 1rem 0;">
-  <button class="btn" type="button" data-modal-open="contact-modal">Get In Touch</button>
+  <button class="btn btn-primary" type="button" data-modal-open="contact-modal">Get In Touch</button>
 </div>
 
 ## Form
