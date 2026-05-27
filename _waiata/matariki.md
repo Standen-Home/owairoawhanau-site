@@ -2,7 +2,7 @@
 layout: 'waiata'
 title: 'Matariki'
 slug: "matariki"
-category: 'haka'
+category: 'Waiata'
 tags:
   - Matariki
   - Waiata Wednesday Rōpū
