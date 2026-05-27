@@ -49,7 +49,7 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 .nav a{padding:.35rem .55rem;border-radius:10px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:.05rem}
 .nav-mi{font-weight:650}
 .nav-en{font-size:.82rem;color:var(--muted)}
-.nav a[aria-current="page"], .nav a:hover{background:#fff;border:1px solid var(--border)}
+.nav a[aria-current="page"], .nav a:hover{background:color-mix(in srgb, var(--khaki), #ffffff 86%);border:1px solid var(--border)}
 
 @media (max-width: 760px){
   .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--border);border-radius:12px;padding:.45rem .7rem}
@@ -59,7 +59,7 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 }
 
 .hero{padding:2.2rem 0 1.2rem 0}
-.hero-box{background:linear-gradient(135deg, #ffffff, #fff6e5);border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem}
+.hero-box{background:linear-gradient(135deg, #ffffff, color-mix(in srgb, var(--gold), #ffffff 78%));border:1px solid var(--border);border-radius:var(--radius);padding:1.4rem}
 .hero h1{margin:0 0 .35rem 0;font-size: clamp(1.6rem, 3.5vw, 2.4rem)}
 .hero p{margin:.2rem 0 0 0;color:var(--muted);max-width:60ch}
 
@@ -72,7 +72,7 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 .section{padding: 1rem 0 2rem 0}
 .section h2{margin:0 0 .6rem 0}
 
-.badge{display:inline-block;padding:.12rem .5rem;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted);font-size:.85rem}
+.badge{display:inline-block;padding:.12rem .5rem;border-radius:999px;border:1px solid var(--border);background:color-mix(in srgb, var(--gold), #ffffff 86%);color:color-mix(in srgb, var(--muted), var(--black) 20%);font-size:.85rem}
 
 .waiata-controls{display:flex;gap:.7rem;flex-wrap:wrap;align-items:end}
 .field{display:flex;flex-direction:column;gap:.25rem}
@@ -88,7 +88,17 @@ input[type="search"], select{
 .waiata-meta .badge{font-size:.82rem}
 @media (max-width:760px){.waiata-card{grid-column: span 12}}
 
-.protect-note{margin:1rem 0;padding:.8rem 1rem;border-radius:12px;border:1px solid #f0d7a6;background:#fff6e5}
+.protect-note{margin:1rem 0;padding:.8rem 1rem;border-radius:12px;border:1px solid color-mix(in srgb, var(--gold), var(--khaki) 30%);background:color-mix(in srgb, var(--gold), #ffffff 84%)}
+
+/* Important callout (uses Brandy sparingly) */
+.callout-important{
+  margin: 1rem 0;
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--brandy), #ffffff 55%);
+  background: color-mix(in srgb, var(--brandy), #ffffff 92%);
+}
+.callout-important strong{color: var(--brandy)}
 
 .site-footer{border-top:1px solid var(--border);padding:1.6rem 0;color:var(--muted);font-size:.95rem}
 
