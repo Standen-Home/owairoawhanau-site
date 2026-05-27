@@ -10,9 +10,11 @@
     {% if waiata.category %}
       <span class="badge">{{ waiata.category }}</span>
     {% endif %}
-    {% for t in waiata.tags %}
-      <span class="badge">{{ t }}</span>
-    {% endfor %}
+
+    {% if waiata.video_url and waiata.video_url != "" %}
+      <a class="badge badge-link" href="{{ waiata.video_url }}" rel="noopener">YouTube</a>
+    {% endif %}
+
     {% if waiata.difficulty %}
       <span class="badge">{{ waiata.difficulty }}</span>
     {% endif %}
