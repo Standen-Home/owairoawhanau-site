@@ -5,35 +5,10 @@
       <p class="footer-en">{{ site.data.site-settings.site_note_en }}</p>
     {% endif %}
     <div class="footer-actions">
-      <button class="btn btn-primary" type="button" data-modal-open="newsletter-modal">Newsletter Sign Up</button>
+      <button class="btn btn-primary" type="button" onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', 'XGX9qF']);">Newsletter Sign Up</button>
     </div>
     <p class="footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
   </div>
 </footer>
-
-<div class="modal" id="newsletter-modal" aria-hidden="true">
-  <div class="modal-backdrop" data-modal-close></div>
-  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="newsletter-title">
-    <div class="modal-head">
-      <div>
-        <div id="newsletter-title" class="modal-title">Newsletter Sign Up</div>
-        <div class="modal-sub">Use this form to sign up for updates.</div>
-      </div>
-      <button class="btn btn-ghost" type="button" data-modal-close aria-label="Close">Close</button>
-    </div>
-
-    <div class="modal-body">
-      <div class="form-embed">
-        <iframe
-          title="Newsletter sign up form"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfdaMc2MHGhwRULXrqKbK99jAtct4xZAMV_bQ3qHg1opsbBFg/viewform?embedded=true"
-          loading="lazy"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0">Loading…</iframe>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="{{ '/assets/js/modal.js' | relative_url }}" defer></script>
