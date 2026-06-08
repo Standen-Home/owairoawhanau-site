@@ -9,7 +9,7 @@ tags:
   - Waiata Wednesday Rōpū
 composer: "Taini Drummond"
 source: "PowerPoint import"
-featured: false
+featured: true
 public: true
 audio: ""
 pdf: ""

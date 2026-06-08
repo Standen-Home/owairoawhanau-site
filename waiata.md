@@ -17,6 +17,7 @@ permalink: /waiata/
   {% endif %}
 </div>
 
+## All Waiata
 <div class="waiata-controls">
   <div class="field">
     <label for="waiata-q">Search</label>

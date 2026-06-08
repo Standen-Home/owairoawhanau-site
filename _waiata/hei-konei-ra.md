@@ -9,7 +9,7 @@ tags:
   - Waiata Wednesday Rōpū
 composer: ""
 source: "PowerPoint import"
-featured: true
+featured: false
 public: true
 audio: ""
 pdf: ""
