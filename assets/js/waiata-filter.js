@@ -2,7 +2,7 @@
   const q = document.getElementById('waiata-q');
   const cat = document.getElementById('waiata-category');
   const tag = document.getElementById('waiata-tag');
-  const cards = Array.from(document.querySelectorAll('[data-waiata-card]'));
+  const cards = Array.from(document.querySelectorAll('#waiata-all-list [data-waiata-card]'));
 
   function norm(s){return (s||'').toLowerCase().trim();}
 

@@ -60,7 +60,7 @@ permalink: /waiata/
 
 <hr style="border:none; border-top:1px solid var(--border); margin: 1.2rem 0">
 
-<div class="waiata-list">
+<div class="waiata-list" id="waiata-all-list">
   {% assign waiata_public = site.waiata | where: "public", true | sort: "order" %}
   {% for waiata in waiata_public %}
     {% include waiata-card.html waiata=waiata %}
