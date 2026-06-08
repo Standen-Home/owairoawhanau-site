@@ -8,7 +8,7 @@ tags:
   - Waiata Wednesday Rōpū
 composer: "Tuini Ngawai"
 source: "PowerPoint import"
-featured: true
+featured: false
 public: true
 audio: ""
 pdf: ""
