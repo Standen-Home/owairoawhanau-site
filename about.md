@@ -4,7 +4,7 @@ title: "Mō Mātou"
 title_en: "About"
 permalink: /about/
 ---
-##Ngā hau e whā, whānau from the four winds
+## Ngā hau e whā, whānau from the four winds
 
 Ō Wairoa Whānau is a community made up of ngā hau e whā, whānau who come from many places, cultures, histories, and whakapapa. Some of us whakapapa Māori to iwi and rohe beyond Tāmaki Makaurau. Some of us are urban Māori who are still finding, learning, or reconnecting with their whakapapa. Some of us are tauiwi, learning how to stand respectfully in this place.
 
