@@ -12,8 +12,28 @@ layout: default
 <section class="section">
   <div class="grid">
     <div class="card">
-      <h2>Next practice</h2>
+      <h2>Next Waiata practice</h2>
       <p>Check the Calendar page for the next Waiata Wednesday practice details.</p>
+      {% assign events = site.data.calendar_events | sort: "start" %}
+      {% if events and events.size > 0 %}
+        <ul class="event-agenda">
+          {% for event in events limit:1 %}
+            <li>
+              <strong>{{ event.summary }}</strong>
+              <time datetime="{{ event.start }}">{{ event.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
+              {% if event.location %}
+                <p class="event-note">{{ event.location }}</p>
+              {% endif %}
+              {% if event.url %}
+                <p><a class="event-link" href="{{ event.url }}" target="_blank" rel="noopener">View details</a></p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="event-note">Showing the next Waiata event. <a href="https://calendar.google.com/calendar/u/0?cid={{ site.google_calendar.id }}" target="_blank" rel="noopener">Open the full calendar</a>.</p>
+      {% else %}
+        <p class="muted">No upcoming Waiata events were found. Check the Calendar page for details.</p>
+      {% endif %}
     </div>
     <div class="card">
       <h2>Featured waiata</h2>

@@ -92,6 +92,12 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 .card:hover{box-shadow: 0 16px 44px rgba(0,0,0,.08); transform: translateY(-1px)}
 .card h2{margin:.1rem 0 .35rem 0;font-size:1.1rem; font-family: "Noto Serif", Inter, system-ui, serif}
 .card p{margin:0;color:var(--muted)}
+.event-agenda{margin-top:1rem}
+.event-agenda ul{list-style:none;margin:0;padding:0}
+.event-agenda li{margin-bottom:.85rem}
+.event-agenda time{display:block;font-size:.95rem;color:var(--muted);margin:.25rem 0}
+.event-agenda .event-link{display:inline-block;margin-top:.25rem;color:var(--accent)}
+.event-agenda .event-note{margin:.35rem 0 0 0;color:var(--muted);font-size:.95rem}
 @media (max-width:760px){.card{grid-column: span 12}}
 
 .section{padding: 1rem 0 2rem 0}
