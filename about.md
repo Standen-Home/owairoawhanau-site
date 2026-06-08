@@ -4,8 +4,15 @@ title: "Mō Mātou"
 title_en: "About"
 permalink: /about/
 ---
+##Ngā hau e whā, whānau from the four winds
+
+Ō Wairoa Whānau is a community made up of ngā hau e whā, whānau who come from many places, cultures, histories, and whakapapa. Some of us whakapapa Māori to iwi and rohe beyond Tāmaki Makaurau. Some of us are urban Māori who are still finding, learning, or reconnecting with their whakapapa. Some of us are tauiwi, learning how to stand respectfully in this place.
+
+We aim to create a safe, welcoming space where whānau can learn, belong, and grow together. As part of that, we acknowledge and give respect to Ngāi Tai ki Tāmaki, tangata whenua of this rohe. We honour the mātauranga, tikanga, whakapapa, and mana of Ngāi Tai ki Tāmaki, and seek to learn in a way that is humble, respectful, and grounded in care for the people and place we gather in.  
 
 This site was started to support the **Waiata Wednesday Rōpū and Whanau of Ō Wairoa Marae** — a place to learn, practise, and share waiata in a way that’s warm, respectful, and easy for our community to join.
+
+We recognise that respectful learning takes time, relationship, and care. As our kaupapa grows and we gather the resources to support it well, we remain open to guidance and will actively seek that guidance as time, capacity, and relationships allow.
 
 ## How our rōpū often runs
 We meet on a Wednesday evening unless notifyed of a change.
