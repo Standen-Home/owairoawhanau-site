@@ -17,19 +17,20 @@ This is an unofficial whānau website. It does not speak on behalf of Ō Wairoa 
 We recognise that respectful learning takes time, relationship, and care. As our kaupapa grows and we gather the resources to support it well, we remain open to guidance and will actively seek that guidance as time, capacity, and relationships allow.
 
 ## How our rōpū often runs
-We meet on a Wednesday evening unless notifyed of a change.
+We meet on a Wednesday evening unless notified of a change.
 
 We follow a simple flow:
  - Karakia
  - Whaikōrero; Speech of Welcome
  - Waiata Tautoko; Supporting Waiata
  - Whakawhanaungatanga / Pepeha; Introductions and connecting with new whānau
- - Panui; Notices
+ - Pānui; Notices
  - Waiata; Singing
- - Karakia 
+ - Karakia
+
 The full outline and templates (pepeha, etc.) are in **[Rauemi](/resources/)**.
 
-We also help to support events that happen at the Marae by lending our time, voices, prescense and mahi before, during or after. 
+We also help to support events that happen at the marae by lending our time, voices, presence and mahi before, during, or after.
 We will be adding tikanga notes for our new whānau in **[Rauemi](/resources/)**.
 
 ## Tikanga / Respectful Use
