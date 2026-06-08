@@ -10,7 +10,9 @@ permalink: /about/
 
 We aim to create a safe, welcoming space where whānau can learn, belong, and grow together. As part of that, we acknowledge and give respect to Ngāi Tai ki Tāmaki, tangata whenua of this rohe. We honour the mātauranga, tikanga, whakapapa, and mana of Ngāi Tai ki Tāmaki, and seek to learn in a way that is humble, respectful, and grounded in care for the people and place we gather in.  
 
-This site was started to support the **Waiata Wednesday Rōpū and Whanau of Ō Wairoa Marae** — a place to learn, practise, and share waiata in a way that’s warm, respectful, and easy for our community to join.
+This site was started to support the Waiata Wednesday Rōpū and whānau of Ō Wairoa Marae. It is a whānau-led, marae-supported space, created to help our community learn, practise, and share waiata in a way that is warm, respectful, and easy to join. 
+
+This is an unofficial whānau website. It does not speak on behalf of Ō Wairoa Marae Trust, Ngāi Tai ki Tāmaki, or Auckland Council, but exists to support whānau learning and connection around Waiata Wednesday.
 
 We recognise that respectful learning takes time, relationship, and care. As our kaupapa grows and we gather the resources to support it well, we remain open to guidance and will actively seek that guidance as time, capacity, and relationships allow.
 
