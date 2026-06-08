@@ -65,12 +65,18 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
   /* Full-bleed banner */
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding:2.2rem 0 1.2rem 0;
-  background:
-    radial-gradient(1200px 500px at 20% 10%, color-mix(in srgb, var(--cyan), var(--bg) 100%), var(--bg) 55%),
-    radial-gradient(900px 400px at 80% 30%, color-mix(in srgb, var(--gold), var(--bg) 100%), var(--bg) 60%),
-    linear-gradient(135deg, var(--bg), color-mix(in srgb, var(--khaki), var(--bg) 85%));
-  border-bottom: 1px solid var(--border);
+    padding: 2.2rem 0 1.2rem 0;
+    /* Fallback for older browsers: use rgba blends so something visible shows */
+    background:
+      radial-gradient(1200px 500px at 20% 10%, rgba(33,128,181,0.12) 0%, rgba(33,128,181,0) 55%),
+      radial-gradient(900px 400px at 80% 30%, rgba(239,206,43,0.12) 0%, rgba(239,206,43,0) 60%),
+      linear-gradient(135deg, var(--bg), rgba(176,155,128,0.06));
+    /* Preferred richer gradients for modern browsers */
+    background:
+      radial-gradient(1200px 500px at 20% 10%, color-mix(in srgb, var(--cyan), var(--bg) 84%), var(--bg) 55%),
+      radial-gradient(900px 400px at 80% 30%, color-mix(in srgb, var(--gold), var(--bg) 82%), var(--bg) 60%),
+      linear-gradient(135deg, var(--bg), color-mix(in srgb, var(--khaki), var(--bg) 85%));
+    border-bottom: 1px solid var(--border);
 }
 .hero-box{
   /* Inner content container (keeps text aligned with rest of page) */
