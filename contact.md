@@ -8,10 +8,10 @@ permalink: /contact/
 ## Contact
 If you need to get in touch, you can email us or use the form below.
 
-- Email: <a href="mailto:kate@owairoawhanau.co.nz">kate@owairoawhanau.co.nz</a>
+- Email: <a href="mailto:info@owairoawhanau.co.nz">info@owairoawhanau.co.nz</a>
 
 ---
 
-<div class="footer-actions" style="margin: 1rem 0;">
+<div class="footer-actions">
   <button class="btn btn-primary btn-lg" type="button" onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', 'REDG5z']);">Get In Touch</button>
 </div>

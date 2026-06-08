@@ -14,28 +14,30 @@ This site was started to support the Waiata Wednesday Rōpū and whānau of Ō W
 
 This is an unofficial whānau website. It does not speak on behalf of Ō Wairoa Marae Trust, Ngāi Tai ki Tāmaki, or Auckland Council, but exists to support whānau learning and connection around Waiata Wednesday.
 
-We recognise that respectful learning takes time, relationship, and care. As our kaupapa grows and we gather the resources to support it well, we remain open to guidance and will actively seek that guidance as time, capacity, and relationships allow.
-
 ## How our rōpū often runs
-We meet on a Wednesday evening unless notified of a change.
+We meet on Wednesday evenings during the school term, unless notified of a change.
 
 We follow a simple flow:
  - Karakia
- - Whaikōrero; Speech of Welcome
- - Waiata Tautoko; Supporting Waiata
+ - Whaikōrero; Speech of welcome
+ - Waiata tautoko; Supporting waiata
  - Whakawhanaungatanga / Pepeha; Introductions and connecting with new whānau
  - Pānui; Notices
  - Waiata; Singing
  - Karakia
 
-The full outline and templates (pepeha, etc.) are in **[Rauemi](/resources/)**.
+The full outline and templates, including pepeha, are in **[Rauemi](/resources/)**.
 
-We also help to support events that happen at the marae by lending our time, voices, presence and mahi before, during, or after.
+We also support events that happen at the marae by lending our time, voices, presence and mahi before, during, or after.
 We will be adding tikanga notes for our new whānau in **[Rauemi](/resources/)**.
 
 ## Tikanga / Respectful Use
 This site is a collection of information that whānau have been given or found that are helpful in our local space as we continue to grow, learn and collaborate together.
 
-If you have any concerns, corrections or guidance on our resources, please get in touch.
+We recognise that respectful learning takes time, relationship, and care. As our kaupapa grows and we gather the resources to support it well, we remain open to guidance and will actively seek that guidance as time, capacity, and relationships allow.
+
+Corrections, guidance, and attribution welcome.
+
+If you do have any concerns, corrections or guidance on our resources, please get in touch via our **[Whakapā](/contact/)** page.
 
 Please use and share these resources appropriately.
