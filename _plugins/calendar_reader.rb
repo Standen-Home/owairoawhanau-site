@@ -26,10 +26,13 @@ module Jekyll
       window_end = window_start + (months_ahead * 31 * 24 * 60 * 60)
 
       generator = CalendarFeed.new(calendar_url, window_start: window_start, window_end: window_end, max_events: max_events)
-      site.data["calendar_events"] = generator.events
+      events = generator.events
+      Jekyll.logger.info("Calendar Reader:", "Loaded #{events.size} event(s) from #{calendar_url}")
+      Jekyll.logger.warn("Calendar Reader:", "No upcoming events were found in the configured window.") if events.empty?
+      site.data["calendar_events"] = events
     rescue StandardError => e
       Jekyll.logger.error("Calendar Reader:", "Error reading calendar: #{e.message}")
-      site.data["calendar_events"] ||= []
+      raise e
     end
 
     private
