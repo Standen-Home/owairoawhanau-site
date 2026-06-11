@@ -35,6 +35,8 @@ defaults:
 
 google_calendar:
   id: "c_135be84f9af8db2cf3f25fad81c2cebeae12b25e8281480aa737a95ce54f54c0@group.calendar.google.com"
+  months_ahead: 12
+  max_events: 100
   # Uses the public ICS feed; no API key is needed for a public calendar.
 
 plugins: []

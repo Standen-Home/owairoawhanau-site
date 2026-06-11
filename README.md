@@ -55,18 +55,15 @@ order: 10
 ```
 
 ## Calendar events
-Run the fetch script to populate the homepage agenda from the public Google Calendar ICS feed:
+The site reads the public Google Calendar ICS feed during the Jekyll build using `_plugins/calendar_reader.rb`.
 
-```bash
-python scripts/fetch-calendar-events.py
-```
-
-This writes `_data/calendar_events.json`, which the home page reads when the site builds.
+Recurring events are expanded at build time so future instances from repeating calendar entries appear on the home page and calendar page.
 
 ## Local preview (optional)
 If you have Ruby/Jekyll installed:
 
 ```bash
+bundle install
 bundle exec jekyll serve
 ```
 
