@@ -10,8 +10,8 @@ layout: default
 </section>
 
 <section class="section">
-  <div class="home-layout">
-    <div class="home-main">
+  <div class="home-layout" data-home-layout>
+    <div class="home-main" data-home-main>
       <div class="card">
         <h2>Next Waiata practice</h2>
         {% assign events = site.data.calendar_events | sort: "start" %}
@@ -81,7 +81,7 @@ layout: default
 
     <div class="home-side">
       <section>
-        <div class="fb-embed">
+        <div class="fb-embed" data-fb-embed>
           <iframe
             title="O Wairoa Marae Facebook feed"
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100077399025413&tabs=timeline&width=500&height=860&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true"
@@ -99,3 +99,5 @@ layout: default
     </div>
   </div>
 </section>
+
+<script src="{{ '/assets/js/home-layout.js' | relative_url }}" defer></script>
