@@ -90,7 +90,7 @@ module Jekyll
 
       case response
       when Net::HTTPSuccess
-        response.body
+        response.body.to_s.force_encoding("UTF-8").encode("UTF-8", invalid: :replace, undef: :replace)
       when Net::HTTPRedirection
         @url = URI.join(@url, response["location"]).to_s
         fetch_calendar(limit - 1)
@@ -247,6 +247,8 @@ module Jekyll
 
     def normalize_text(value)
       value.to_s
+        .force_encoding("UTF-8")
+        .encode("UTF-8", invalid: :replace, undef: :replace)
         .gsub("\\n", "\n")
         .gsub("\\,", ",")
         .gsub("\\;", ";")
