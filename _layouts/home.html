@@ -47,7 +47,7 @@ layout: default
       </div>
 
       <div class="card">
-        <h2>Featured waiata</h2>
+        <h2>Featured Waiata</h2>
         {% assign featured = site.waiata | where: "featured", true | where: "public", true | sort: "order" %}
         {% if featured.size > 0 %}
           <ul>
@@ -59,11 +59,31 @@ layout: default
           <p class="muted">No featured waiata yet.</p>
         {% endif %}
       </div>
+
+      <div class="card">
+        <h2>Latest Pānui</h2>
+        {% assign posts = site.posts | slice: 0, 3 %}
+        {% if posts.size > 0 %}
+          <ul>
+            {% for post in posts %}
+              <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="badge">{{ post.date | date: "%d %b %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+          <p class="event-note"><a href="{{ '/news/' | relative_url }}">See all pānui →</a></p>
+        {% else %}
+          <p class="muted">No pānui yet.</p>
+        {% endif %}
+      </div>
     </div>
 
     <div class="home-side">
-      <div class="card fb-card">
-        <h2>Marae Facebook</h2>
+      <section class="fb-panel" aria-labelledby="home-facebook">
+        <div class="fb-panel-head">
+          <h2 id="home-facebook">Marae Facebook</h2>
+        </div>
         <div class="fb-embed">
           <iframe
             title="O Wairoa Marae Facebook feed"
@@ -78,26 +98,7 @@ layout: default
           </iframe>
         </div>
         <p class="event-note"><a href="https://www.facebook.com/profile.php?id=100077399025413" target="_blank" rel="noopener">Open the Facebook page</a>.</p>
-      </div>
+      </section>
     </div>
   </div>
-</section>
-
-<section class="section">
-  <h2>Latest pānui</h2>
-  {% assign posts = site.posts | slice: 0, 3 %}
-  {% if posts.size > 0 %}
-    <ul>
-      {% for post in posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <span class="badge">{{ post.date | date: "%d %b %Y" }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No pānui yet.</p>
-  {% endif %}
-
-  <p><a href="{{ '/news/' | relative_url }}">See all pānui →</a></p>
 </section>
