@@ -106,7 +106,7 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 .fb-embed iframe{
   width:100%;
   max-width:100%;
-  height:auto;
+  height: 650px;
   display:block;
 }
 .event-agenda{margin-top:1rem}
