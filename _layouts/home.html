@@ -14,20 +14,25 @@ layout: default
     <div class="card">
       <h2>Next Waiata practice</h2>
       {% assign events = site.data.calendar_events | sort: "start" %}
+      {% assign next_waiata = nil %}
       {% if events and events.size > 0 %}
-        {% assign event = events[0] %}
-        {% assign event_time = event.start | date: "%s" %}
-        {% assign now = "now" | date: "%s" %}
-        {% if event_time > now %}
+        {% for item in events %}
+          {% assign summary_downcase = item.summary | downcase %}
+          {% if summary_downcase contains "waiata" %}
+            {% assign next_waiata = item %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if next_waiata %}
           <ul class="event-agenda">
             <li>
-              <strong>{{ event.summary }}</strong>
-              <time datetime="{{ event.start }}">{{ event.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
-              {% if event.location %}
-                <p class="event-note">{{ event.location }}</p>
+              <strong>{{ next_waiata.summary }}</strong>
+              <time datetime="{{ next_waiata.start }}">{{ next_waiata.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
+              {% if next_waiata.location %}
+                <p class="event-note">{{ next_waiata.location }}</p>
               {% endif %}
-              {% if event.url %}
-                <p><a class="event-link" href="{{ event.url }}" target="_blank" rel="noopener">View details</a></p>
+              {% if next_waiata.url %}
+                <p><a class="event-link" href="{{ next_waiata.url }}" target="_blank" rel="noopener">View details</a></p>
               {% endif %}
             </li>
           </ul>
@@ -44,7 +49,7 @@ layout: default
       {% assign featured = site.waiata | where: "featured", true | where: "public", true | sort: "order" %}
       {% if featured.size > 0 %}
         <ul>
-          {% for w in featured limit:3 %}
+          {% for w in featured limit:6 %}
             <li><a href="{{ w.url | relative_url }}">{{ w.title }}</a></li>
           {% endfor %}
         </ul>
