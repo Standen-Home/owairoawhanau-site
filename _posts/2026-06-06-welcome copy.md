@@ -1,0 +1,89 @@
+---
+title: "Pānui o te wiki - 15 June 2026"
+date: 2026-06-06
+---
+
+Kia ora, e hoa.
+
+Welcome to the first newsletter on our new platform!
+We've migrated our email list from Waiata Wednesdays to keep you all up to date. 
+
+If you know anyone who hasn't received this email, please get them to sign up for the newsletter on the website.
+
+
+# Panui o te wiki!
+​
+## Wednesday | 17 June 2026
+
+Carmel School Visit
+Waiata Wednesday - 6pm
+
+## Sunday | 28 June 2026
+
+Kapa Haka with Kaihaka
+
+Starting Sunday 28th June, Join Eru and Kaihaka for Kapa Haka practices at Ō Wairoa Marae.
+
+Kaihaka are a collective of Māori practitioners teaching and sharing our customary Māori practices. Educating through kapa haka, workshops / wananga , events and performances nationally and internationally.
+
+Starting from 2pm with the first half teaching kupu, actions etc This is a great opportunity to learn more about Kapa Haka, Kaihakas performance brackets, and get to know more about what they do.
+
+## Matariki | 18 July 2026
+
+​Plans are coming along for the Matariki Festival at Ō Wairoa Marae!
+
+Following the hui on Friday this is the current program.
+
+Note:
+Matariki will rise between 5.30am and 6.30 am
+High Tide is at 10.30am on 18th July.
+After the start, times are fluid and could go 15mins each way.
+
+**4.45am**
+Opening Whare Ora, Green Room to set up kai and hot drinks
+People can drop off kai until 5.15am
+Set up fire and start
+
+**5.30am**
+Karanga ki Matariki / Manuhiri
+Whakatau / Waiata
+Explanation of the Matariki Whakanui
+Karakia
+Story telling (Pita Turei)
+
+**7.00am**
+Kai in Whare Ora / Green Room
+Hall for extra seating if we need too.
+
+**8.15 / 8.30 am**
+Putara will sound for rowers to gather at buses for ride to waka at Bucklands Beach
+Start to clean up hall and whare kai
+
+**9.00am**
+Kemu / Practice of Toia Mai for waka (for anyone who at marae)
+BBQ
+Stalls at Front can open
+
+**9.30am**
+Putara Sounds
+Walk to Beach to set up for welcoming waka
+Set up for Toia Mai / Welcome Waka
+
+**10.00am**
+Waka arrive
+Welcome and return to marae
+
+**11.00am**
+Arrive at marae
+Karakia on Marae Atea / kai for the Kaihoe
+Stalls open / BBQ until 1.00pm
+Kapa Haka
+
+The Whare Matariki will be open for visits from early morning.
+
+The waiata we will look to use during the day will be added to our site and we will be practicing these on Waiata Wednesday! 
+
+
+As always - We look forward to seeing you soon.
+
+Kia pai te ra! ☀️
