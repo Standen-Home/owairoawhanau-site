@@ -6,10 +6,11 @@
     {% endif %}
     <p class="footer-note">Whānau-led, marae-supported, unofficial website for Waiata Wednesday Rōpū.</p>
     <div class="footer-actions">
-      <button class="btn btn-primary" type="button" onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', 'XGX9qF']);">Newsletter Sign Up</button>
+      <button class="btn btn-primary" type="button" data-klaviyo-form="XGX9qF">Newsletter Sign Up</button>
     </div>
     <p class="footer-meta">&copy; {{ site.time | date: '%Y' }} {{ site.title }}.</p>
   </div>
 </footer>
 
 <script src="{{ '/assets/js/modal.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/klaviyo.js' | relative_url }}" defer></script>

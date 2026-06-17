@@ -13,5 +13,5 @@ If you need to get in touch, you can email us or use the form below.
 ---
 
 <div class="footer-actions">
-  <button class="btn btn-primary btn-lg" type="button" onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', 'REDG5z']);">Get In Touch</button>
+  <button class="btn btn-primary btn-lg" type="button" data-klaviyo-form="REDG5z">Get In Touch</button>
 </div>

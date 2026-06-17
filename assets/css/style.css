@@ -13,7 +13,7 @@
   --accent: var(--cyan);    /* links + primary accents */
   --accent2: var(--gold);   /* secondary accent */
   --card: #ffffff;
- /* --border: #e7dfd2;        /* warm border to suit khaki/gold */
+  --border: #e7dfd2;        /* warm border to suit khaki/gold */
   --focus: var(--cyan);     /* accessible focus ring */
 
   --max: 980px;

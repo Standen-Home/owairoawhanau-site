@@ -32,6 +32,14 @@ date: 2026-03-20
 ### Edit navigation
 Edit `_data/navigation.yml`.
 
+## Weekly maintainer checklist
+
+1. Add or update the latest pānui in `_posts/`.
+2. Check the public Google Calendar has the next practice/event details.
+3. Feature any waiata the group is currently learning by setting `featured: true`.
+4. Keep any whānau-only waiata as `public: false`.
+5. Push to `main`, then check the GitHub Pages deploy completed successfully.
+
 ## Waiata fields
 Each waiata supports front matter like:
 
