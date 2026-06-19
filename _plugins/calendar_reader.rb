@@ -598,14 +598,14 @@ module Jekyll
         return start_value.to_s
       end
 
-      return start_value.strftime("%a %d %b %Y, %-l:%M %p") unless end_value
+      return start_value.strftime("%-l:%M %p, %a %d %b %Y") unless end_value
 
       same_day = date_value(start_value) == date_value(end_value)
 
       if same_day
-        "#{start_value.strftime('%a %d %b %Y, %-l:%M %p')} - #{end_value.strftime('%-l:%M %p')}"
+        "#{start_value.strftime('%-l:%M %p')} - #{end_value.strftime('%-l:%M %p')}, #{start_value.strftime('%a %d %b %Y')}"
       else
-        "#{start_value.strftime('%a %d %b %Y, %-l:%M %p')} - #{end_value.strftime('%a %d %b %Y, %-l:%M %p')}"
+        "#{start_value.strftime('%-l:%M %p, %a %d %b %Y')} - #{end_value.strftime('%-l:%M %p, %a %d %b %Y')}"
       end
     end
 

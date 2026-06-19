@@ -7,7 +7,7 @@
 #   image: "/assets/images/events/matariki-poster.jpg"
 #   image_alt: "Poster for the Matariki Celebration event"
 #   teaser: "Shared kai after the performance. Bring whanau and warm clothes."
-#   display_time: "Sun 28 Jun 2026, 10:00 AM - 2:00 PM"
+#   display_time: "10:00 AM - 2:00 PM, Sun 28 Jun 2026"
 #   button_text: "Open poster"
 #   button_url: "/assets/images/events/matariki-poster.jpg"
 
@@ -16,6 +16,6 @@
   image: "/assets/images/events/matariki-o-wairoa-marae-2026.jpg"
   image_alt: "Poster for Matariki O Wairoa Marae on Saturday 18 July 2026"
   teaser: "Shared kai, waka experience, live performance, kemu Maori, and market stalls."
-  display_time: "Sat 18 Jul 2026, 9:00 AM - 3:30 PM"
+  display_time: "9:00 AM - 3:30 PM, Sat 18 Jul 2026"
   button_text: "Open poster"
   button_url: "/assets/images/events/matariki-o-wairoa-marae-2026.jpg"
