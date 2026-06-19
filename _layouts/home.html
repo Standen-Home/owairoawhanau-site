@@ -33,7 +33,14 @@ layout: default
                   </figure>
                 {% endif %}
                 <strong>{{ next_waiata.summary }}</strong>
-                <time datetime="{{ next_waiata.start }}">{{ next_waiata.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
+                <time datetime="{{ next_waiata.start }}">
+                  {% if next_waiata.display_time %}
+                    {{ next_waiata.display_time }}
+                  {% else %}
+                    {{ next_waiata.start | date: "%a %d %b %Y, %l:%M %p" }}
+                  {% endif %}
+                  {% if next_waiata.all_day and next_waiata.display_time == blank %}<span class="calendar-time-note">All day</span>{% endif %}
+                </time>
                 {% if next_waiata.location %}
                   <p class="event-note">{{ next_waiata.location }}</p>
                 {% endif %}

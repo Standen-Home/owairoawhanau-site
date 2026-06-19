@@ -309,6 +309,17 @@ input[type="search"], select{
   font-size:.95rem;
   white-space:nowrap;
 }
+.calendar-time-note{
+  display:inline-block;
+  margin-left:.45rem;
+  padding:.1rem .45rem;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:color-mix(in srgb, var(--gold), #ffffff 86%);
+  color:color-mix(in srgb, var(--muted), var(--black) 20%);
+  font-size:.8rem;
+  vertical-align:middle;
+}
 .calendar-empty{padding: 0 1rem 1rem 1rem}
 .calendar-panel[hidden]{display:none}
 .calendar-panel-note{padding: .85rem 1rem 1rem 1rem}

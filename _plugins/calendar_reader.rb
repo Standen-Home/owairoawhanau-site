@@ -78,7 +78,7 @@ module Jekyll
     def merge_override(event, override)
       merged = event.dup
 
-      %w[image image_alt teaser button_text button_url].each do |key|
+      %w[image image_alt teaser button_text button_url display_time].each do |key|
         value = override[key]
         merged[key] = value unless blank?(value)
       end
@@ -571,7 +571,9 @@ module Jekyll
       output = {
         "uid" => event[:uid],
         "summary" => event[:summary],
-        "start" => format_datetime(event[:dtstart])
+        "start" => format_datetime(event[:dtstart]),
+        "all_day" => all_day_event?(event[:dtstart], event[:dtend]),
+        "display_time" => format_display_time(event[:dtstart], event[:dtend])
       }
 
       output["end"] = format_datetime(event[:dtend]) if event[:dtend]
@@ -579,6 +581,32 @@ module Jekyll
       output["description"] = event[:description] unless blank?(event[:description])
       output["url"] = event[:url] unless blank?(event[:url])
       output
+    end
+
+    def all_day_event?(start_value, end_value)
+      start_is_date = start_value.is_a?(Date) && !start_value.is_a?(Time)
+      end_is_date = end_value.nil? || (end_value.is_a?(Date) && !end_value.is_a?(Time))
+      start_is_date && end_is_date
+    end
+
+    def format_display_time(start_value, end_value)
+      return "" unless start_value
+
+      if all_day_event?(start_value, end_value)
+        return start_value.strftime("%a %d %b %Y") if start_value.respond_to?(:strftime)
+
+        return start_value.to_s
+      end
+
+      return start_value.strftime("%a %d %b %Y, %-l:%M %p") unless end_value
+
+      same_day = date_value(start_value) == date_value(end_value)
+
+      if same_day
+        "#{start_value.strftime('%a %d %b %Y, %-l:%M %p')} - #{end_value.strftime('%-l:%M %p')}"
+      else
+        "#{start_value.strftime('%a %d %b %Y, %-l:%M %p')} - #{end_value.strftime('%a %d %b %Y, %-l:%M %p')}"
+      end
     end
 
     def format_datetime(value)

@@ -83,7 +83,14 @@ permalink: /calendar/
             {% endif %}
             <div class="calendar-event-head">
               <h2>{{ event.summary }}</h2>
-              <time datetime="{{ event.start }}">{{ event.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
+              <time datetime="{{ event.start }}">
+                {% if event.display_time %}
+                  {{ event.display_time }}
+                {% else %}
+                  {{ event.start | date: "%a %d %b %Y, %l:%M %p" }}
+                {% endif %}
+                {% if event.all_day and event.display_time == blank %}<span class="calendar-time-note">All day</span>{% endif %}
+              </time>
             </div>
             {% if event.location %}
               <p class="event-note">{{ event.location }}</p>
