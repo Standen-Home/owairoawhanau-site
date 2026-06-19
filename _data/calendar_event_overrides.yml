@@ -1,0 +1,12 @@
+# Add optional site-only display content for specific calendar events.
+# Match either by `uid`, or by `summary` plus `start`.
+#
+# Example:
+# - summary: "Matariki Celebration"
+#   start: "2026-06-28T10:00:00+12:00"
+#   image: "/assets/images/events/matariki-poster.jpg"
+#   image_alt: "Poster for the Matariki Celebration event"
+#   teaser: "Shared kai after the performance. Bring whānau and warm clothes."
+#   button_text: "Open poster"
+#   button_url: "/assets/images/events/matariki-poster.jpg"
+

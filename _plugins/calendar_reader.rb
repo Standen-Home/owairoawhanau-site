@@ -26,7 +26,7 @@ module Jekyll
       window_end = window_start + (months_ahead * 31 * 24 * 60 * 60)
 
       generator = CalendarFeed.new(calendar_url, window_start: window_start, window_end: window_end, max_events: max_events)
-      events = generator.events
+      events = apply_overrides(generator.events, site.data["calendar_event_overrides"])
       Jekyll.logger.info("Calendar Reader:", "Loaded #{events.size} event(s) from #{calendar_url}")
       Jekyll.logger.warn("Calendar Reader:", "No upcoming events were found in the configured window.") if events.empty?
       site.data["calendar_events"] = events
@@ -48,6 +48,46 @@ module Jekyll
       Integer(value || default)
     rescue ArgumentError, TypeError
       default
+    end
+
+    def apply_overrides(events, overrides)
+      override_list = Array(overrides).compact
+      return events if override_list.empty?
+
+      events.map do |event|
+        matched_override = override_list.find { |override| override_matches?(event, override) }
+        matched_override ? merge_override(event, matched_override) : event
+      end
+    end
+
+    def override_matches?(event, override)
+      return false unless override.is_a?(Hash)
+
+      uid_match = override["uid"].to_s.strip
+      summary_match = override["summary"].to_s.strip
+      start_match = override["start"].to_s.strip
+
+      return event["uid"].to_s == uid_match unless uid_match.empty?
+
+      summary_ok = summary_match.empty? || event["summary"].to_s == summary_match
+      start_ok = start_match.empty? || event["start"].to_s == start_match
+
+      summary_ok && start_ok
+    end
+
+    def merge_override(event, override)
+      merged = event.dup
+
+      %w[image image_alt teaser button_text button_url].each do |key|
+        value = override[key]
+        merged[key] = value unless blank?(value)
+      end
+
+      merged
+    end
+
+    def blank?(value)
+      value.to_s.strip.empty?
     end
   end
 
@@ -529,6 +569,7 @@ module Jekyll
 
     def serialize_event(event)
       output = {
+        "uid" => event[:uid],
         "summary" => event[:summary],
         "start" => format_datetime(event[:dtstart])
       }

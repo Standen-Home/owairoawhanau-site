@@ -27,10 +27,21 @@ layout: default
           {% if next_waiata %}
             <ul class="event-agenda">
               <li>
+                {% if next_waiata.image %}
+                  <figure class="event-media">
+                    <img src="{{ next_waiata.image }}" alt="{{ next_waiata.image_alt | default: next_waiata.summary }}">
+                  </figure>
+                {% endif %}
                 <strong>{{ next_waiata.summary }}</strong>
                 <time datetime="{{ next_waiata.start }}">{{ next_waiata.start | date: "%a %d %b %Y, %l:%M %p" }}</time>
                 {% if next_waiata.location %}
                   <p class="event-note">{{ next_waiata.location }}</p>
+                {% endif %}
+                {% if next_waiata.teaser %}
+                  <p class="event-note">{{ next_waiata.teaser }}</p>
+                {% endif %}
+                {% if next_waiata.button_url %}
+                  <p><a class="btn" href="{{ next_waiata.button_url }}" target="_blank" rel="noopener">{{ next_waiata.button_text | default: "More info" }}</a></p>
                 {% endif %}
                 {% if next_waiata.url %}
                   <p><a class="event-link" href="{{ next_waiata.url }}" target="_blank" rel="noopener">View details</a></p>
