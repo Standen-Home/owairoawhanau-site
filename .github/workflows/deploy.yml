@@ -8,6 +8,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # GitHub cron uses UTC. This keeps calendar-derived pages fresh daily.
+  schedule:
+    - cron: "0 16 * * *"
 
 permissions:
   contents: read
