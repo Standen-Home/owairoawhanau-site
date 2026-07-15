@@ -14,6 +14,7 @@ module Jekyll
     def generate(site)
       calendar_config = site.config.fetch("google_calendar", {})
       calendar_url = calendar_config["ics_url"] || build_google_ics_url(calendar_config["id"])
+      display_timezone = calendar_config["display_timezone"] || site.config["timezone"] || "Pacific/Auckland"
 
       unless calendar_url
         Jekyll.logger.warn("Calendar Reader:", "No Google Calendar ICS URL or calendar id configured.")
@@ -25,7 +26,13 @@ module Jekyll
       window_start = Time.now.utc
       window_end = window_start + (months_ahead * 31 * 24 * 60 * 60)
 
-      generator = CalendarFeed.new(calendar_url, window_start: window_start, window_end: window_end, max_events: max_events)
+      generator = CalendarFeed.new(
+        calendar_url,
+        window_start: window_start,
+        window_end: window_end,
+        max_events: max_events,
+        display_timezone: display_timezone
+      )
       events = apply_overrides(generator.events, site.data["calendar_event_overrides"])
       Jekyll.logger.info("Calendar Reader:", "Loaded #{events.size} event(s) from #{calendar_url}")
       Jekyll.logger.warn("Calendar Reader:", "No upcoming events were found in the configured window.") if events.empty?
@@ -103,11 +110,12 @@ module Jekyll
       "SA" => 6
     }.freeze
 
-    def initialize(url, window_start:, window_end:, max_events:)
+    def initialize(url, window_start:, window_end:, max_events:, display_timezone:)
       @url = url
       @window_start = window_start
       @window_end = window_end
       @max_events = max_events
+      @display_timezone = TZInfo::Timezone.get(display_timezone)
     end
 
     def events
@@ -598,23 +606,36 @@ module Jekyll
         return start_value.to_s
       end
 
-      return start_value.strftime("%-l:%M %p, %a %d %b %Y") unless end_value
+      local_start = display_value(start_value)
+      local_end = end_value ? display_value(end_value) : nil
 
-      same_day = date_value(start_value) == date_value(end_value)
+      return local_start.strftime("%-l:%M %p, %a %d %b %Y") unless local_end
+
+      same_day = date_value(local_start) == date_value(local_end)
 
       if same_day
-        "#{start_value.strftime('%-l:%M %p')} - #{end_value.strftime('%-l:%M %p')}, #{start_value.strftime('%a %d %b %Y')}"
+        "#{local_start.strftime('%-l:%M %p')} - #{local_end.strftime('%-l:%M %p')}, #{local_start.strftime('%a %d %b %Y')}"
       else
-        "#{start_value.strftime('%-l:%M %p, %a %d %b %Y')} - #{end_value.strftime('%-l:%M %p, %a %d %b %Y')}"
+        "#{local_start.strftime('%-l:%M %p, %a %d %b %Y')} - #{local_end.strftime('%-l:%M %p, %a %d %b %Y')}"
       end
     end
 
     def format_datetime(value)
+      if value.is_a?(Time)
+        return display_value(value).iso8601
+      end
+
       return value.iso8601 if value.is_a?(Time)
       return value.iso8601 if value.is_a?(DateTime)
       return value.iso8601 if value.is_a?(Date)
 
       value.to_s
+    end
+
+    def display_value(value)
+      return value unless value.is_a?(Time)
+
+      @display_timezone.utc_to_local(value.getutc).to_time
     end
 
     def canonical_key(value)
