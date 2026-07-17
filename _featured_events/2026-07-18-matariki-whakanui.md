@@ -2,6 +2,7 @@
 title: "Matariki Whakanui"
 title_en: "Matariki Celebration"
 date: 2026-07-18
+slug: "matariki-whakanui"
 calendar_summary: "Matariki O Wairoa Marae"
 calendar_start: "2026-07-18"
 ---
