@@ -10,7 +10,7 @@ calendar_start: "2026-07-18"
 
 Whanau Plans for the Matariki whakanui at O Wairoa Marae on Saturday, 18 July 2026.
 
-[Download waiata booklet]({{ '/assets/pdfs/waiata-booklet.pdf' | relative_url }){: .btn}
+<p><a class="btn" href="{{ '/assets/pdfs/waiata-booklet.pdf' | relative_url }}">Download waiata booklet</a></p>
 
 ## Programme
 
