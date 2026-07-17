@@ -22,18 +22,26 @@ order: 20
 <pre class="lyrics">
 Mā te rāpa ka kitea
 
-Nō Ngāi Tai te tupuna e
-Te waka, he huruhuru
-Te pōhutukawa i Wairoa
-He tohu, he whakataukī
-Mā te rāpa ka kitea
+  Te Tuhi a Manawatere
+  Nō Ngāi Tai te tupuna e
+  Te waka, he huruhuru
+  Te pōhutukawa i Wairoa
+  He tohu, he whakataukī
 
-Nō Ngāi Tai te tupuna e
-Te waka, he huruhuru
-Te pōhutukawa i Wairoa
-He tohu, he whakataukī
-Mā te rāpa ka kitea 
-Mā te rāpa ka kitea
+  Mā te rāpa ka kitea
+
+Te Tuhi 
+
+  Te Tuhi a Manawatere
+  Nō Ngāi Tai te tupuna e
+  Te waka, he huruhuru
+  Te pōhutukawa i Wairoa
+  He tohu, he whakataukī
+
+Mā te rā
+
+  Mā te rāpa ka kitea 
+  Mā te rāpa ka kitea
 </pre>
 
 ## Meaning
