@@ -6,33 +6,40 @@ calendar_summary: "Matariki O Wairoa Marae"
 calendar_start: "2026-07-18"
 ---
 
-Plans are coming together for the Matariki whakanui at O Wairoa Marae on Saturday, 18 July 2026.
+Whanau Plans for the Matariki whakanui at O Wairoa Marae on Saturday, 18 July 2026.
 
 ## Programme
 
-**4.45am**
-Opening Whare Ora, Green Room to set up kai and hot drinks. People can drop off kai until 5.15am.
+**4.30am**
+Opening Whare Ora and the Green Rooms to finish settings up kai and hot drinks. 
+People can drop off kai until 5.00am.
 
 **5.30am**
-Karanga ki Matariki and manuhiri arrival, whakatau, waiata, explanation of the Matariki whakanui, karakia, and storytelling with Pita Turei.
+Karanga ki Matariki and Manuhiri arrival, whakatau, waiata, explanation of the Matariki whakanui, karakia, and storytelling with Pita Turei.
 
 **7.00am**
-Kai in Whare Ora and the Green Room. The hall will be opened for extra seating if needed.
+Kai in Whare Ora and the Green Room. Direct Kaumatua to Whare Ora first, and once full (or younger ones) direct to the Green Rooms.
+
+Waiata Group not working kai, please gather in Whare Ora to sing fun waiata together!
 
 **8.15am / 8.30am**
-Putara for rowers to gather at the buses for the ride to the waka at Bucklands Beach. Clean up starts in the hall and whare kai.
+Putara for rowers to gather at the buses for the ride to the waka at Whitford Village. 
+If not on the waka, please assist with cleaning / packing down in Te Whare Ora and the Green Rooms.
 
 **9.00am**
-Kemu and practice of "Toia Mai" for the waka welcome, plus BBQ and front stalls opening.
+Kemu and practice of "Toia Mai" for the waka welcome, and front stalls opening.
 
 **9.30am**
-Putara sounds and the group walks to the beach to set up for welcoming the waka.
+Putara sounds and the group walks to Howick beach to set up for welcoming the waka.
 
 **10.00am**
 Waka arrive, are welcomed, and return to the marae.
 
-**11.00am**
+**10.30 - 11.00am**
 Arrival back at the marae, karakia on the marae atea, kai for the kaihoe, stalls and BBQ until 1.00pm, followed by kapa haka.
+
+**3.30 - 4.00pm** 
+Final Clean-up begins. 
 
 ## Notes
 
