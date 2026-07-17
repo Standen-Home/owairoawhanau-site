@@ -40,12 +40,20 @@
             {% endif %}
           {% endfor %}
         {% endif %}
-        <div class="nav-item{% if (nav_children and nav_children.size > 0) or has_upcoming_children %} has-children{% endif %}">
+        {% assign has_nav_children = false %}
+        {% if nav_children and nav_children.size > 0 %}
+          {% assign has_nav_children = true %}
+        {% endif %}
+        {% assign has_any_children = false %}
+        {% if has_nav_children or has_upcoming_children %}
+          {% assign has_any_children = true %}
+        {% endif %}
+        <div class="nav-item{% if has_any_children %} has-children{% endif %}">
           <a class="nav-link" href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>
             <span class="nav-mi">{{ item.title }}</span>
             {% if item.title_en %}<span class="nav-en">{{ item.title_en }}</span>{% endif %}
           </a>
-          {% if (nav_children and nav_children.size > 0) or has_upcoming_children %}
+          {% if has_any_children %}
             <div class="nav-subnav" aria-label="{{ item.title }} subpages">
               {% for child in nav_children %}
                 <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>

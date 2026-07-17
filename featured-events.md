@@ -23,10 +23,10 @@ permalink: /calendar/featured-events/
     {% assign event_ts = event.date | date: "%s" | plus: 0 %}
     {% if event_ts >= now_ts %}
       {% assign matched_calendar = nil %}
+      {% assign summary_match = event.calendar_summary | append: "" | strip %}
+      {% assign start_match = event.calendar_start | append: "" | strip %}
+      {% assign uid_match = event.calendar_uid | append: "" | strip %}
       {% for calendar_event in site.data.calendar_events %}
-        {% assign summary_match = event.calendar_summary | to_s | strip %}
-        {% assign start_match = event.calendar_start | to_s | strip %}
-        {% assign uid_match = event.calendar_uid | to_s | strip %}
         {% if uid_match != "" and calendar_event.uid == uid_match %}
           {% assign matched_calendar = calendar_event %}
           {% break %}
