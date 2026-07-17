@@ -59,8 +59,8 @@ Home time
 
 ## Attire
 
-Ō Wairoa Marae Shirts / Sweaters
-Tidy long pants or skirts (preferably black)
+Ō Wairoa Marae Shirts / Sweaters.
+Tidy long pants or skirts (preferably black).
 Dress warm due to the cold early morning. 
 
 ## Notes
