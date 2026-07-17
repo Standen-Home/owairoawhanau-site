@@ -14,23 +14,38 @@
 
     <nav id="site-nav" class="nav" data-site-nav>
       {% assign current = page.url %}
+      {% assign now_ts = site.time | date: "%s" | plus: 0 %}
       {% for item in site.data.navigation %}
         {% assign nav_children = nil %}
+        {% assign upcoming_featured_children = nil %}
         {% if item.children %}
           {% assign nav_children = item.children %}
         {% elsif item.children_collection %}
           {% assign nav_children = site[item.children_collection] | where: "public", true | sort: "order" %}
         {% endif %}
+        {% if item.upcoming_featured_events %}
+          {% assign upcoming_featured_children = site.featured_events | sort: "date" %}
+        {% endif %}
         {% assign is_current = false %}
         {% if current == item.url or (item.url != '/' and current contains item.url) %}
           {% assign is_current = true %}
         {% endif %}
-        <div class="nav-item{% if nav_children and nav_children.size > 0 %} has-children{% endif %}">
+        {% assign has_upcoming_children = false %}
+        {% if upcoming_featured_children %}
+          {% for child in upcoming_featured_children %}
+            {% assign child_ts = child.date | date: "%s" | plus: 0 %}
+            {% if child_ts >= now_ts %}
+              {% assign has_upcoming_children = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <div class="nav-item{% if (nav_children and nav_children.size > 0) or has_upcoming_children %} has-children{% endif %}">
           <a class="nav-link" href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>
             <span class="nav-mi">{{ item.title }}</span>
             {% if item.title_en %}<span class="nav-en">{{ item.title_en }}</span>{% endif %}
           </a>
-          {% if nav_children and nav_children.size > 0 %}
+          {% if (nav_children and nav_children.size > 0) or has_upcoming_children %}
             <div class="nav-subnav" aria-label="{{ item.title }} subpages">
               {% for child in nav_children %}
                 <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>
@@ -38,6 +53,19 @@
                   {% if child.title_en %}<span class="nav-en">{{ child.title_en }}</span>{% endif %}
                 </a>
               {% endfor %}
+              {% if has_upcoming_children %}
+                {% assign shown_children = 0 %}
+                {% for child in upcoming_featured_children %}
+                  {% assign child_ts = child.date | date: "%s" | plus: 0 %}
+                  {% if child_ts >= now_ts and shown_children < 5 %}
+                    <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>
+                      <span class="nav-mi">{{ child.title }}</span>
+                      <span class="nav-en">{{ child.date | date: "%d %b %Y" }}</span>
+                    </a>
+                    {% assign shown_children = shown_children | plus: 1 %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
             </div>
           {% endif %}
         </div>

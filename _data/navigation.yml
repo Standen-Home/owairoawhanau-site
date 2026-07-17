@@ -13,6 +13,7 @@
   children:
     - title: "Featured Events"
       url: "/calendar/featured-events/"
+  upcoming_featured_events: true
 - title: "Rauemi"
   title_en: "Resources"
   url: "/resources/"
