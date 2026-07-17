@@ -1,6 +1,6 @@
 ---
 layout: 'waiata'
-title: 'Ma wai ra?'
+title: 'Ma wai ra'
 slug: "ma-wai-ra"
 category: 'Waiata'
 tags:

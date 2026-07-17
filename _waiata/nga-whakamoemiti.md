@@ -2,16 +2,16 @@
 layout: 'waiata'
 title: 'Ngā Whakamoemiti'
 slug: "nga-whakamoemiti"
-category: 'haka'
+category: 'waiata'
 tags:
   - ppt-import
-composer: ''
+composer: 'Pumi Taituha Maniapoto/Waikato'
 source: 'PowerPoint import'
-featured: false
-public: false
+featured: true
+public: true
 audio: ''
 pdf: ''
-video_url: ''
+video_url: 'https://www.youtube.com/watch?v=379QXkjI2EA'
 image: ''
 order: 27
 ---
@@ -26,7 +26,18 @@ Ko koe te piringa
 Ka puta ki te oranga
 E te Ariki
 Pai mārire
-Lord everlasting peace
+
+Ngā whakamoemiti
+Whakawhetai - E ihu e
+Mo ōu manaakitanga
+Ki te iwi - E tau nei
+Ko koe te piringa
+Ka puta ki te oranga
+E te Ariki
+Pai mārire
+
+E te Ariki
+Pai mārire
 </pre>
 
 
@@ -40,6 +51,5 @@ And show us a better life
 </div>
 
 Notes
-Kaitito: Pumi Taituha (Maniapoto/Waikato
-Link to
-YouTube Video
+Kaitito: Pumi Taituha Maniapoto/Waikato
+
