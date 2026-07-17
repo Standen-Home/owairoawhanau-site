@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="hero-box">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.title_en %}
+      <div class="page-title-en">{{ page.title_en }}</div>
+    {% endif %}
+    {% assign display_date = page.event_date | default: page.date %}
+    {% if display_date %}
+      <p><span class="badge">{{ display_date | date: "%d %b %Y" }}</span></p>
+    {% endif %}
+  </div>
+</section>
+
+<article class="prose">
+  {{ content }}
+</article>

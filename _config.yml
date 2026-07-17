@@ -39,7 +39,7 @@ defaults:
       path: ""
       type: "featured_events"
     values:
-      layout: post
+      layout: featured-event
 
 google_calendar:
   id: "c_135be84f9af8db2cf3f25fad81c2cebeae12b25e8281480aa737a95ce54f54c0@group.calendar.google.com"

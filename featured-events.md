@@ -6,11 +6,11 @@ permalink: /calendar/featured-events/
 ---
 
 {% assign now_ts = site.time | date: "%s" | plus: 0 %}
-{% assign events = site.featured_events | sort: "date" %}
+{% assign events = site.featured_events | sort: "event_date" %}
 {% assign has_upcoming = false %}
 
 {% for event in events %}
-  {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+  {% assign event_ts = event.event_date | default: event.date | date: "%s" | plus: 0 %}
   {% if event_ts >= now_ts %}
     {% assign has_upcoming = true %}
     {% break %}
@@ -20,7 +20,7 @@ permalink: /calendar/featured-events/
 {% if has_upcoming %}
 <div class="featured-events-grid">
   {% for event in events %}
-    {% assign event_ts = event.date | date: "%s" | plus: 0 %}
+    {% assign event_ts = event.event_date | default: event.date | date: "%s" | plus: 0 %}
     {% if event_ts >= now_ts %}
       {% assign matched_calendar = nil %}
       {% assign summary_match = event.calendar_summary | append: "" | strip %}
@@ -47,7 +47,7 @@ permalink: /calendar/featured-events/
           {% if matched_calendar and matched_calendar.display_time != blank %}
             <p class="featured-event-time">{{ matched_calendar.display_time }}</p>
           {% else %}
-            <p class="featured-event-time">{{ event.date | date: "%a %d %b %Y" }}</p>
+            <p class="featured-event-time">{{ event.event_date | default: event.date | date: "%a %d %b %Y" }}</p>
           {% endif %}
         </div>
         {% if matched_calendar and matched_calendar.location %}

@@ -36,7 +36,7 @@ date: 2026-03-20
 ```yaml
 ---
 title: "Matariki Whakanui"
-date: 2026-07-18
+event_date: 2026-07-18
 calendar_summary: "Matariki O Wairoa Marae"
 calendar_start: "2026-07-18"
 ---

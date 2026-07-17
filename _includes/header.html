@@ -24,7 +24,7 @@
           {% assign nav_children = site[item.children_collection] | where: "public", true | sort: "order" %}
         {% endif %}
         {% if item.upcoming_featured_events %}
-          {% assign upcoming_featured_children = site.featured_events | sort: "date" %}
+          {% assign upcoming_featured_children = site.featured_events | sort: "event_date" %}
         {% endif %}
         {% assign is_current = false %}
         {% if current == item.url or (item.url != '/' and current contains item.url) %}
@@ -33,7 +33,7 @@
         {% assign has_upcoming_children = false %}
         {% if upcoming_featured_children %}
           {% for child in upcoming_featured_children %}
-            {% assign child_ts = child.date | date: "%s" | plus: 0 %}
+            {% assign child_ts = child.event_date | default: child.date | date: "%s" | plus: 0 %}
             {% if child_ts >= now_ts %}
               {% assign has_upcoming_children = true %}
               {% break %}
@@ -64,11 +64,11 @@
               {% if has_upcoming_children %}
                 {% assign shown_children = 0 %}
                 {% for child in upcoming_featured_children %}
-                  {% assign child_ts = child.date | date: "%s" | plus: 0 %}
+                  {% assign child_ts = child.event_date | default: child.date | date: "%s" | plus: 0 %}
                   {% if child_ts >= now_ts and shown_children < 5 %}
                     <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>
                       <span class="nav-mi">{{ child.title }}</span>
-                      <span class="nav-en">{{ child.date | date: "%d %b %Y" }}</span>
+                      <span class="nav-en">{{ child.event_date | default: child.date | date: "%d %b %Y" }}</span>
                     </a>
                     {% assign shown_children = shown_children | plus: 1 %}
                   {% endif %}
