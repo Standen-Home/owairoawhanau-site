@@ -10,6 +10,9 @@
 - title: "Maramataka"
   title_en: "Calendar"
   url: "/calendar/"
+  children:
+    - title: "Featured Events"
+      url: "/calendar/featured-events/"
 - title: "Rauemi"
   title_en: "Resources"
   url: "/resources/"

@@ -29,6 +29,22 @@ date: 2026-03-20
 
 3. Write your update and commit.
 
+### Add a featured event page
+1. Add a file to `_featured_events/` named like `YYYY-MM-DD-title.md`.
+2. Include front matter like:
+
+```yaml
+---
+title: "Matariki Whakanui"
+date: 2026-07-18
+calendar_summary: "Matariki O Wairoa Marae"
+calendar_start: "2026-07-18"
+---
+```
+
+3. Write the full event details in the body.
+4. If you want the calendar card to link to this page automatically, make sure `calendar_summary` and `calendar_start` match the calendar event, or use `calendar_uid` instead.
+
 ### Edit navigation
 Edit `_data/navigation.yml`.
 

@@ -15,14 +15,32 @@
     <nav id="site-nav" class="nav" data-site-nav>
       {% assign current = page.url %}
       {% for item in site.data.navigation %}
+        {% assign nav_children = nil %}
+        {% if item.children %}
+          {% assign nav_children = item.children %}
+        {% elsif item.children_collection %}
+          {% assign nav_children = site[item.children_collection] | where: "public", true | sort: "order" %}
+        {% endif %}
         {% assign is_current = false %}
         {% if current == item.url or (item.url != '/' and current contains item.url) %}
           {% assign is_current = true %}
         {% endif %}
-        <a href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>
-          <span class="nav-mi">{{ item.title }}</span>
-          {% if item.title_en %}<span class="nav-en">{{ item.title_en }}</span>{% endif %}
-        </a>
+        <div class="nav-item{% if nav_children and nav_children.size > 0 %} has-children{% endif %}">
+          <a class="nav-link" href="{{ item.url | relative_url }}" {% if is_current %}aria-current="page"{% endif %}>
+            <span class="nav-mi">{{ item.title }}</span>
+            {% if item.title_en %}<span class="nav-en">{{ item.title_en }}</span>{% endif %}
+          </a>
+          {% if nav_children and nav_children.size > 0 %}
+            <div class="nav-subnav" aria-label="{{ item.title }} subpages">
+              {% for child in nav_children %}
+                <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>
+                  <span class="nav-mi">{{ child.title }}</span>
+                  {% if child.title_en %}<span class="nav-en">{{ child.title_en }}</span>{% endif %}
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
       {% endfor %}
     </nav>
   </div>

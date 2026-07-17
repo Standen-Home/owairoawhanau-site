@@ -16,6 +16,9 @@ collections:
   resources:
     output: true
     permalink: /resources/:slug/
+  featured_events:
+    output: true
+    permalink: /calendar/featured-events/:slug/
 
 defaults:
   - scope:
@@ -32,6 +35,11 @@ defaults:
       type: "waiata"
     values:
       layout: waiata
+  - scope:
+      path: ""
+      type: "featured_events"
+    values:
+      layout: post
 
 google_calendar:
   id: "c_135be84f9af8db2cf3f25fad81c2cebeae12b25e8281480aa737a95ce54f54c0@group.calendar.google.com"

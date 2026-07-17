@@ -2,22 +2,33 @@
 layout: 'waiata'
 title: 'He hōnore'
 slug: "he-honore"
-category: 'haka'
+category: 'waiata'
 tags:
   - ppt-import
 composer: ''
 source: 'PowerPoint import'
-featured: false
-public: false
+featured: true
+public: true
 audio: ''
 pdf: ''
-video_url: ''
+video_url: 'https://youtu.be/mAaBu5puEGc?si=5vx2jXRxsu2LTPzs'
 image: ''
 order: 25
 ---
 
 ## Kupu
 <pre class="lyrics">
+He hōnore
+He korōria
+Maungārongo
+Ki te whenua
+Whakaaro, pai e
+Ki ngā tāngata katoa
+Ake ake, ake ake
+āmine
+Te atua, hei piringa
+Tōku oranga
+He hōnore
 He korōria
 Maungārongo
 Ki te whenua
@@ -28,15 +39,16 @@ Ake ake, ake ake
 Te atua, hei piringa
 Tōku oranga
 Tōku oranga
-Honour,
-peace
-May good thoughts
-He hōnore
+
+
 </pre>
 
 
 ## Meaning
 <div class="meaning">
+Honour,
+peace
+May good thoughts
 glory and
 to the land
 come to all people

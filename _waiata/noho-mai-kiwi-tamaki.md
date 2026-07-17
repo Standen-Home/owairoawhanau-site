@@ -14,7 +14,7 @@ featured: true
 public: true
 audio: ""
 pdf: ""
-video_url: ""
+video_url: "https://youtu.be/2Hcd4zcDiqw?si=16_xKsYNb6iPQHnX"
 image: ""
 order: 75
 keywords: ""

@@ -34,6 +34,7 @@ module Jekyll
         display_timezone: display_timezone
       )
       events = apply_overrides(generator.events, site.data["calendar_event_overrides"])
+      events = apply_featured_event_links(events, site)
       Jekyll.logger.info("Calendar Reader:", "Loaded #{events.size} event(s) from #{calendar_url}")
       Jekyll.logger.warn("Calendar Reader:", "No upcoming events were found in the configured window.") if events.empty?
       site.data["calendar_events"] = events
@@ -91,6 +92,39 @@ module Jekyll
       end
 
       merged
+    end
+
+    def apply_featured_event_links(events, site)
+      featured_docs = site.collections.fetch("featured_events", nil)&.docs || []
+      return events if featured_docs.empty?
+
+      events.map do |event|
+        matched_doc = featured_docs.find { |doc| featured_event_matches?(event, doc) }
+        next event unless matched_doc
+
+        event.merge(
+          "featured_page_url" => matched_doc.url,
+          "featured_page_title" => featured_page_title(matched_doc)
+        )
+      end
+    end
+
+    def featured_event_matches?(event, doc)
+      data = doc.data || {}
+      uid_match = data["calendar_uid"].to_s.strip
+      summary_match = data["calendar_summary"].to_s.strip
+      start_match = data["calendar_start"].to_s.strip
+
+      return event["uid"].to_s == uid_match unless uid_match.empty?
+
+      return false if summary_match.empty? || start_match.empty?
+
+      event["summary"].to_s == summary_match && event["start"].to_s == start_match
+    end
+
+    def featured_page_title(doc)
+      data = doc.data || {}
+      data["link_title"].to_s.strip.empty? ? data["title"] : data["link_title"]
     end
 
     def blank?(value)

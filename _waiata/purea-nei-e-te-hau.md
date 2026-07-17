@@ -23,7 +23,7 @@ Mākere ana ngā here
 
   Purea nei e te hau
 Hororia
-  Horoia e te ua
+  Hororia e te ua
 Whitiwhitia
   Whitiwhitia e te rā
   Mahea ake ngā 
