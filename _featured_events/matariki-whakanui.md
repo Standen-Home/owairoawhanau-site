@@ -10,6 +10,8 @@ calendar_start: "2026-07-18"
 
 Whanau Plans for the Matariki whakanui at O Wairoa Marae on Saturday, 18 July 2026.
 
+[Download waiata booklet]({{ '/assets/pdfs/waiata-booklet.pdf' | relative_url }){: .btn}
+
 ## Programme
 
 **4.30am**
@@ -69,4 +71,3 @@ Matariki is expected to rise between 5.30am and 6.30am. High tide is at 10.30am 
 
 After the start of the programme, timings may move by around 15 minutes either way.
 The Whare Matariki will be open for visits from early morning.
-
