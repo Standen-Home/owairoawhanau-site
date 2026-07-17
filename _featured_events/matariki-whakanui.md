@@ -19,10 +19,21 @@ People can drop off kai until 5.00am.
 **5.30am**
 Karanga ki Matariki and Manuhiri arrival, whakatau, waiata, explanation of the Matariki whakanui, karakia, and storytelling with Pita Turei.
 
+*Waiata*
+Ma wai ra 
+Te Tuhi
+Ngā Whakamoemiti
+Noho Mai Kiwi Tamaki
+He Hōnore
+Purea Nei
+I Te Tīmatanga
+
 **7.00am**
 Kai in Whare Ora and the Green Room. Direct Kaumatua to Whare Ora first, and once full (or younger ones) direct to the Green Rooms.
 
+*Waiata*
 Waiata Group not working kai, please gather in Whare Ora to sing fun waiata together!
+You get to pick your favourite songs.  Belt out the lead and have fun!
 
 **8.00am**
 Putara for rowers to gather at the buses for the ride to the waka at Whitford Village. 
@@ -45,7 +56,6 @@ Final Clean-up begins.
 
 **6.00pm**
 Home time
-
 
 ## Attire
 
