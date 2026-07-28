@@ -40,8 +40,9 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 .site-header{position:sticky;top:0;
   background: var(--gold);
   backdrop-filter:saturate(160%) blur(8px);
+  border-bottom:1px solid color-mix(in srgb, var(--gold), var(--black) 18%);
   z-index:10}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0 0}
 .brand{display:flex;flex-direction:column;gap:.1rem}
 .brand a{color:var(--ink);text-decoration:none}
 .brand-title{font-weight:800;letter-spacing:.2px}
@@ -84,11 +85,28 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
 }
 
 @media (max-width: 760px){
-  .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--border);border-radius:12px;padding:.45rem .7rem}
-  .nav{display:none;flex-direction:column;align-items:stretch;padding:0 0 .9rem 0}
+  .site-header{box-shadow:0 4px 18px rgba(0,0,0,.08)}
+  .header-inner{flex-wrap:wrap;gap:.6rem;padding:.55rem 0}
+  .brand{min-width:0;flex:1}
+  .brand-title{font-size:1rem;line-height:1.2}
+  .brand-sub{font-size:.78rem;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;background:#fff;border:1px solid color-mix(in srgb, var(--border), var(--black) 10%);border-radius:999px;padding:.5rem .8rem;font:inherit;font-weight:800;color:var(--ink);box-shadow:0 3px 10px rgba(0,0,0,.08);cursor:pointer}
+  .nav-toggle-icon,
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after{display:block;width:18px;height:2px;border-radius:999px;background:currentColor;transition:transform .18s ease, opacity .18s ease}
+  .nav-toggle-icon{position:relative}
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after{content:"";position:absolute;left:0}
+  .nav-toggle-icon::before{top:-6px}
+  .nav-toggle-icon::after{top:6px}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-icon{transform:rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-icon::before{transform:translateY(6px) rotate(90deg)}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-icon::after{opacity:0}
+  .nav{display:none;flex:0 0 100%;flex-direction:column;align-items:stretch;gap:.45rem;padding:.35rem 0 .25rem 0}
   .nav.open{display:flex}
   .nav-item{width:100%}
-  .nav a{border:1px solid var(--border);background:#fff}
+  .nav a{min-height:48px;border:1px solid var(--border);background:#fff;border-radius:12px;padding:.55rem .7rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .nav a[aria-current="page"]{border-color:color-mix(in srgb, var(--accent), var(--black) 10%);background:color-mix(in srgb, var(--accent), #ffffff 88%)}
   .nav-subnav{
     position:static;
     display:flex;
