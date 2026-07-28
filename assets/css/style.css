@@ -104,7 +104,7 @@ a:focus{outline:3px solid var(--focus); outline-offset: 2px; border-radius: 6px}
   .nav{display:none;flex:0 0 100%;flex-direction:column;align-items:stretch;gap:.45rem;padding:.35rem 0 .25rem 0}
   .nav.open{display:flex}
   .nav-item{width:100%}
-  .nav a{min-height:48px;border:1px solid var(--border);background:#fff;border-radius:12px;padding:.55rem .7rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .nav a{min-height:48px;border:0;background:transparent;border-radius:10px;padding:.55rem .7rem;box-shadow:none}
   .nav a[aria-current="page"]{background:var(--bg)}
   .nav-subnav{
     position:static;
