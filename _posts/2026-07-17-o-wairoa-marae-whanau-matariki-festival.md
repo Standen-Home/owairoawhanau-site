@@ -10,37 +10,15 @@ klaviyo_source_url: "https://www.klaviyo.com/campaign/01KXQCZH1HKNGGMF7KFFK86PA1
 ---
 
 {% raw %}
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
-<head>
-<title>
-</title>
-<!--[if !mso]><!-->
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<!--<![endif]-->
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<!--[if mso]>
-        <noscript>
-        <xml>
-        <o:OfficeDocumentSettings>
-          <o:AllowPNG/>
-          <o:PixelsPerInch>96</o:PixelsPerInch>
-        </o:OfficeDocumentSettings>
-        </xml>
-        </noscript>
-        <![endif]-->
-<!--[if lte mso 11]>
-        <style type="text/css" data-inliner="ignore">
+<style type="text/css" data-inliner="ignore">
           .mj-outlook-group-fix { width:100% !important; }
         </style>
-        <![endif]-->
-<!--[if !mso]><!--><!--<![endif]-->
 <style>a:not([name]) {color:#85200E;font-weight:700;text-decoration:underline}
 a:link {color:#85200E;font-weight:700;text-decoration:underline}
 a:visited {color:#85200E;font-weight:700;text-decoration:underline}
 a:active {color:#85200E;font-weight:700;text-decoration:underline}
-a:hover {color:#85200E;font-weight:700;text-decoration:underline}</style><style>@import url(https://static-forms.klaviyo.com/fonts/api/v1/S4tXRU/custom_fonts.css);
+a:hover {color:#85200E;font-weight:700;text-decoration:underline}</style>
+<style>@import url(https://static-forms.klaviyo.com/fonts/api/v1/S4tXRU/custom_fonts.css);
 #outlook a {
     padding: 0
     }
@@ -321,8 +299,7 @@ h4 {
         padding-right: 18px !important;
         padding-left: 18px !important
         }
-    }</style></head>
-<body style="word-spacing:normal;background-color:#FBFAF7;">
+    }</style>
 <!-- TRACKING_PIXEL_TOP -->
 <div class="root-container" id="bodyTable" style="background-color:#FBFAF7;">
 <div class="root-container-spacing">
@@ -423,7 +400,7 @@ h4 {
 <tbody>
 <tr>
 <td align="left" class="kl-text" style="font-size:0px;padding:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
-<div style="font-family:Inter;font-size:16px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;text-decoration:none;color:#090303;"><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: right; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="line-height: normal; color: rgb(133, 32, 14); font-size: 24px;"><strong style="font-weight: 700;">|</strong></span><span style="line-height: normal; color: rgb(255, 108, 108); font-size: 24px;"><strong style="font-weight: 700;"> </strong></span><span style="color: rgb(133, 32, 14); font-size: 24px;"><strong style="font-weight: 700;">Ō Wairoa Marae</strong></span><span style="font-size: 24px;"><strong style="font-weight: 700;"> Whanau</strong></span></div><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: center; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span><span style="font-weight: 400;">​</span></span></div><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: center; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span><span style="font-weight: 400;">​</span></span></div><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Kia ora, {{ person.first_name|default:'e hoa' }}.</span></span></p><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Hopefully this catches your inbox before you head to bed for some sleep with our early start in the morning!  Thank you to everyone that came to help today and will be there tomorrow.  It will be a fantastic day and the setup is look amazing. </span></span><br/><br/><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Waiata talked about on Wednesday are linked for you here:</span></span></p><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><a href="https://owairoawhanau.co.nz/waiata/ma-wai-ra/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Ma wai ra</span></a><br/><a href="https://owairoawhanau.co.nz/waiata/te-tuhi-a-manawatere-20/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Te Tuhi</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/nga-whakamoemiti/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Ngā Whakamoemiti</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/noho-mai-kiwi-tamaki/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Noho Mai Kiwi Tamaki</span></a><br/><a href="https://owairoawhanau.co.nz/waiata/he-honore/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">He Hōnore</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/purea-nei-e-te-hau/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Purea Nei</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/i-te-t%C4%ABmatanga/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">I Te Tīmatanga</span></a><br/><br/><span style="font-size: 16px;">You can download the above waiata in a </span><a href="https://owairoawhanau.co.nz/assets/pdfs/waiata-booklet.pdf" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">PDF booklet here.</span></a></p><p data-color="rgb(255, 255, 255)" style="padding-bottom:0; font-style:normal; text-align:left; letter-spacing:normal; text-transform:none; color:rgb(34, 34, 34); background-color:rgb(255, 255, 255); font-family:Arial, Helvetica, sans-serif; font-size:small">​</p></div>
+<div style="font-family:Inter;font-size:16px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;text-decoration:none;color:#090303;"><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: right; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="line-height: normal; color: rgb(133, 32, 14); font-size: 24px;"><strong style="font-weight: 700;">|</strong></span><span style="line-height: normal; color: rgb(255, 108, 108); font-size: 24px;"><strong style="font-weight: 700;"> </strong></span><span style="color: rgb(133, 32, 14); font-size: 24px;"><strong style="font-weight: 700;">Ō Wairoa Marae</strong></span><span style="font-size: 24px;"><strong style="font-weight: 700;"> Whanau</strong></span></div><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: center; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span><span style="font-weight: 400;">​</span></span></div><div data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: center; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span><span style="font-weight: 400;">​</span></span></div><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Kia ora, e hoa.</span></span></p><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Hopefully this catches your inbox before you head to bed for some sleep with our early start in the morning!  Thank you to everyone that came to help today and will be there tomorrow.  It will be a fantastic day and the setup is look amazing. </span></span><br/><br/><span style="text-align: left; color: rgb(64, 63, 63); font-size: 16px;"><span style="font-weight: 400;">Waiata talked about on Wednesday are linked for you here:</span></span></p><p data-color="rgb(255, 255, 255)" style="font-style: normal; text-align: left; letter-spacing: normal; text-transform: none; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: small;"><a href="https://owairoawhanau.co.nz/waiata/ma-wai-ra/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Ma wai ra</span></a><br/><a href="https://owairoawhanau.co.nz/waiata/te-tuhi-a-manawatere-20/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Te Tuhi</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/nga-whakamoemiti/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Ngā Whakamoemiti</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/noho-mai-kiwi-tamaki/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Noho Mai Kiwi Tamaki</span></a><br/><a href="https://owairoawhanau.co.nz/waiata/he-honore/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">He Hōnore</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/purea-nei-e-te-hau/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">Purea Nei</span></a><span style="font-size: 16px;">​</span><br/><a href="https://owairoawhanau.co.nz/waiata/i-te-t%C4%ABmatanga/" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">I Te Tīmatanga</span></a><br/><br/><span style="font-size: 16px;">You can download the above waiata in a </span><a href="https://owairoawhanau.co.nz/assets/pdfs/waiata-booklet.pdf" rel="noopener noreferrer nofollow" style="color:#85200E; font-weight:700; text-decoration:underline" target="_blank"><span style="font-size: 16px;">PDF booklet here.</span></a></p><p data-color="rgb(255, 255, 255)" style="padding-bottom:0; font-style:normal; text-align:left; letter-spacing:normal; text-transform:none; color:rgb(34, 34, 34); background-color:rgb(255, 255, 255); font-family:Arial, Helvetica, sans-serif; font-size:small">​</p></div>
 </td>
 </tr>
 </tbody>
@@ -618,7 +595,7 @@ h4 {
 <tbody>
 <tr>
 <td align="center" class="kl-text" style="font-size:0px;padding:0px;padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;">
-<div style="font-family:Inter;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:center;text-decoration:none;color:#ffffff;"><div><span style="font-style: normal; letter-spacing: 0px; color: rgb(255, 255, 255); font-family: Inter; font-size: 14px;"><span style="font-weight: 400;">{{ organization.name }}</span></span></div></div>
+<div style="font-family:Inter;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:center;text-decoration:none;color:#ffffff;"><div><span style="font-style: normal; letter-spacing: 0px; color: rgb(255, 255, 255); font-family: Inter; font-size: 14px;"><span style="font-weight: 400;">Ō Wairoa Whānau</span></span></div></div>
 </td>
 </tr>
 </tbody>
@@ -628,16 +605,7 @@ h4 {
 </tbody>
 </table>
 </div>
-<div class="mj-column-per-100 mj-outlook-group-fix component-wrapper kl-text-table-layout" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-<tbody>
-<tr>
-<td class="" style="background-color:#FBFAF7;vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-<tbody>
-<tr>
-<td align="center" class="kl-text" style="font-size:0px;padding:0px;padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;">
-<div style="font-family:Inter;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:center;text-decoration:none;color:#ffffff;"><div><span style="color: rgb(62, 61, 61); font-size: 13px;">No longer want to receive these emails? </span><span style="font-style: normal; letter-spacing: 0px; color: rgb(62, 61, 61); font-size: 13px;"><u>{% unsubscribe %}</u></span><span style="color: rgb(62, 61, 61); font-size: 13px;">.<br/></span></div></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -672,6 +640,4 @@ h4 {
 </div>
 </div>
 <!-- TRACKING_PIXEL_BOTTOM -->
-</body>
-</html>
 {% endraw %}

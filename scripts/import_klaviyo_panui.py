@@ -32,6 +32,7 @@ from typing import Any, Callable, Iterable
 API_BASE = "https://a.klaviyo.com"
 DEFAULT_REVISION = "2026-07-15"
 DEFAULT_FILTER = r"pānui|panui|newsletter|news"
+SITE_TITLE = "Ō Wairoa Whānau"
 
 
 @dataclasses.dataclass
@@ -175,6 +176,52 @@ def rewrite_images(
         return re.sub(r"src=[\"'][^\"']+[\"']", f'src="{replacements[src]}"', original, count=1, flags=re.I)
 
     return img_pattern.sub(replace, html_text)
+
+
+def sanitize_merge_fields(html_text: str, site_title: str = SITE_TITLE) -> str:
+    html_text = re.sub(r"{{\s*organi[sz]ation\.name\s*}}", site_title, html_text, flags=re.I)
+    html_text = re.sub(
+        r"{{\s*[^{}]*?\|\s*default\s*:\s*(['\"])(.*?)\1\s*[^{}]*}}",
+        lambda match: match.group(2),
+        html_text,
+        flags=re.I | re.S,
+    )
+    return re.sub(r"{{\s*[^{}]*\s*}}", "", html_text)
+
+
+def remove_unsubscribe_line(html_text: str) -> str:
+    html_text = re.sub(
+        r"<div\b[^>]*>\s*(?:<[^>]+>\s*)*No longer want to receive these emails\?.*?unsubscribe.*?</div>",
+        "",
+        html_text,
+        flags=re.I | re.S,
+    )
+    lines = [
+        line
+        for line in html_text.splitlines()
+        if not re.search(r"No longer want to receive these emails\?|{%\s*unsubscribe\s*%}", line, re.I)
+    ]
+    return "\n".join(lines)
+
+
+def strip_document_wrapper(html_text: str) -> str:
+    styles = re.findall(r"<style\b[^>]*>.*?</style>", html_text, flags=re.I | re.S)
+    body_match = re.search(r"<body\b[^>]*>(.*?)</body>", html_text, flags=re.I | re.S)
+    if body_match:
+        body = body_match.group(1).strip()
+        return "\n".join(styles + [body]).strip()
+    html_text = re.sub(r"<!DOCTYPE[^>]*>", "", html_text, flags=re.I)
+    html_text = re.sub(r"<head\b[^>]*>.*?</head>", "", html_text, flags=re.I | re.S)
+    html_text = re.sub(r"</?html\b[^>]*>", "", html_text, flags=re.I)
+    html_text = re.sub(r"</?body\b[^>]*>", "", html_text, flags=re.I)
+    return html_text.strip()
+
+
+def sanitize_newsletter_html(html_text: str, site_title: str = SITE_TITLE) -> str:
+    html_text = strip_document_wrapper(html_text)
+    html_text = sanitize_merge_fields(html_text, site_title)
+    html_text = remove_unsubscribe_line(html_text)
+    return html_text.strip()
 
 
 def build_post_file(post: ImportedPost) -> tuple[Path, str]:
@@ -376,10 +423,11 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
 
             assets_rel = f"assets/images/panui/{slugify(campaign_id or message_id)}"
             rewritten_body = rewrite_images(body, repo_root / assets_rel, "/" + assets_rel)
+            sanitized_body = sanitize_newsletter_html(rewritten_body)
             post = ImportedPost(
                 title=html.unescape(subject).strip(),
                 date=sent_date,
-                body_html=rewritten_body,
+                body_html=sanitized_body,
                 campaign_id=campaign_id,
                 message_id=message_id,
                 content_hash=content_hash,
