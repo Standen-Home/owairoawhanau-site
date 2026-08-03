@@ -88,6 +88,80 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
         self.assertIn('klaviyo_web_url: "https://example.com/web-view"', text)
         self.assertIn("{% raw %}\n<p>Hello</p>\n{% endraw %}", text)
 
+    def test_sanitize_newsletter_html_removes_document_chrome_and_unsubscribe(self):
+        raw_html = """<!DOCTYPE html>
+<html><head><title>Email</title><style>.x{color:red}</style></head>
+<body><p>Kia ora {{ person.first_name|default:'e hoa' }}</p>
+<p>{{ person.last_name }}</p>
+<div><span>No longer want to receive these emails? </span><u>{% unsubscribe %}</u></div>
+</body></html>"""
+
+        sanitized = import_klaviyo_panui.sanitize_newsletter_html(raw_html)
+
+        self.assertNotIn("<!DOCTYPE", sanitized)
+        self.assertNotIn("<html", sanitized)
+        self.assertNotIn("<head", sanitized)
+        self.assertIn("<style>.x{color:red}</style>", sanitized)
+        self.assertIn("Kia ora e hoa", sanitized)
+        self.assertNotIn("person.last_name", sanitized)
+        self.assertNotIn("No longer want to receive these emails", sanitized)
+        self.assertNotIn("unsubscribe", sanitized)
+
+    def test_sanitize_newsletter_html_replaces_organisation_name_with_site_title(self):
+        sanitized = import_klaviyo_panui.sanitize_newsletter_html(
+            "<p>{{ organisation.name }}</p><p>{{ organization.name }}</p>"
+        )
+
+        self.assertEqual(sanitized, "<p>Ō Wairoa Whānau</p><p>Ō Wairoa Whānau</p>")
+
+    def test_import_posts_sanitizes_body_before_writing(self):
+        captured = {}
+
+        def fake_paginated_api_get(path, api_key, revision, query):
+            return [
+                {
+                    "id": "camp_789",
+                    "attributes": {"status": "Sent", "name": "Pānui"},
+                    "relationships": {"campaign-messages": {"data": [{"id": "msg_789"}]}},
+                }
+            ]
+
+        def fake_api_get(path_or_url, api_key, revision, query=None):
+            return {
+                "data": {
+                    "id": "msg_789",
+                    "attributes": {
+                        "send_times": [{"datetime": "2026-06-20T10:30:00+12:00"}],
+                        "definition": {
+                            "label": "Pānui",
+                            "content": {
+                                "subject": "Pānui",
+                                "body": "<!DOCTYPE html><html><body><p>{{ organization.name }}</p><p>{{ person.first_name|default:'e hoa' }}</p><div>No longer want to receive these emails? {% unsubscribe %}</div></body></html>",
+                            },
+                        },
+                    },
+                }
+            }
+
+        original_paginated = import_klaviyo_panui.paginated_api_get
+        original_api_get = import_klaviyo_panui.api_get
+        import_klaviyo_panui.paginated_api_get = fake_paginated_api_get
+        import_klaviyo_panui.api_get = fake_api_get
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                repo_root = Path(temp_dir)
+                created = import_klaviyo_panui.import_posts(repo_root, "key", "2026-07-15", "pānui|panui")
+                post_text = (repo_root / created[0]).read_text(encoding="utf-8")
+                captured["post_text"] = post_text
+        finally:
+            import_klaviyo_panui.paginated_api_get = original_paginated
+            import_klaviyo_panui.api_get = original_api_get
+
+        self.assertNotIn("<!DOCTYPE", captured["post_text"])
+        self.assertIn("Ō Wairoa Whānau", captured["post_text"])
+        self.assertIn("e hoa", captured["post_text"])
+        self.assertNotIn("unsubscribe", captured["post_text"])
+
     def test_import_posts_uses_stable_campaign_field_names(self):
         captured = {}
 
