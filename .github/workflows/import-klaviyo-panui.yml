@@ -1,0 +1,51 @@
+name: Import Klaviyo Pānui
+
+on:
+  workflow_dispatch:
+  # Keep this aligned with the daily calendar-derived Pages rebuild.
+  schedule:
+    - cron: "0 16 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "klaviyo-panui-import"
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      # Match likely pānui/newsletter campaigns while avoiding unrelated sends.
+      # Adjust this repo variable/line if Klaviyo campaign naming changes.
+      KLAVIYO_CAMPAIGN_FILTER: "pānui|panui|newsletter|news"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stop if KLAVIYO_API_KEY is not configured
+        if: env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "KLAVIYO_API_KEY secret is not configured; skipping Klaviyo pānui import."
+
+      - name: Import sent Klaviyo campaigns
+        if: env.KLAVIYO_API_KEY != ''
+        run: python3 scripts/import_klaviyo_panui.py
+
+      - name: Commit imported pānui
+        if: env.KLAVIYO_API_KEY != ''
+        run: |
+          if [ -z "$(git status --porcelain -- _posts assets/images/panui)" ]; then
+            echo "No new Klaviyo pānui to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _posts assets/images/panui
+          git commit -m "chore: import Klaviyo pānui"
+          git push
