@@ -109,6 +109,7 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
             captured["query"]["fields[campaign]"],
             "created_at,updated_at,name,status,send_time,scheduled_at,archived",
         )
+        self.assertEqual(captured["query"]["filter"], "equals(messages.channel,'email')")
         self.assertNotIn("definition", captured["query"]["fields[campaign]"])
 
     def test_is_sent_campaign_rejects_drafts(self):
