@@ -252,6 +252,8 @@ def paginated_api_get(path: str, api_key: str, revision: str, query: dict[str, s
 def normalize_date(value: Any) -> str:
     if isinstance(value, list) and value:
         value = value[0]
+    if isinstance(value, dict):
+        value = first_nonempty(value.get("datetime"), value.get("date"), value.get("send_time"), value.get("created_at"))
     if not value:
         return ""
     text = str(value).replace("Z", "+00:00")
