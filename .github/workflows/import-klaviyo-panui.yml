@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: "klaviyo-panui-import"
@@ -49,3 +50,4 @@ jobs:
           git add _posts assets/images/panui
           git commit -m "chore: import Klaviyo pānui"
           git push
+          GH_TOKEN="${{ github.token }}" gh workflow run deploy.yml --ref main
