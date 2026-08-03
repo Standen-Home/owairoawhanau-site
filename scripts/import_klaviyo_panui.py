@@ -276,11 +276,9 @@ def campaign_matches_filter(campaign: dict[str, Any], message: dict[str, Any], p
     haystack = "\n".join(
         [
             str(nested_get(attrs, "name", "")),
-            str(nested_get(attrs, "definition.name", "")),
             str(nested_get(msg_attrs, "definition.label", "")),
             str(nested_get(msg_attrs, "definition.content.subject", "")),
-            str(nested_get(msg_attrs, "definition.details.subject", "")),
-            str(nested_get(msg_attrs, "definition.name", "")),
+            str(nested_get(msg_attrs, "definition.content.title", "")),
         ]
     )
     return bool(pattern.search(haystack))
@@ -290,6 +288,16 @@ def extract_message_ids(campaign: dict[str, Any]) -> list[str]:
     relationships = nested_get(campaign, "relationships.campaign-messages.data", [])
     ids = [item.get("id", "") for item in relationships if isinstance(item, dict)]
     return [item for item in ids if item]
+
+
+def is_sent_campaign(campaign: dict[str, Any]) -> bool:
+    attrs = campaign.get("attributes", {})
+    status = str(attrs.get("status", "")).strip().lower()
+    if status in {"sent", "sent_or_partially_sent"}:
+        return True
+    if status and status not in {"draft", "scheduled", "cancelled", "canceled"}:
+        return False
+    return bool(attrs.get("send_time"))
 
 
 def template_body_from_included(message_payload: dict[str, Any]) -> str:
@@ -312,14 +320,14 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
 
     campaign_query = {
         "include": "campaign-messages",
-        "fields[campaign]": "created_at,updated_at,definition,definition.name,definition.archived",
+        "fields[campaign]": "created_at,updated_at,name,status,send_time,scheduled_at,archived",
         "fields[campaign-message]": "created_at,updated_at,definition,definition.content,definition.label,send_times",
         "page[size]": "100",
     }
 
     for campaign in paginated_api_get("/api/campaigns", api_key, revision, campaign_query):
         campaign_id = campaign.get("id", "")
-        if campaign_id in existing.campaign_ids:
+        if campaign_id in existing.campaign_ids or not is_sent_campaign(campaign):
             continue
         message_ids = extract_message_ids(campaign)
         for message_id in message_ids:
@@ -343,15 +351,12 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
             attrs = message.get("attributes", {})
             subject = first_nonempty(
                 nested_get(attrs, "definition.content.subject", ""),
-                nested_get(attrs, "definition.details.subject", ""),
                 nested_get(attrs, "definition.label", ""),
-                nested_get(campaign.get("attributes", {}), "definition.name", ""),
                 nested_get(campaign.get("attributes", {}), "name", ""),
                 "Pānui",
             )
             body = first_nonempty(
                 nested_get(attrs, "definition.content.body", ""),
-                nested_get(attrs, "definition.details.body", ""),
                 template_body_from_included(message_payload),
             )
             if not body:
@@ -377,13 +382,11 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
                 content_hash=content_hash,
                 klaviyo_web_url=first_nonempty(
                     nested_get(attrs, "definition.content.web_url", ""),
-                    nested_get(attrs, "definition.details.web_url", ""),
                     nested_get(attrs, "definition.options.on_open.web_url", ""),
                 ),
                 source_url=f"https://www.klaviyo.com/campaign/{campaign_id}" if campaign_id else "",
                 preview_text=first_nonempty(
                     nested_get(attrs, "definition.content.preview_text", ""),
-                    nested_get(attrs, "definition.details.preview_text", ""),
                 ),
             )
             rel_path, text = build_post_file(post)
