@@ -195,7 +195,7 @@ def build_post_file(post: ImportedPost) -> tuple[Path, str]:
         lines.append(f"klaviyo_web_url: {yaml_string(post.klaviyo_web_url)}")
     if post.source_url:
         lines.append(f"klaviyo_source_url: {yaml_string(post.source_url)}")
-    lines.extend(["---", "", post.body_html.strip(), ""])
+    lines.extend(["---", "", "{% raw %}", post.body_html.strip(), "{% endraw %}", ""])
     return rel_path, "\n".join(lines)
 
 

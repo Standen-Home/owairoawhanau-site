@@ -86,7 +86,7 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
         self.assertIn('klaviyo_campaign_id: "camp_123"', text)
         self.assertIn('klaviyo_message_id: "msg_456"', text)
         self.assertIn('klaviyo_web_url: "https://example.com/web-view"', text)
-        self.assertIn("<p>Hello</p>", text)
+        self.assertIn("{% raw %}\n<p>Hello</p>\n{% endraw %}", text)
 
     def test_import_posts_uses_stable_campaign_field_names(self):
         captured = {}
