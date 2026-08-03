@@ -322,6 +322,7 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
         "include": "campaign-messages",
         "fields[campaign]": "created_at,updated_at,name,status,send_time,scheduled_at,archived",
         "fields[campaign-message]": "created_at,updated_at,definition,definition.content,definition.label,send_times",
+        "filter": "equals(messages.channel,'email')",
         "page[size]": "100",
     }
 
