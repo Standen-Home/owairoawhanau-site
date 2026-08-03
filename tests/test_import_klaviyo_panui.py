@@ -117,6 +117,12 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
         self.assertTrue(import_klaviyo_panui.is_sent_campaign({"attributes": {"send_time": "2026-06-15T10:00:00Z"}}))
         self.assertFalse(import_klaviyo_panui.is_sent_campaign({"attributes": {"status": "Draft"}}))
 
+    def test_normalize_date_handles_klaviyo_send_time_dicts(self):
+        self.assertEqual(
+            import_klaviyo_panui.normalize_date([{"datetime": "2026-06-15T10:30:00+12:00"}]),
+            "2026-06-15",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
