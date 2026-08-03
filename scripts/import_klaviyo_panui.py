@@ -365,7 +365,7 @@ def import_posts(repo_root: Path, api_key: str, revision: str, filter_regex: str
             if not body:
                 print(f"WARNING: skipping {campaign_id}/{message_id}; no message body found", file=sys.stderr)
                 continue
-            sent_date = normalize_date(first_nonempty(attrs.get("send_times"), attrs.get("created_at"), campaign.get("attributes", {}).get("created_at")))
+            sent_date = normalize_date(attrs.get("send_times") or attrs.get("created_at") or campaign.get("attributes", {}).get("send_time") or campaign.get("attributes", {}).get("created_at"))
             if not sent_date:
                 print(f"WARNING: skipping {campaign_id}/{message_id}; no sent/created date found", file=sys.stderr)
                 continue
