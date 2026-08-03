@@ -88,6 +88,34 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
         self.assertIn('klaviyo_web_url: "https://example.com/web-view"', text)
         self.assertIn("<p>Hello</p>", text)
 
+    def test_import_posts_uses_stable_campaign_field_names(self):
+        captured = {}
+
+        def fake_paginated_api_get(path, api_key, revision, query):
+            captured["path"] = path
+            captured["query"] = query
+            return []
+
+        original = import_klaviyo_panui.paginated_api_get
+        import_klaviyo_panui.paginated_api_get = fake_paginated_api_get
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                import_klaviyo_panui.import_posts(Path(temp_dir), "key", "2026-07-15", "panui", dry_run=True)
+        finally:
+            import_klaviyo_panui.paginated_api_get = original
+
+        self.assertEqual(captured["path"], "/api/campaigns")
+        self.assertEqual(
+            captured["query"]["fields[campaign]"],
+            "created_at,updated_at,name,status,send_time,scheduled_at,archived",
+        )
+        self.assertNotIn("definition", captured["query"]["fields[campaign]"])
+
+    def test_is_sent_campaign_rejects_drafts(self):
+        self.assertTrue(import_klaviyo_panui.is_sent_campaign({"attributes": {"status": "Sent"}}))
+        self.assertTrue(import_klaviyo_panui.is_sent_campaign({"attributes": {"send_time": "2026-06-15T10:00:00Z"}}))
+        self.assertFalse(import_klaviyo_panui.is_sent_campaign({"attributes": {"status": "Draft"}}))
+
 
 if __name__ == "__main__":
     unittest.main()
