@@ -123,6 +123,43 @@ class ImportKlaviyoPanuiTests(unittest.TestCase):
             "2026-06-15",
         )
 
+    def test_imported_post_date_uses_send_times_without_stringifying_dict(self):
+        captured = {}
+
+        def fake_paginated_api_get(path, api_key, revision, query):
+            return [
+                {
+                    "id": "camp_123",
+                    "attributes": {"status": "Sent", "name": "Pānui"},
+                    "relationships": {"campaign-messages": {"data": [{"id": "msg_456"}]}},
+                }
+            ]
+
+        def fake_api_get(path_or_url, api_key, revision, query=None):
+            return {
+                "data": {
+                    "id": "msg_456",
+                    "attributes": {
+                        "send_times": [{"datetime": "2026-06-15T10:30:00+12:00"}],
+                        "definition": {"label": "Pānui", "content": {"subject": "Pānui", "body": "<p>Kia ora</p>"}},
+                    },
+                }
+            }
+
+        original_paginated = import_klaviyo_panui.paginated_api_get
+        original_api_get = import_klaviyo_panui.api_get
+        import_klaviyo_panui.paginated_api_get = fake_paginated_api_get
+        import_klaviyo_panui.api_get = fake_api_get
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                created = import_klaviyo_panui.import_posts(Path(temp_dir), "key", "2026-07-15", "pānui|panui")
+                captured["created"] = created
+        finally:
+            import_klaviyo_panui.paginated_api_get = original_paginated
+            import_klaviyo_panui.api_get = original_api_get
+
+        self.assertEqual(captured["created"], [Path("_posts/2026-06-15-panui.md")])
+
 
 if __name__ == "__main__":
     unittest.main()
