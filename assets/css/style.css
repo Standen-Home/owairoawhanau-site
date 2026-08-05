@@ -398,15 +398,76 @@ input[type="search"], select{
   .calendar-event time{white-space:normal}
 }
 
-/* Lyrics formatting: preserve line breaks */
-.lyrics{
-  white-space: pre-wrap;
-  font-size: 1rem;
-  line-height: 1.6;
+/* Lyrics formatting: readable song-sheet style, preserving line breaks */
+.lyrics-wrap{
+  max-width: 42rem;
+  margin: 1rem 0;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: .9rem 1rem;
+  overflow: hidden;
+}
+.lyrics-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:.75rem;
+  padding:.55rem .7rem;
+  border-bottom:1px solid var(--border);
+  background:color-mix(in srgb, var(--gold), #ffffff 88%);
+}
+.lyrics-toolbar-label{
+  font-weight:800;
+  font-size:.95rem;
+}
+.lyrics-toolbar-actions{
+  display:flex;
+  gap:.35rem;
+  flex-wrap:wrap;
+}
+.lyrics-size-btn{
+  min-height:36px;
+  min-width:36px;
+  padding:.35rem .55rem;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+.lyrics-size-btn:hover,
+.lyrics-size-btn:focus{
+  border-color:color-mix(in srgb, var(--accent), var(--black) 12%);
+}
+.lyrics-size-btn:focus{
+  outline:3px solid var(--focus);
+  outline-offset:2px;
+}
+.lyrics{
+  white-space: pre-wrap;
+  max-width: 42rem;
+  margin: 1rem 0;
+  font-family: "Atkinson Hyperlegible", "Noto Sans", Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: var(--lyrics-size, clamp(1.08rem, 2.8vw, 1.22rem));
+  line-height: 1.75;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+.lyrics-wrap .lyrics{
+  max-width:none;
+  margin:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+}
+@media (max-width:520px){
+  .lyrics-toolbar{align-items:flex-start;flex-direction:column}
+  .lyrics-toolbar-actions{width:100%}
+  .lyrics-size-btn{flex:1}
 }
 
 /* Bilingual metadata lines (waiata) */
