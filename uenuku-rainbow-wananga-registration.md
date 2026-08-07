@@ -15,7 +15,7 @@ permalink: /uenuku-rainbow-wananga/register/
 </div>
 
 <div class="registration-form registration-klaviyo-embed">
-  <div class="klaviyo-form-TdN8jE"></div>
+  <div class="klaviyo-form-S2Yhc6"></div>
 </div>
 
 <p class="note">Prefer to talk to someone? Call/text Taini: <a href="tel:+64225676059">022 567 6059</a>.</p>
