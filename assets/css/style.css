@@ -560,6 +560,52 @@ input[type="search"], select{
 .form-embed{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden}
 .form-embed iframe{width:100%;height: min(85vh, 1904px); border:0; display:block}
 
+.registration-event-summary,
+.registration-form{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1rem;
+  box-shadow:0 10px 26px rgba(0,0,0,.05);
+}
+.registration-event-summary{
+  margin:1rem 0;
+  border-left:6px solid var(--gold);
+}
+.registration-event-summary p{margin:.2rem 0}
+.registration-form{margin:1rem 0 0 0}
+.registration-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:1rem;
+}
+.registration-form input,
+.registration-form textarea{
+  width:100%;
+  padding:.65rem .75rem;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+}
+.registration-form textarea{resize:vertical}
+.registration-form input:focus,
+.registration-form textarea:focus{
+  outline:3px solid var(--focus);
+  outline-offset:2px;
+}
+.registration-actions{
+  display:flex;
+  gap:.7rem;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:1rem;
+}
+@media (max-width:760px){
+  .registration-form-grid{grid-template-columns:1fr}
+}
+
 .footer-actions{margin: .8rem 0}
 
 /* Modal */

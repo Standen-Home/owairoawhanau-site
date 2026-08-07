@@ -13,6 +13,9 @@
   children:
     - title: "Featured Events"
       url: "/calendar/featured-events/"
+    - title: "Uenuku Registration"
+      title_en: "Register interest"
+      url: "/uenuku-rainbow-wananga/register/"
   upcoming_featured_events: true
 - title: "Rauemi"
   title_en: "Resources"
