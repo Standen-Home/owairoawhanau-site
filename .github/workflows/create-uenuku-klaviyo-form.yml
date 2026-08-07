@@ -1,0 +1,38 @@
+name: Create Uenuku Klaviyo Form
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-form:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stop if KLAVIYO_API_KEY is not configured
+        if: env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "KLAVIYO_API_KEY secret is not configured."
+          exit 1
+
+      - name: Create Uenuku registration form
+        id: create_form
+        if: env.KLAVIYO_API_KEY != ''
+        run: python3 scripts/create_klaviyo_uenuku_form.py
+
+      - name: Summary
+        if: steps.create_form.outputs.form_id != ''
+        run: |
+          echo "Created/found Klaviyo form ID: ${{ steps.create_form.outputs.form_id }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "form_id=${{ steps.create_form.outputs.form_id }}"
