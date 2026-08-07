@@ -144,7 +144,6 @@ def build_payload(list_id: str | None) -> dict[str, Any]:
                         {
                             "name": "Main",
                             "type": "popup",
-                            "location": "top_center",
                             "status": "draft",
                             "ab_test": False,
                             "channel": "WEB",
