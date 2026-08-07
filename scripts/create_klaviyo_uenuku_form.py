@@ -16,7 +16,7 @@ from typing import Any
 
 API_BASE = "https://a.klaviyo.com"
 REVISION = os.environ.get("KLAVIYO_REVISION", "2026-07-15")
-FORM_NAME = "Uenuku Rainbow Wānanga Registration"
+FORM_NAME = os.environ.get("KLAVIYO_FORM_NAME", "Uenuku Rainbow Wānanga Registration Embed")
 
 
 def api_request(method: str, path: str, payload: dict[str, Any] | None = None) -> tuple[int, dict[str, Any] | None, str]:
@@ -143,7 +143,7 @@ def build_payload(list_id: str | None) -> dict[str, Any]:
                     "versions": [
                         {
                             "name": "Main",
-                            "type": "popup",
+                            "type": "embed",
                             "status": "draft",
                             "ab_test": False,
                             "channel": "WEB",
