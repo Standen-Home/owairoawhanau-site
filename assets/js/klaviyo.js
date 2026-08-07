@@ -44,4 +44,8 @@
       openForm(formId);
     }
   });
+
+  if(document.querySelector('[class*="klaviyo-form-"]')){
+    loadKlaviyo().catch(() => {});
+  }
 })();
