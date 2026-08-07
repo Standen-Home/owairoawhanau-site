@@ -16,6 +16,7 @@ jobs:
     env:
       KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
       KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_FORM_LIST_ID: "RPbsS6"
     steps:
       - name: Checkout
         uses: actions/checkout@v4

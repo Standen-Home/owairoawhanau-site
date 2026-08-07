@@ -215,14 +215,22 @@ def build_payload(list_id: str | None) -> dict[str, Any]:
 
 
 def first_list_id() -> str | None:
-    # Optional: use the first available list if the key has lists:read. If not, create without list_id.
+    configured = os.environ.get("KLAVIYO_FORM_LIST_ID", "").strip()
+    if configured:
+        print(f"Using configured Klaviyo list for submissions: {configured}")
+        return configured
+
+    # Optional: use the first available list if the key has lists:read. If not, fall back
+    # to the known Preview List ID discovered with the existing read key.
     status, parsed, _ = api_request("GET", "/api/lists?fields[list]=name,id&page[size]=1")
-    if status != 200 or not parsed or not parsed.get("data"):
-        print(f"List lookup skipped/unavailable (status {status}); creating form without explicit list_id.")
-        return None
-    item = parsed["data"][0]
-    print(f"Using Klaviyo list for submissions: {item.get('attributes', {}).get('name', item.get('id'))} ({item.get('id')})")
-    return item.get("id")
+    if status == 200 and parsed and parsed.get("data"):
+        item = parsed["data"][0]
+        print(f"Using Klaviyo list for submissions: {item.get('attributes', {}).get('name', item.get('id'))} ({item.get('id')})")
+        return item.get("id")
+
+    fallback = "RPbsS6"
+    print(f"List lookup skipped/unavailable (status {status}); using known Preview List ID {fallback}.")
+    return fallback
 
 
 def existing_form_id() -> str | None:
