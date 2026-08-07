@@ -149,7 +149,7 @@ def build_payload(list_id: str | None) -> dict[str, Any]:
                             "ab_test": False,
                             "channel": "WEB",
                             "message_priority": 50,
-                            "triggers": [],
+                            "triggers": [{"type": "custom_javascript", "properties": {}}],
                             "teasers": [],
                             "styles": {
                                 "width": "medium",
