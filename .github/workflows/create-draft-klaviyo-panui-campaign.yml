@@ -28,6 +28,7 @@ jobs:
       KLAVIYO_REVISION: "2026-07-15"
       KLAVIYO_SOURCE_CAMPAIGN_ID: ${{ inputs.source_campaign_id }}
       KLAVIYO_DRAFT_CAMPAIGN_NAME: ${{ inputs.campaign_name }}
+      KLAVIYO_TEMPLATE_EDITOR_TYPE: "USER_DRAGGABLE"
       SITE_URL: "https://owairoawhanau.co.nz"
     steps:
       - name: Checkout

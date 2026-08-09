@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Create a Klaviyo draft pānui campaign for the coming week.
 
-This is intentionally DRAFT ONLY: it clones an existing sent campaign, assigns a
-fresh HTML template, and verifies the resulting campaign is not scheduled/sent.
+This is intentionally kept in Klaviyo Draft status: it clones an existing sent
+campaign, assigns fresh editable template content, and verifies the resulting
+campaign is not scheduled/sent.
 """
 from __future__ import annotations
 
@@ -60,7 +61,7 @@ def api_request(method: str, path: str, api_key: str, payload: dict[str, Any] | 
 def text_content() -> str:
     return """Kia ora {{ person.first_name|default:'e hoa' }},
 
-Draft pānui for the week of 9 August 2026.
+Pānui for the week of 9 August 2026.
 
 This week:
 • Today, Sunday 9 August, 2pm-5pm — Kaihaka Kapa Haka
@@ -73,8 +74,6 @@ No longer want to receive these emails? {% unsubscribe %}
 Manage preferences: {% manage_preferences %}
 {{ organization.name }}
 {{ organization.full_address }}
-
-This campaign is draft only and has not been scheduled.
 """.strip()
 
 
@@ -118,14 +117,14 @@ def campaign_html() -> str:
   </style>
 </head>
 <body>
-  <div style="display:none;max-height:0;overflow:hidden;">Draft only — pānui o te wiki with this week’s events and Uenuku Rainbow Wānanga.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s events and Uenuku Rainbow Wānanga.</div>
   <div class="wrapper">
     <table role="presentation" class="container" align="center" width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
       <tr><td class="brand"><span class="brand-accent">| Ō Wairoa Marae</span> <strong>Whanau</strong></td></tr>
       <tr><td class="text" style="padding:9px 18px;">
         <p><span style="color:#403F3F;">Kia ora, {{{{ person.first_name|default:'e hoa' }}}}.</span></p>
-        <p><span style="color:#403F3F;">Here is the draft pānui o te wiki for the coming week. Please review/edit before sending — this campaign is draft only and has not been scheduled.</span></p>
+        <p><span style="color:#403F3F;">Here is the pānui o te wiki for the coming week.</span></p>
       </td></tr>
       <tr><td style="padding:18px;"><div class="divider">&nbsp;</div></td></tr>
 
@@ -225,12 +224,16 @@ def main() -> int:
     if missing_tokens:
         raise RuntimeError(f"Generated campaign content is missing merge fields: {missing_tokens}")
 
+    template_editor_type = os.environ.get("KLAVIYO_TEMPLATE_EDITOR_TYPE", "USER_DRAGGABLE").strip().upper()
+    if template_editor_type not in {"CODE", "USER_DRAGGABLE"}:
+        raise RuntimeError("KLAVIYO_TEMPLATE_EDITOR_TYPE must be CODE or USER_DRAGGABLE for HTML-based draft creation")
+
     template_payload = {
         "data": {
             "type": "template",
             "attributes": {
                 "name": f"{draft_name} template",
-                "editor_type": "CODE",
+                "editor_type": template_editor_type,
                 "html": html_body,
                 "text": plain_body,
             },
@@ -303,6 +306,7 @@ def main() -> int:
         "campaign_name": attrs.get("name") or draft_name,
         "message_id": message_id,
         "template_id": template_id,
+        "template_editor_type": template_editor_type,
         "status": attrs.get("status", "draft"),
         "scheduled_at": attrs.get("scheduled_at"),
         "send_time": attrs.get("send_time"),
