@@ -1,0 +1,48 @@
+name: Clone Klaviyo Draggable Pānui Campaign
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_campaign_id:
+        description: "Existing drag-and-drop Klaviyo campaign ID to clone"
+        required: false
+        default: "01KXQCZH1HKNGGMF7KFFK86PA1"
+      campaign_name:
+        description: "Internal draft campaign name"
+        required: false
+        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 9 Aug 2026 - draggable"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  clone-draggable:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_SOURCE_CAMPAIGN_ID: ${{ inputs.source_campaign_id }}
+      KLAVIYO_DRAFT_CAMPAIGN_NAME: ${{ inputs.campaign_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Clone campaign preserving drag-and-drop template
+        id: clone
+        run: python3 scripts/clone_klaviyo_draggable_panui_campaign.py
+      - name: Summary
+        run: |
+          {
+            echo "Campaign ID: ${{ steps.clone.outputs.campaign_id }}"
+            echo "Campaign name: ${{ steps.clone.outputs.campaign_name }}"
+            echo "Message ID: ${{ steps.clone.outputs.message_id }}"
+            echo "Template ID: ${{ steps.clone.outputs.template_id }}"
+            echo "Template name: ${{ steps.clone.outputs.template_name }}"
+            echo "Template editor type: ${{ steps.clone.outputs.template_editor_type }}"
+            echo "Status: ${{ steps.clone.outputs.status }}"
+            echo "Scheduled at: ${{ steps.clone.outputs.scheduled_at }}"
+            echo "Send time: ${{ steps.clone.outputs.send_time }}"
+          } >> "$GITHUB_STEP_SUMMARY"
