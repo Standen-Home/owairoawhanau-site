@@ -140,8 +140,12 @@ def first_message_id(campaign_id: str, api_key: str) -> str:
 
 
 def main() -> int:
-    api_key = (os.environ.get("KLAVIYO_API_CREATE_KEY") or os.environ.get("KLAVIYO_API_KEY") or "").strip()
-    if not api_key:
+    candidate_keys = [
+        ("KLAVIYO_API_CREATE_KEY", os.environ.get("KLAVIYO_API_CREATE_KEY", "").strip()),
+        ("KLAVIYO_API_KEY", os.environ.get("KLAVIYO_API_KEY", "").strip()),
+    ]
+    candidate_keys = [(name, key) for name, key in candidate_keys if key]
+    if not candidate_keys:
         print("ERROR: KLAVIYO_API_CREATE_KEY/KLAVIYO_API_KEY is required", file=sys.stderr)
         return 2
 
@@ -151,7 +155,8 @@ def main() -> int:
     preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: kapa haka today, Mahi Ngahere, and the Uenuku Rainbow Wānanga on Saturday 15 August.")
 
     # Create and assign the HTML template before cloning/sending anything. This
-    # verifies template permissions without changing any campaign state.
+    # verifies template permissions without changing any campaign state. Try both
+    # configured secrets because older repo secrets may have different scopes.
     template_payload = {
         "data": {
             "type": "template",
@@ -163,10 +168,23 @@ def main() -> int:
             },
         }
     }
-    template = api_request("POST", "/api/templates", api_key, template_payload, {"fields[template]": "id,name,editor_type"})
-    template_id = template.get("data", {}).get("id")
-    if not template_id:
-        raise RuntimeError(f"Template creation did not return an id: {template}")
+    template = None
+    template_id = ""
+    api_key = ""
+    failures: list[str] = []
+    for key_name, candidate_api_key in candidate_keys:
+        try:
+            template = api_request("POST", "/api/templates", candidate_api_key, template_payload, {"fields[template]": "id,name,editor_type"})
+            template_id = template.get("data", {}).get("id", "")
+            if template_id:
+                api_key = candidate_api_key
+                print(f"Using {key_name} for Klaviyo draft campaign creation.")
+                break
+            failures.append(f"{key_name}: template creation returned no id")
+        except RuntimeError as exc:
+            failures.append(f"{key_name}: {exc}")
+    if not template_id or not api_key:
+        raise RuntimeError("Could not create Klaviyo template with any configured key. " + " | ".join(failures))
 
     clone_payload = {"data": {"type": "campaign", "id": SOURCE_CAMPAIGN_ID, "attributes": {"new_name": draft_name}}}
     clone = api_request("POST", "/api/campaign-clone", api_key, clone_payload, {"fields[campaign]": "id,name,status,scheduled_at,send_time"})
