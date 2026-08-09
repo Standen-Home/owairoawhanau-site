@@ -58,7 +58,7 @@ def api_request(method: str, path: str, api_key: str, payload: dict[str, Any] | 
 
 
 def text_content() -> str:
-    return """Kia ora e te whānau,
+    return """Kia ora {{ person.first_name|default:'e hoa' }},
 
 Draft pānui for the week of 9 August 2026.
 
@@ -68,6 +68,11 @@ This week:
 • Saturday 15 August, 10am-12pm — Nga tae o Uenuku / Uenuku Rainbow Wānanga with Taini Drummond at Ō Wairoa Marae - Matariki Whare
 
 The Uenuku wānanga is koha based, with all proceeds to the marae. Register for updates on the website.
+
+No longer want to receive these emails? {% unsubscribe %}
+Manage preferences: {% manage_preferences %}
+{{ organization.name }}
+{{ organization.full_address }}
 
 This campaign is draft only and has not been scheduled.
 """.strip()
@@ -119,7 +124,7 @@ def campaign_html() -> str:
       <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
       <tr><td class="brand"><span class="brand-accent">| Ō Wairoa Marae</span> <strong>Whanau</strong></td></tr>
       <tr><td class="text" style="padding:9px 18px;">
-        <p><span style="color:#403F3F;">Kia ora, e hoa.</span></p>
+        <p><span style="color:#403F3F;">Kia ora, {{{{ person.first_name|default:'e hoa' }}}}.</span></p>
         <p><span style="color:#403F3F;">Here is the draft pānui o te wiki for the coming week. Please review/edit before sending — this campaign is draft only and has not been scheduled.</span></p>
       </td></tr>
       <tr><td style="padding:18px;"><div class="divider">&nbsp;</div></td></tr>
@@ -165,6 +170,12 @@ def campaign_html() -> str:
       </td></tr>
 
       <tr><td class="text center" style="background-color:#85200E; color:#ffffff; padding:9px 18px; font-size:14px;">Ō Wairoa Whānau</td></tr>
+      <tr><td class="text center" style="background-color:#FBFAF7; color:#3E3D3D; padding:12px 18px; font-size:12px; font-family:Arial, Helvetica, sans-serif;">
+        <div>No longer want to receive these emails? <a href="{{% unsubscribe %}}" style="color:#85200E; font-weight:700; text-decoration:underline;">Unsubscribe</a></div>
+        <div><a href="{{% manage_preferences %}}" style="color:#85200E; font-weight:700; text-decoration:underline;">Manage preferences</a></div>
+        <div>{{{{ organization.name }}}}</div>
+        <div>{{{{ organization.full_address }}}}</div>
+      </td></tr>
     </table>
   </div>
 </body>
@@ -201,14 +212,27 @@ def main() -> int:
     # Create and assign the HTML template before cloning/sending anything. This
     # verifies template permissions without changing any campaign state. Try both
     # configured secrets because older repo secrets may have different scopes.
+    html_body = campaign_html()
+    plain_body = text_content()
+    required_merge_tokens = [
+        "{{ person.first_name|default:'e hoa' }}",
+        "{% unsubscribe %}",
+        "{% manage_preferences %}",
+        "{{ organization.name }}",
+        "{{ organization.full_address }}",
+    ]
+    missing_tokens = [token for token in required_merge_tokens if token not in html_body and token not in plain_body]
+    if missing_tokens:
+        raise RuntimeError(f"Generated campaign content is missing merge fields: {missing_tokens}")
+
     template_payload = {
         "data": {
             "type": "template",
             "attributes": {
                 "name": f"{draft_name} template",
                 "editor_type": "CODE",
-                "html": campaign_html(),
-                "text": text_content(),
+                "html": html_body,
+                "text": plain_body,
             },
         }
     }
