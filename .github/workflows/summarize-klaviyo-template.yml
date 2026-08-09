@@ -1,0 +1,27 @@
+name: Summarize Klaviyo Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      template_id:
+        description: "Klaviyo template ID"
+        required: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_TEMPLATE_ID: ${{ inputs.template_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/summarize_klaviyo_template.py
