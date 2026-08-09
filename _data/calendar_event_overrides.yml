@@ -19,3 +19,11 @@
   display_time: "9:00 AM - 3:30 PM, Sat 18 Jul 2026"
   button_text: "Open poster"
   button_url: "/assets/images/events/matariki-o-wairoa-marae-2026.jpg"
+
+- uid: "4j2cbfnaot0rb3f91qc9fco691@google.com"
+  image: "/assets/images/events/uenuku-rainbow-wananga-2026.png"
+  image_alt: "Poster for Nga tae o Uenuku Rainbow Wānanga with Taini Drummond on Saturday 15 August 2026"
+  teaser: "Come together for a Uenuku Rainbow workshop, shared learning, whanaungatanga, and support for the whare."
+  display_time: "10:00 AM - 12:00 PM, Sat 15 Aug 2026"
+  button_text: "Register for updates"
+  button_url: "/uenuku-rainbow-wananga/register/"

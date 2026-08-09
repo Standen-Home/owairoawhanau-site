@@ -1,0 +1,56 @@
+name: Create Draft Klaviyo Pānui Campaign
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_campaign_id:
+        description: "Existing campaign ID to clone"
+        required: false
+        default: "01KXQCZH1HKNGGMF7KFFK86PA1"
+      campaign_name:
+        description: "Draft campaign name"
+        required: false
+        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 9 Aug 2026"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_SOURCE_CAMPAIGN_ID: ${{ inputs.source_campaign_id }}
+      KLAVIYO_DRAFT_CAMPAIGN_NAME: ${{ inputs.campaign_name }}
+      SITE_URL: "https://owairoawhanau.co.nz"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stop if Klaviyo API secret is not configured
+        if: env.KLAVIYO_API_CREATE_KEY == '' && env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "Klaviyo API secret is not configured."
+          exit 1
+
+      - name: Create draft campaign
+        id: create_campaign
+        run: python3 scripts/create_klaviyo_draft_panui_campaign.py
+
+      - name: Summary
+        run: |
+          {
+            echo "Created draft Klaviyo campaign."
+            echo "Campaign ID: ${{ steps.create_campaign.outputs.campaign_id }}"
+            echo "Campaign name: ${{ steps.create_campaign.outputs.campaign_name }}"
+            echo "Status: ${{ steps.create_campaign.outputs.status }}"
+            echo "Scheduled at: ${{ steps.create_campaign.outputs.scheduled_at }}"
+            echo "Send time: ${{ steps.create_campaign.outputs.send_time }}"
+            echo "Template ID: ${{ steps.create_campaign.outputs.template_id }}"
+          } >> "$GITHUB_STEP_SUMMARY"

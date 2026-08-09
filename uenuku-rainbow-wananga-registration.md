@@ -9,8 +9,8 @@ permalink: /uenuku-rainbow-wananga/register/
 
 <div class="registration-event-summary">
   <p><strong>Date:</strong> Saturday 15 August 2026</p>
-  <p><strong>Where:</strong> At the whare</p>
-  <p><strong>Time:</strong> To be confirmed</p>
+  <p><strong>Where:</strong> Ō Wairoa Marae - Matariki Whare</p>
+  <p><strong>Time:</strong> 10am - 12pm</p>
   <p><strong>Koha:</strong> Koha based — all proceeds to the whare</p>
 </div>
 
