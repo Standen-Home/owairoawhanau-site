@@ -65,6 +65,7 @@ Pānui for the week of 9 August 2026.
 
 This week:
 • Today, Sunday 9 August, 2pm-5pm — Kaihaka Kapa Haka
+• Wednesday 12 August, 6pm-7pm — Ō Wairoa Marae Waiata Group
 • Friday 14 August, 9am-10am — Mahi Ngahere
 • Saturday 15 August, 10am-12pm — Nga tae o Uenuku / Uenuku Rainbow Wānanga with Taini Drummond at Ō Wairoa Marae - Matariki Whare
 
@@ -133,6 +134,9 @@ def campaign_html() -> str:
 
         <p><span class="event-title">Sunday | 9 August 2026</span></p>
         <p><span style="font-size:18px;">Kaihaka Kapa Haka - 2pm to 5pm</span></p>
+
+        <p><span class="event-title">Wednesday | 12 August 2026</span></p>
+        <p><span style="font-size:18px;">Ō Wairoa Marae Waiata Group - 6pm to 7pm</span></p>
 
         <p><span class="event-title">Friday | 14 August 2026</span></p>
         <p><span style="font-size:18px;">Mahi Ngahere - 9am to 10am</span></p>
@@ -302,6 +306,7 @@ def campaign_definition() -> dict[str, Any]:
     event_text = """
 <div style="text-align:center;"><strong style="font-size:28px;">Panui o te wiki!</strong></div>
 <p style="text-align:center;"><br><strong><u>Sunday | 9 August 2026</u></strong><br>Kaihaka Kapa Haka - 2pm to 5pm</p>
+<p style="text-align:center;"><strong><u>Wednesday | 12 August 2026</u></strong><br>Ō Wairoa Marae Waiata Group - 6pm to 7pm</p>
 <p style="text-align:center;"><strong><u>Friday | 14 August 2026</u></strong><br>Mahi Ngahere - 9am to 10am</p>
 <p style="text-align:center;"><strong><u>Saturday | 15 August 2026</u></strong><br>Nga tae o Uenuku | Uenuku Rainbow Wānanga with Taini Drummond<br>10am to 12pm<br>Ō Wairoa Marae - Matariki Whare<br>Koha based — all proceeds to the marae</p>
 """.strip()
@@ -366,7 +371,7 @@ def main() -> int:
     date_label = dt.datetime.now(TZ).strftime("%Y-%m-%d")
     draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 9 Aug 2026 ({date_label})")
     subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 9 August")
-    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: kapa haka today, Mahi Ngahere, and the Uenuku Rainbow Wānanga on Saturday 15 August.")
+    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: kapa haka today, Waiata Wednesday, Mahi Ngahere, and the Uenuku Rainbow Wānanga on Saturday 15 August.")
 
     # Create and assign the HTML template before cloning/sending anything. This
     # verifies template permissions without changing any campaign state. Try both
