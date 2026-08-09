@@ -181,6 +181,172 @@ def campaign_html() -> str:
 </html>"""
 
 
+def dnd_display() -> dict[str, str]:
+    return {"show_on": "all"}
+
+
+def dnd_text_block(content: str, *, align: str = "left", size: int = 16, color: str = "#090303", weight: str = "400") -> dict[str, Any]:
+    return {
+        "content_type": "block",
+        "type": "text",
+        "data": {
+            "content": content,
+            "display_options": dnd_display(),
+            "styles": {
+                "font_family": "Arial, Helvetica, sans-serif",
+                "font_size": size,
+                "font_weight": weight,
+                "line_height": 1.3,
+                "color": color,
+                "text_align": align,
+                "block_padding_top": 9,
+                "block_padding_right": 18,
+                "block_padding_bottom": 9,
+                "block_padding_left": 18,
+            },
+        },
+    }
+
+
+def dnd_image_block(src: str, alt: str, href: str | None = None) -> dict[str, Any]:
+    return {
+        "content_type": "block",
+        "type": "image",
+        "data": {
+            "properties": {"dynamic": False, "src": src, "alt_text": alt, "href": href},
+            "display_options": dnd_display(),
+            "styles": {
+                "align": "center",
+                "width": 600,
+                "max_width": 600,
+                "block_padding_top": 0,
+                "block_padding_right": 0,
+                "block_padding_bottom": 0,
+                "block_padding_left": 0,
+            },
+        },
+    }
+
+
+def dnd_button_block(label: str, href: str) -> dict[str, Any]:
+    return {
+        "content_type": "block",
+        "type": "button",
+        "data": {
+            "content": label,
+            "properties": {"href": href},
+            "display_options": dnd_display(),
+            "styles": {
+                "background_color": "#85200E",
+                "color": "#FFFFFF",
+                "font_family": "Arial, Helvetica, sans-serif",
+                "font_size": 16,
+                "font_weight": "700",
+                "text_align": "center",
+                "border_radius": 4,
+                "inner_padding_top": 12,
+                "inner_padding_right": 18,
+                "inner_padding_bottom": 12,
+                "inner_padding_left": 18,
+                "block_padding_top": 12,
+                "block_padding_right": 18,
+                "block_padding_bottom": 12,
+                "block_padding_left": 18,
+            },
+        },
+    }
+
+
+def dnd_rule_block() -> dict[str, Any]:
+    return {
+        "content_type": "block",
+        "type": "horizontal_rule",
+        "data": {
+            "display_options": dnd_display(),
+            "styles": {
+                "border_color": "#CCCCCC",
+                "border_style": "solid",
+                "border_width": 1,
+                "block_padding_top": 18,
+                "block_padding_right": 18,
+                "block_padding_bottom": 18,
+                "block_padding_left": 18,
+            },
+        },
+    }
+
+
+def dnd_section(blocks: list[dict[str, Any]], *, background: str = "#FFFFFF") -> dict[str, Any]:
+    return {
+        "content_type": "section",
+        "type": "section",
+        "data": {
+            "properties": {},
+            "display_options": dnd_display(),
+            "styles": {
+                "background_color": background,
+                "content_color": "#FFFFFF",
+                "content_color_type": "section",
+                "inner_padding_top": 0,
+                "inner_padding_right": 0,
+                "inner_padding_bottom": 0,
+                "inner_padding_left": 0,
+                "column_align": "top",
+                "column_direction": "ltr",
+                "stack_on_mobile": True,
+            },
+        },
+        "rows": [{"data": {}, "columns": [{"data": {}, "blocks": blocks}]}],
+    }
+
+
+def campaign_definition() -> dict[str, Any]:
+    """Build a Klaviyo SYSTEM_DRAGGABLE definition with editable blocks."""
+    poster_url = f"{SITE_URL}/assets/images/events/uenuku-rainbow-wananga-2026.png"
+    register_url = f"{SITE_URL}/uenuku-rainbow-wananga/register/"
+    calendar_url = f"{SITE_URL}/calendar/"
+    event_text = """
+<div style="text-align:center;"><strong style="font-size:28px;">Panui o te wiki!</strong></div>
+<p style="text-align:center;"><br><strong><u>Sunday | 9 August 2026</u></strong><br>Kaihaka Kapa Haka - 2pm to 5pm</p>
+<p style="text-align:center;"><strong><u>Friday | 14 August 2026</u></strong><br>Mahi Ngahere - 9am to 10am</p>
+<p style="text-align:center;"><strong><u>Saturday | 15 August 2026</u></strong><br>Nga tae o Uenuku | Uenuku Rainbow Wānanga with Taini Drummond<br>10am to 12pm<br>Ō Wairoa Marae - Matariki Whare<br>Koha based — all proceeds to the marae</p>
+""".strip()
+    waiata_text = """
+<div style="text-align:center;"><strong style="color:#85200E; font-size:18px;">Te Tuhi </strong><strong style="font-size:18px;">Lyrics</strong><br><br><strong>Mā te rāpa ka kitea</strong><br>Te Tuhi a Manawatere<br>Nō Ngāi Tai... te tupuna e<br>Te Waka... he huruhuru<br>Te Pōhutukawa ..i Wairoa<br>He tohu... he whaka-taukī<br>Mā te rāpa .. ka kitea x2</div>
+""".strip()
+    footer_text = """
+<div style="text-align:center; font-size:12px;">No longer want to receive these emails? <a href="{% unsubscribe %}">Unsubscribe</a><br><a href="{% manage_preferences %}">Manage preferences</a><br>{{ organization.name }}<br>{{ organization.full_address }}</div>
+""".strip()
+    return {
+        "body": {
+            "properties": {},
+            "styles": {"background_color": "#FBFAF7", "width": 600},
+            "sections": [
+                dnd_section([dnd_text_block("&nbsp;", align="center", color="#EFCE2B")], background="#EFCE2B"),
+                dnd_section([dnd_text_block('<div style="text-align:right;"><span style="color:#85200E;"><strong>| Ō Wairoa Marae</strong></span> <strong>Whanau</strong></div>', align="right", size=24, weight="700")]),
+                dnd_section([dnd_text_block("Kia ora, {{ person.first_name|default:'e hoa' }}.<br><br>Here is the pānui o te wiki for the coming week.", color="#403F3F")]),
+                dnd_section([dnd_rule_block()]),
+                dnd_section([dnd_text_block(event_text, align="center", size=18), dnd_button_block("Register for updates", register_url), dnd_button_block("Open the full calendar", calendar_url)]),
+                dnd_section([dnd_image_block(poster_url, "Poster for Nga tae o Uenuku Rainbow Wānanga with Taini Drummond", register_url)]),
+                dnd_section([dnd_rule_block(), dnd_text_block("As always - We look forward to seeing you soon.<br><br>Kia pai te ra! ☀️", color="#3E3D3D")]),
+                dnd_section([dnd_text_block("Ō Wairoa Whānau", align="center", color="#FFFFFF")], background="#85200E"),
+                dnd_section([dnd_text_block(waiata_text, align="center")], background="#FBFAF7"),
+                dnd_section([dnd_text_block(footer_text, align="center", size=12, color="#3E3D3D")], background="#FBFAF7"),
+            ],
+        },
+        "styles": [
+            {"style_type": "base-styles", "properties": {"is_user_draggable": True, "mobile_optimizations": True}, "styles": {"background_color": "#FBFAF7"}},
+            {"style_type": "text-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 16, "color": "#090303"}},
+            {"style_type": "heading-1-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 28, "color": "#090303"}},
+            {"style_type": "heading-2-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 24, "color": "#85200E"}},
+            {"style_type": "heading-3-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 20, "color": "#090303"}},
+            {"style_type": "heading-4-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 18, "color": "#090303"}},
+            {"style_type": "link-styles", "styles": {"color": "#85200E", "font_weight": "700", "text_decoration": "underline"}},
+            {"style_type": "mobile-styles", "properties": {}, "styles": {}},
+        ],
+    }
+
+
 def first_message_id(campaign_id: str, api_key: str) -> str:
     payload = api_request("GET", f"/api/campaigns/{urllib.parse.quote(campaign_id)}/campaign-messages", api_key)
     messages = payload.get("data", [])
@@ -224,21 +390,21 @@ def main() -> int:
     if missing_tokens:
         raise RuntimeError(f"Generated campaign content is missing merge fields: {missing_tokens}")
 
-    template_editor_type = os.environ.get("KLAVIYO_TEMPLATE_EDITOR_TYPE", "USER_DRAGGABLE").strip().upper()
-    if template_editor_type not in {"CODE", "USER_DRAGGABLE"}:
-        raise RuntimeError("KLAVIYO_TEMPLATE_EDITOR_TYPE must be CODE or USER_DRAGGABLE for HTML-based draft creation")
+    template_editor_type = os.environ.get("KLAVIYO_TEMPLATE_EDITOR_TYPE", "SYSTEM_DRAGGABLE").strip().upper()
+    if template_editor_type not in {"CODE", "USER_DRAGGABLE", "SYSTEM_DRAGGABLE"}:
+        raise RuntimeError("KLAVIYO_TEMPLATE_EDITOR_TYPE must be CODE, USER_DRAGGABLE, or SYSTEM_DRAGGABLE")
 
-    template_payload = {
-        "data": {
-            "type": "template",
-            "attributes": {
-                "name": f"{draft_name} template",
-                "editor_type": template_editor_type,
-                "html": html_body,
-                "text": plain_body,
-            },
-        }
+    template_attributes: dict[str, Any] = {
+        "name": f"{draft_name} template",
+        "editor_type": template_editor_type,
+        "text": plain_body,
     }
+    if template_editor_type == "SYSTEM_DRAGGABLE":
+        template_attributes["definition"] = campaign_definition()
+    else:
+        template_attributes["html"] = html_body
+
+    template_payload = {"data": {"type": "template", "attributes": template_attributes}}
     template = None
     template_id = ""
     api_key = ""
