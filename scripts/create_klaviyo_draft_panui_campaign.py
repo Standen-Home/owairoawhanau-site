@@ -209,21 +209,15 @@ def dnd_text_block(content: str, *, align: str = "left", size: int = 16, color: 
 
 
 def dnd_image_block(src: str, alt: str, href: str | None = None) -> dict[str, Any]:
+    image_html = f'<img src="{html.escape(src)}" alt="{html.escape(alt)}" style="display:block;width:100%;max-width:600px;height:auto;border:0;">'
+    if href:
+        image_html = f'<a href="{html.escape(href)}" target="_blank" rel="noopener noreferrer nofollow">{image_html}</a>'
     return {
         "content_type": "block",
-        "type": "image",
+        "type": "html",
         "data": {
-            "properties": {"dynamic": False, "src": src, "alt_text": alt, "href": href},
+            "content": image_html,
             "display_options": dnd_display(),
-            "styles": {
-                "align": "center",
-                "width": 600,
-                "max_width": 600,
-                "block_padding_top": 0,
-                "block_padding_right": 0,
-                "block_padding_bottom": 0,
-                "block_padding_left": 0,
-            },
         },
     }
 
@@ -296,7 +290,7 @@ def dnd_section(blocks: list[dict[str, Any]], *, background: str = "#FFFFFF") ->
                 "stack_on_mobile": True,
             },
         },
-        "rows": [{"data": {}, "columns": [{"data": {}, "blocks": blocks}]}],
+        "rows": [{"data": {"styles": {"column_layout": "1-column-full-width"}}, "columns": [{"data": {}, "blocks": blocks}]}],
     }
 
 
@@ -335,7 +329,7 @@ def campaign_definition() -> dict[str, Any]:
             ],
         },
         "styles": [
-            {"style_type": "base-styles", "properties": {"is_user_draggable": True, "mobile_optimizations": True}, "styles": {"background_color": "#FBFAF7"}},
+            {"style_type": "base-styles", "properties": {"is_user_draggable": True, "mobile_optimizations": True}, "styles": {"content_background_color": "#FFFFFF", "inner_padding_top": 0, "inner_padding_right": 0, "inner_padding_bottom": 0, "inner_padding_left": 0}},
             {"style_type": "text-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 16, "color": "#090303"}},
             {"style_type": "heading-1-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 28, "color": "#090303"}},
             {"style_type": "heading-2-styles", "styles": {"font_family": "Arial, Helvetica, sans-serif", "font_size": 24, "color": "#85200E"}},
