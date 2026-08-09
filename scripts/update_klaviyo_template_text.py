@@ -113,11 +113,12 @@ def main() -> int:
                 definition, count = replace_in_obj(attrs["definition"], old_text, new_text)
                 update_attrs["definition"] = definition
                 total += count
-            for field in ("html", "text"):
-                if isinstance(attrs.get(field), str):
-                    replaced, count = replace_in_obj(attrs[field], old_text, new_text)
-                    update_attrs[field] = replaced
-                    total += count
+            if str(editor_type).upper() != "SYSTEM_DRAGGABLE":
+                for field in ("html", "text"):
+                    if isinstance(attrs.get(field), str):
+                        replaced, count = replace_in_obj(attrs[field], old_text, new_text)
+                        update_attrs[field] = replaced
+                        total += count
             if total == 0:
                 print(
                     json.dumps(
