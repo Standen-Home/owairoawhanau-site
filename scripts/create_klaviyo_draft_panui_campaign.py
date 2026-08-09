@@ -218,7 +218,12 @@ def main() -> int:
     }
     api_request("POST", "/api/campaign-message-assign-template", api_key, assign_payload)
 
-    verified = api_request("GET", f"/api/campaigns/{urllib.parse.quote(campaign_id)}", api_key, {"fields[campaign]": "id,name,status,scheduled_at,send_time"}).get("data", {})
+    verified = api_request(
+        "GET",
+        f"/api/campaigns/{urllib.parse.quote(campaign_id)}",
+        api_key,
+        query={"fields[campaign]": "id,name,status,scheduled_at,send_time"},
+    ).get("data", {})
     attrs = verified.get("attributes", {})
     if str(attrs.get("status", "")).lower() not in {"draft", ""}:
         raise RuntimeError(f"Expected draft status, got: {attrs}")
