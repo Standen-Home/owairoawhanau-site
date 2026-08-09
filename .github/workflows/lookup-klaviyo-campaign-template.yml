@@ -1,0 +1,48 @@
+name: Lookup Klaviyo Campaign Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign_id:
+        description: "Klaviyo campaign ID"
+        required: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_CAMPAIGN_ID: ${{ inputs.campaign_id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stop if Klaviyo API secret is not configured
+        if: env.KLAVIYO_API_CREATE_KEY == '' && env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "Klaviyo API secret is not configured."
+          exit 1
+
+      - name: Lookup campaign template
+        id: lookup
+        run: python3 scripts/lookup_klaviyo_campaign_template.py
+
+      - name: Summary
+        run: |
+          {
+            echo "Campaign ID: ${{ steps.lookup.outputs.campaign_id }}"
+            echo "Campaign name: ${{ steps.lookup.outputs.campaign_name }}"
+            echo "Message ID: ${{ steps.lookup.outputs.message_id }}"
+            echo "Template ID: ${{ steps.lookup.outputs.template_id }}"
+            echo "Template name: ${{ steps.lookup.outputs.template_name }}"
+            echo "Template editor type: ${{ steps.lookup.outputs.template_editor_type }}"
+          } >> "$GITHUB_STEP_SUMMARY"
