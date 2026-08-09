@@ -74,55 +74,99 @@ This campaign is draft only and has not been scheduled.
 
 
 def campaign_html() -> str:
+    """Return HTML that mirrors the recent Klaviyo pānui layout.
+
+    The previous pānui format is simple and very Klaviyo-ish: pale site
+    background, 600px white card, yellow strip at the top, right-aligned Ō Wairoa
+    Marae Whanau header, centered date/event blocks, full-width poster image,
+    horizontal dividers, closing text, maroon social/footer strip, and a waiata
+    lyrics block.
+    """
     poster_url = f"{SITE_URL}/assets/images/events/uenuku-rainbow-wananga-2026.png"
     register_url = f"{SITE_URL}/uenuku-rainbow-wananga/register/"
     calendar_url = f"{SITE_URL}/calendar/"
-    news_url = f"{SITE_URL}/news/"
+    contact_url = f"{SITE_URL}/contact/"
+    facebook_icon = f"{SITE_URL}/assets/images/panui/01kwknzstzg8kaqzj32jt93fmx/311d80d6bdd83b45.png"
+    email_icon = f"{SITE_URL}/assets/images/panui/01kwknzstzg8kaqzj32jt93fmx/6d549562fa389c2e.png"
     return f"""<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ō Wairoa Whānau Pānui</title>
+  <title>Ō Wairoa Marae Whanau | Pānui o te wiki</title>
+  <style>
+    body {{ margin:0; padding:0; background:#FBFAF7; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }}
+    table, td {{ border-collapse:collapse; }}
+    img {{ border:0; height:auto; line-height:100%; outline:none; text-decoration:none; max-width:100%; }}
+    a {{ color:#85200E; font-weight:700; text-decoration:underline; }}
+    p {{ margin:0; padding-bottom:1em; }}
+    .wrapper {{ background:#FBFAF7; padding:10px; }}
+    .container {{ width:100%; max-width:600px; background:#ffffff; margin:0 auto; }}
+    .text {{ font-family:Inter, Arial, Helvetica, sans-serif; font-size:16px; line-height:1.3; color:#090303; }}
+    .brand {{ text-align:right; font-family:Arial, Helvetica, sans-serif; font-size:24px; line-height:1.2; padding:9px 18px; }}
+    .brand-accent {{ color:#85200E; font-weight:700; }}
+    .center {{ text-align:center; }}
+    .event-title {{ color:#090303; font-size:18px; font-weight:700; text-decoration:underline; }}
+    .section-title {{ color:#85200E; font-size:24px; font-weight:700; }}
+    .divider {{ border-top:solid 1px #CCCCCC; font-size:1px; line-height:1px; margin:0 auto; width:100%; }}
+    @media only screen and (max-width:480px) {{ .text {{ padding-left:18px !important; padding-right:18px !important; }} }}
+  </style>
 </head>
-<body style="margin:0;background:#f5efe7;color:#25170f;font-family:Inter,Arial,sans-serif;">
-  <div style="display:none;max-height:0;overflow:hidden;">Draft only — week ahead pānui including today and the Uenuku Rainbow Wānanga.</div>
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f5efe7;">
-    <tr><td align="center" style="padding:24px 12px;">
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#fffaf3;border-radius:20px;overflow:hidden;border:1px solid #ead9c2;">
-        <tr><td style="background:#5b2a16;color:#fff;padding:28px 30px;">
-          <p style="margin:0 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;">DRAFT ONLY — not scheduled</p>
-          <h1 style="margin:0;font-size:30px;line-height:1.15;">Ō Wairoa Whānau Pānui</h1>
-          <p style="margin:10px 0 0;font-size:17px;">Week of 9 August 2026</p>
-        </td></tr>
-        <tr><td style="padding:28px 30px;">
-          <p style="font-size:17px;line-height:1.55;margin:0 0 18px;">Kia ora e te whānau, here is the draft week-ahead pānui, based on the last two pānui style: clear dates first, then the key kaupapa and links.</p>
+<body>
+  <div style="display:none;max-height:0;overflow:hidden;">Draft only — pānui o te wiki with this week’s events and Uenuku Rainbow Wānanga.</div>
+  <div class="wrapper">
+    <table role="presentation" class="container" align="center" width="100%" cellpadding="0" cellspacing="0">
+      <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
+      <tr><td class="brand"><span class="brand-accent">| Ō Wairoa Marae</span> <strong>Whanau</strong></td></tr>
+      <tr><td class="text" style="padding:9px 18px;">
+        <p><span style="color:#403F3F;">Kia ora, e hoa.</span></p>
+        <p><span style="color:#403F3F;">Here is the draft pānui o te wiki for the coming week. Please review/edit before sending — this campaign is draft only and has not been scheduled.</span></p>
+      </td></tr>
+      <tr><td style="padding:18px;"><div class="divider">&nbsp;</div></td></tr>
 
-          <h2 style="font-size:22px;margin:26px 0 12px;color:#5b2a16;">This week</h2>
-          <ul style="padding-left:22px;font-size:16px;line-height:1.6;margin:0 0 22px;">
-            <li><strong>Today, Sunday 9 August, 2pm-5pm:</strong> Kaihaka Kapa Haka</li>
-            <li><strong>Friday 14 August, 9am-10am:</strong> Mahi Ngahere</li>
-            <li><strong>Saturday 15 August, 10am-12pm:</strong> Nga tae o Uenuku / Uenuku Rainbow Wānanga with Taini Drummond</li>
-          </ul>
+      <tr><td class="text center" style="padding:9px 18px; font-family:Arial, Helvetica, sans-serif;">
+        <div style="font-size:28px; font-weight:700; padding-bottom:18px;">Panui o te wiki!</div>
 
-          <div style="border:2px solid #7b5ac7;border-radius:18px;padding:20px;background:#f7f3ff;margin:24px 0;">
-            <h2 style="font-size:24px;margin:0 0 10px;color:#25154d;">Nga tae o Uenuku — Uenuku Rainbow Wānanga</h2>
-            <p style="font-size:16px;line-height:1.55;margin:0 0 14px;">Come together for a Uenuku Rainbow workshop, shared learning, whanaungatanga, and support for the whare.</p>
-            <p style="font-size:16px;line-height:1.55;margin:0 0 14px;"><strong>When:</strong> Saturday 15 August, 10am - 12pm<br><strong>Where:</strong> Ō Wairoa Marae - Matariki Whare<br><strong>Koha:</strong> Koha based — all proceeds to the marae<br><strong>Enquiries:</strong> Taini 022 567 6059</p>
-            <p style="margin:18px 0;"><a href="{register_url}" style="background:#5b2a16;color:#fff;text-decoration:none;border-radius:999px;padding:12px 18px;display:inline-block;font-weight:700;">Register for updates</a></p>
-            <a href="{register_url}"><img src="{poster_url}" alt="Poster for Nga tae o Uenuku Uenuku Rainbow Wānanga with Taini Drummond" style="width:100%;max-width:520px;border-radius:14px;display:block;margin:10px auto 0;"></a>
-          </div>
+        <p><span class="event-title">Sunday | 9 August 2026</span></p>
+        <p><span style="font-size:18px;">Kaihaka Kapa Haka - 2pm to 5pm</span></p>
 
-          <h2 style="font-size:22px;margin:26px 0 12px;color:#5b2a16;">Also from recent pānui</h2>
-          <p style="font-size:16px;line-height:1.55;margin:0 0 12px;">The recent pānui centred Matariki, whānau connection, waiata/kapa haka, and practical event information. This draft keeps the same rhythm: what is happening, when to come, and where to click next.</p>
-          <p style="margin:18px 0 0;"><a href="{calendar_url}" style="color:#85200e;font-weight:700;">Open the calendar</a> &nbsp;|&nbsp; <a href="{news_url}" style="color:#85200e;font-weight:700;">Read past pānui</a></p>
-        </td></tr>
-        <tr><td style="background:#efe2d1;padding:18px 30px;font-size:13px;line-height:1.5;color:#5b4638;">
-          Draft campaign created for review only. Do not schedule/send until approved.
-        </td></tr>
-      </table>
-    </td></tr>
-  </table>
+        <p><span class="event-title">Friday | 14 August 2026</span></p>
+        <p><span style="font-size:18px;">Mahi Ngahere - 9am to 10am</span></p>
+
+        <p><span class="event-title">Saturday | 15 August 2026</span></p>
+        <p><span style="font-size:18px;">Nga tae o Uenuku | Uenuku Rainbow Wānanga with Taini Drummond</span></p>
+        <p><span style="font-size:16px;">10am to 12pm<br>Ō Wairoa Marae - Matariki Whare<br>Koha based — all proceeds to the marae</span></p>
+        <p><a href="{register_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Register for updates</span></a></p>
+        <p><a href="{calendar_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Open the full calendar</span></a></p>
+      </td></tr>
+
+      <tr><td align="center" style="padding:0;">
+        <a href="{register_url}" target="_blank" rel="noopener noreferrer nofollow"><img src="{poster_url}" alt="Poster for Nga tae o Uenuku Rainbow Wānanga with Taini Drummond" width="600" style="display:block; width:100%; max-width:600px;"></a>
+      </td></tr>
+
+      <tr><td style="padding:18px;"><div class="divider">&nbsp;</div></td></tr>
+      <tr><td class="text" style="padding:9px 18px;">
+        <div><span style="color:#3E3D3D;">As always - We look forward to seeing you soon.</span></div>
+        <div><span style="color:#3E3D3D;"><br>Kia pai te ra! ☀️</span></div>
+        <div><span style="color:#3E3D3D;">&nbsp;</span></div>
+      </td></tr>
+
+      <tr><td style="background-color:#85200E; padding:9px; text-align:center;">
+        <a href="https://www.facebook.com/profile.php?id=100077399025413" target="_blank" style="display:inline-block; padding-right:10px;"><img alt="facebook" src="{facebook_icon}" width="32" style="width:32px;"></a>
+        <a href="{contact_url}" target="_blank" style="display:inline-block;"><img alt="Email" src="{email_icon}" width="32" style="width:32px;"></a>
+      </td></tr>
+
+      <tr><td style="background-color:#FBFAF7; padding:9px 18px;">
+        <div class="text center" style="background:#FFFFFF; padding:10px; font-family:Arial, Helvetica, sans-serif;">
+          <div><span style="color:#85200E; font-size:18px;"><strong>Te Tuhi </strong></span><span style="font-size:18px;"><strong>Lyrics</strong></span></div>
+          <div style="padding:8px 0;">&nbsp;</div>
+          <div><strong>Mā te rāpa ka kitea</strong><br>Te Tuhi a Manawatere<br>Nō Ngāi Tai... te tupuna e<br>Te Waka... he huruhuru<br>Te Pōhutukawa ..i Wairoa<br>He tohu... he whaka-taukī<br>Mā te rāpa .. ka kitea x2</div>
+        </div>
+      </td></tr>
+
+      <tr><td class="text center" style="background-color:#85200E; color:#ffffff; padding:9px 18px; font-size:14px;">Ō Wairoa Whānau</td></tr>
+    </table>
+  </div>
 </body>
 </html>"""
 
