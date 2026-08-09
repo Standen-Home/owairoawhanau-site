@@ -8,6 +8,7 @@ Klaviyo drag-and-drop editor.
 from __future__ import annotations
 import json, os, sys, time, urllib.error, urllib.parse, urllib.request
 from typing import Any
+from create_klaviyo_draft_panui_campaign import campaign_html as build_campaign_html, text_content as build_text_content
 API_BASE='https://a.klaviyo.com'; REVISION=os.environ.get('KLAVIYO_REVISION','2026-07-15')
 SOURCE_CAMPAIGN_ID=os.environ.get('KLAVIYO_SOURCE_CAMPAIGN_ID','01KXQCZH1HKNGGMF7KFFK86PA1')
 
@@ -61,7 +62,18 @@ def main() -> int:
             if editor == 'CODE':
                 raise RuntimeError(f'cloned campaign unexpectedly uses CODE template {info}')
             msg_id=info['message_id']
-            update_payload={'data':{'type':'campaign-message','id':msg_id,'attributes':{'definition':{'channel':'email','label':'Main email','content':{'subject':subject,'preview_text':preview}}}}}
+            html_body = build_campaign_html()
+            plain_body = build_text_content()
+            required_tokens = ["{{ person.first_name|default:'e hoa' }}", "{% unsubscribe %}", "{% manage_preferences %}", "{{ organization.name }}", "{{ organization.full_address }}"]
+            missing = [token for token in required_tokens if token not in html_body and token not in plain_body]
+            if missing:
+                raise RuntimeError(f'Generated campaign content is missing merge fields: {missing}')
+            forbidden_customer_words = ['draft only', 'this campaign is draft', 'not scheduled', 'review/edit before sending']
+            lower_content = (html_body + '\n' + plain_body).lower()
+            leaked = [word for word in forbidden_customer_words if word in lower_content]
+            if leaked:
+                raise RuntimeError(f'Generated customer-facing content contains draft/scheduling wording: {leaked}')
+            update_payload={'data':{'type':'campaign-message','id':msg_id,'attributes':{'definition':{'channel':'email','label':'Main email','content':{'subject':subject,'preview_text':preview,'body':html_body}}}}}
             api_request('PATCH', f'/api/campaign-messages/{urllib.parse.quote(str(msg_id))}', key, update_payload)
             verified=api_request('GET', f'/api/campaigns/{urllib.parse.quote(campaign_id)}', key, query={'fields[campaign]':'id,name,status,scheduled_at,send_time'}).get('data',{})
             attrs=verified.get('attributes') or {}
