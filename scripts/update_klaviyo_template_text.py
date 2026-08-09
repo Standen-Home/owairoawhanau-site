@@ -119,6 +119,20 @@ def main() -> int:
                     update_attrs[field] = replaced
                     total += count
             if total == 0:
+                print(
+                    json.dumps(
+                        {
+                            "template_id": template_id,
+                            "editor_type": editor_type,
+                            "attribute_keys": sorted(attrs.keys()),
+                            "has_definition": attrs.get("definition") is not None,
+                            "has_html": isinstance(attrs.get("html"), str),
+                            "has_text": isinstance(attrs.get("text"), str),
+                        },
+                        ensure_ascii=False,
+                        indent=2,
+                    )
+                )
                 raise RuntimeError(f"Text not found in template {template_id}: {old_text!r}")
             update_payload = {"data": {"type": "template", "id": template_id, "attributes": update_attrs}}
             api_request("PATCH", f"/api/templates/{urllib.parse.quote(template_id)}", api_key, update_payload)
