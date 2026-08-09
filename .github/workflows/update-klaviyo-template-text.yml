@@ -1,0 +1,44 @@
+name: Update Klaviyo Template Text
+
+on:
+  workflow_dispatch:
+    inputs:
+      template_id:
+        description: "Klaviyo template ID"
+        required: true
+      old_text:
+        description: "Exact text to replace"
+        required: true
+      new_text:
+        description: "Replacement text"
+        required: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  update-template-text:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_TEMPLATE_ID: ${{ inputs.template_id }}
+      KLAVIYO_OLD_TEXT: ${{ inputs.old_text }}
+      KLAVIYO_NEW_TEXT: ${{ inputs.new_text }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update template text
+        id: update
+        run: python3 scripts/update_klaviyo_template_text.py
+      - name: Summary
+        run: |
+          {
+            echo "Template ID: ${{ steps.update.outputs.template_id }}"
+            echo "Editor type: ${{ steps.update.outputs.editor_type }}"
+            echo "Replacements: ${{ steps.update.outputs.replacements }}"
+          } >> "$GITHUB_STEP_SUMMARY"
