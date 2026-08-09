@@ -99,7 +99,7 @@ def main() -> int:
                 "GET",
                 f"/api/templates/{urllib.parse.quote(template_id)}",
                 api_key,
-                {
+                query={
                     "additional-fields[template]": "definition",
                     "fields[template]": "id,name,editor_type,definition,html,text",
                 },
