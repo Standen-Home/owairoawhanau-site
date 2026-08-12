@@ -18,4 +18,6 @@ permalink: /uenuku-rainbow-wananga/register/
   <div class="klaviyo-form-S2Yhc6"></div>
 </div>
 
+<p><button class="btn btn-primary" type="button" data-klaviyo-form="S2Yhc6">Open registration form</button></p>
+
 <p class="note">Prefer to talk to someone? Call/text Taini: <a href="tel:+64225676059">022 567 6059</a>.</p>
