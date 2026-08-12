@@ -62,8 +62,8 @@ def summarize(item: dict[str, Any]) -> dict[str, Any]:
         "form_id": item.get("id"),
         "name": attrs.get("name"),
         "status": attrs.get("status"),
-        "created": attrs.get("created"),
-        "updated": attrs.get("updated"),
+        "created_at": attrs.get("created_at"),
+        "updated_at": attrs.get("updated_at"),
     }
     out.update(first_version_summary(attrs.get("definition")))
     return out
@@ -93,14 +93,14 @@ def main() -> int:
                 payload = api_get(
                     f"/api/forms/{urllib.parse.quote(form_id)}",
                     api_key,
-                    {"fields[form]": "id,name,status,created,updated"},
+                    {"fields[form]": "id,name,status,created_at,updated_at"},
                 )
                 results = [summarize(payload.get("data", {}))]
             else:
                 payload = api_get(
                     "/api/forms",
                     api_key,
-                    {"filter": f'equals(name,"{form_name}")', "fields[form]": "id,name,status,created,updated"},
+                    {"filter": f'equals(name,"{form_name}")', "fields[form]": "id,name,status,created_at,updated_at"},
                 )
                 results = [summarize(item) for item in payload.get("data", [])]
             print(json.dumps({"api_key_used": key_name, "results": results}, ensure_ascii=False, indent=2))
