@@ -93,7 +93,7 @@ def main() -> int:
                 payload = api_get(
                     f"/api/forms/{urllib.parse.quote(form_id)}",
                     api_key,
-                    {"fields[form]": "id,name,status,created_at,updated_at"},
+                    {"fields[form]": "id,name,status,created_at,updated_at,definition,definition.versions"},
                 )
                 results = [summarize(payload.get("data", {}))]
             else:
