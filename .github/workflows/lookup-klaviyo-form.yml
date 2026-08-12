@@ -1,0 +1,44 @@
+name: Lookup Klaviyo Form
+
+on:
+  workflow_dispatch:
+    inputs:
+      form_id:
+        description: "Klaviyo form ID"
+        required: false
+      form_name:
+        description: "Klaviyo form name"
+        required: false
+        default: "Uenuku Rainbow Wānanga Registration Embed"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lookup-form:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_FORM_ID: ${{ inputs.form_id }}
+      KLAVIYO_FORM_NAME: ${{ inputs.form_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lookup form
+        id: lookup
+        run: python3 scripts/lookup_klaviyo_form.py
+      - name: Summary
+        run: |
+          {
+            echo "Form ID: ${{ steps.lookup.outputs.form_id }}"
+            echo "Name: ${{ steps.lookup.outputs.name }}"
+            echo "Status: ${{ steps.lookup.outputs.status }}"
+            echo "Version type: ${{ steps.lookup.outputs.version_type }}"
+            echo "Version status: ${{ steps.lookup.outputs.version_status }}"
+            echo "Step count: ${{ steps.lookup.outputs.step_count }}"
+          } >> "$GITHUB_STEP_SUMMARY"
