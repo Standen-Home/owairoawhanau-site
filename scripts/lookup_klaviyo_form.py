@@ -93,14 +93,14 @@ def main() -> int:
                 payload = api_get(
                     f"/api/forms/{urllib.parse.quote(form_id)}",
                     api_key,
-                    {"additional-fields[form]": "definition", "fields[form]": "id,name,status,definition,created,updated"},
+                    {"additional-fields[form]": "[definition]", "fields[form]": "id,name,status,definition,created,updated"},
                 )
                 results = [summarize(payload.get("data", {}))]
             else:
                 payload = api_get(
                     "/api/forms",
                     api_key,
-                    {"filter": f'equals(name,"{form_name}")', "additional-fields[form]": "definition", "fields[form]": "id,name,status,definition,created,updated"},
+                    {"filter": f'equals(name,"{form_name}")', "additional-fields[form]": "[definition]", "fields[form]": "id,name,status,definition,created,updated"},
                 )
                 results = [summarize(item) for item in payload.get("data", [])]
             print(json.dumps({"api_key_used": key_name, "results": results}, ensure_ascii=False, indent=2))
