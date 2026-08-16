@@ -61,15 +61,16 @@ def api_request(method: str, path: str, api_key: str, payload: dict[str, Any] | 
 def text_content() -> str:
     return """Kia ora {{ person.first_name|default:'e hoa' }},
 
-Pānui for the week of 9 August 2026.
+Pānui for the week of 17 August 2026.
 
 This week:
-• Today, Sunday 9 August, 2pm-5pm — Kaihaka Kapa Haka
-• Wednesday 12 August, 6pm-7pm — Ō Wairoa Marae Waiata Group
-• Friday 14 August, 9am-10am — Mahi Ngahere
-• Saturday 15 August, 10am-12pm — Nga tae o Uenuku / Uenuku Rainbow Wānanga with Taini Drummond at Ō Wairoa Marae - Matariki Whare
+• Tuesday 18 August, before 5.30pm — Howick Intermediate School Hui at Ō Wairoa Marae. Pōwhiri starts at 5.30pm; those who can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.
+• Wednesday 19 August — Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.
+• Thursday 20 August — Whakatika Te Reo
+• Friday 21 August, 9am-10am — Mahi Ngahere
+• Sunday 23 August — Kaihaka Kapa Haka
 
-The Uenuku wānanga is koha based, with all proceeds to the marae. Register for updates on the website.
+Thank you to everyone who can come along and support the kaupapa on Tuesday.
 
 No longer want to receive these emails? {% unsubscribe %}
 Manage preferences: {% manage_preferences %}
@@ -118,7 +119,7 @@ def campaign_html() -> str:
   </style>
 </head>
 <body>
-  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s events and Uenuku Rainbow Wānanga.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s events, including Waiata Wednesday moving to Tuesday for the Howick Intermediate School Hui.</div>
   <div class="wrapper">
     <table role="presentation" class="container" align="center" width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
@@ -132,24 +133,22 @@ def campaign_html() -> str:
       <tr><td class="text center" style="padding:9px 18px; font-family:Arial, Helvetica, sans-serif;">
         <div style="font-size:28px; font-weight:700; padding-bottom:18px;">Panui o te wiki!</div>
 
-        <p><span class="event-title">Sunday | 9 August 2026</span></p>
-        <p><span style="font-size:18px;">Kaihaka Kapa Haka - 2pm to 5pm</span></p>
+        <p><span class="event-title">Tuesday | 18 August 2026</span></p>
+        <p><span style="font-size:18px;">Howick Intermediate School Hui at Ō Wairoa Marae</span></p>
+        <p><span style="font-size:16px;">Pōwhiri starts at 5.30pm. If you can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.</span></p>
 
-        <p><span class="event-title">Wednesday | 12 August 2026</span></p>
-        <p><span style="font-size:18px;">Ō Wairoa Marae Waiata Group - 6pm to 7pm</span></p>
+        <p><span class="event-title">Wednesday | 19 August 2026</span></p>
+        <p><span style="font-size:18px;">Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.</span></p>
 
-        <p><span class="event-title">Friday | 14 August 2026</span></p>
+        <p><span class="event-title">Thursday | 20 August 2026</span></p>
+        <p><span style="font-size:18px;">Whakatika Te Reo</span></p>
+
+        <p><span class="event-title">Friday | 21 August 2026</span></p>
         <p><span style="font-size:18px;">Mahi Ngahere - 9am to 10am</span></p>
 
-        <p><span class="event-title">Saturday | 15 August 2026</span></p>
-        <p><span style="font-size:18px;">Nga tae o Uenuku | Uenuku Rainbow Wānanga with Taini Drummond</span></p>
-        <p><span style="font-size:16px;">10am to 12pm<br>Ō Wairoa Marae - Matariki Whare<br>Koha based — all proceeds to the marae</span></p>
-        <p><a href="{register_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Register for updates</span></a></p>
+        <p><span class="event-title">Sunday | 23 August 2026</span></p>
+        <p><span style="font-size:18px;">Kaihaka Kapa Haka</span></p>
         <p><a href="{calendar_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Open the full calendar</span></a></p>
-      </td></tr>
-
-      <tr><td align="center" style="padding:0;">
-        <a href="{register_url}" target="_blank" rel="noopener noreferrer nofollow"><img src="{poster_url}" alt="Poster for Nga tae o Uenuku Rainbow Wānanga with Taini Drummond" width="600" style="display:block; width:100%; max-width:600px;"></a>
       </td></tr>
 
       <tr><td style="padding:18px;"><div class="divider">&nbsp;</div></td></tr>
@@ -300,15 +299,14 @@ def dnd_section(blocks: list[dict[str, Any]], *, background: str = "#FFFFFF") ->
 
 def campaign_definition() -> dict[str, Any]:
     """Build a Klaviyo SYSTEM_DRAGGABLE definition with editable blocks."""
-    poster_url = f"{SITE_URL}/assets/images/events/uenuku-rainbow-wananga-2026.png"
-    register_url = f"{SITE_URL}/uenuku-rainbow-wananga/register/"
     calendar_url = f"{SITE_URL}/calendar/"
     event_text = """
 <div style="text-align:center;"><strong style="font-size:28px;">Panui o te wiki!</strong></div>
-<p style="text-align:center;"><br><strong><u>Sunday | 9 August 2026</u></strong><br>Kaihaka Kapa Haka - 2pm to 5pm</p>
-<p style="text-align:center;"><strong><u>Wednesday | 12 August 2026</u></strong><br>Ō Wairoa Marae Waiata Group - 6pm to 7pm</p>
-<p style="text-align:center;"><strong><u>Friday | 14 August 2026</u></strong><br>Mahi Ngahere - 9am to 10am</p>
-<p style="text-align:center;"><strong><u>Saturday | 15 August 2026</u></strong><br>Nga tae o Uenuku | Uenuku Rainbow Wānanga with Taini Drummond<br>10am to 12pm<br>Ō Wairoa Marae - Matariki Whare<br>Koha based — all proceeds to the marae</p>
+<p style="text-align:center;"><br><strong><u>Tuesday | 18 August 2026</u></strong><br>Howick Intermediate School Hui at Ō Wairoa Marae<br><span style="font-size:16px;">Pōwhiri starts at 5.30pm. If you can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.</span></p>
+<p style="text-align:center;"><strong><u>Wednesday | 19 August 2026</u></strong><br>Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.</p>
+<p style="text-align:center;"><strong><u>Thursday | 20 August 2026</u></strong><br>Whakatika Te Reo</p>
+<p style="text-align:center;"><strong><u>Friday | 21 August 2026</u></strong><br>Mahi Ngahere - 9am to 10am</p>
+<p style="text-align:center;"><strong><u>Sunday | 23 August 2026</u></strong><br>Kaihaka Kapa Haka</p>
 """.strip()
     waiata_text = """
 <div style="text-align:center;"><strong style="color:#85200E; font-size:18px;">Te Tuhi </strong><strong style="font-size:18px;">Lyrics</strong><br><br><strong>Mā te rāpa ka kitea</strong><br>Te Tuhi a Manawatere<br>Nō Ngāi Tai... te tupuna e<br>Te Waka... he huruhuru<br>Te Pōhutukawa ..i Wairoa<br>He tohu... he whaka-taukī<br>Mā te rāpa .. ka kitea x2</div>
@@ -325,8 +323,7 @@ def campaign_definition() -> dict[str, Any]:
                 dnd_section([dnd_text_block('<div style="text-align:right;"><span style="color:#85200E;"><strong>| Ō Wairoa Marae</strong></span> <strong>Whanau</strong></div>', align="right", size=24, weight="700")]),
                 dnd_section([dnd_text_block("Kia ora, {{ person.first_name|default:'e hoa' }}.<br><br>Here is the pānui o te wiki for the coming week.", color="#403F3F")]),
                 dnd_section([dnd_rule_block()]),
-                dnd_section([dnd_text_block(event_text, align="center", size=18), dnd_button_block("Register for updates", register_url), dnd_button_block("Open the full calendar", calendar_url)]),
-                dnd_section([dnd_image_block(poster_url, "Poster for Nga tae o Uenuku Rainbow Wānanga with Taini Drummond", register_url)]),
+                dnd_section([dnd_text_block(event_text, align="center", size=18), dnd_button_block("Open the full calendar", calendar_url)]),
                 dnd_section([dnd_rule_block(), dnd_text_block("As always - We look forward to seeing you soon.<br><br>Kia pai te ra! ☀️", color="#3E3D3D")]),
                 dnd_section([dnd_text_block("Ō Wairoa Whānau", align="center", color="#FFFFFF")], background="#85200E"),
                 dnd_section([dnd_text_block(waiata_text, align="center")], background="#FBFAF7"),
@@ -369,9 +366,9 @@ def main() -> int:
         return 2
 
     date_label = dt.datetime.now(TZ).strftime("%Y-%m-%d")
-    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 9 Aug 2026 ({date_label})")
-    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 9 August")
-    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: kapa haka today, Waiata Wednesday, Mahi Ngahere, and the Uenuku Rainbow Wānanga on Saturday 15 August.")
+    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 17 Aug 2026 ({date_label})")
+    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 17 August")
+    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: Waiata Wednesday moves to Tuesday for the Howick Intermediate School Hui, plus Whakatika Te Reo, Mahi Ngahere, and Kaihaka Kapa Haka.")
 
     # Create and assign the HTML template before cloning/sending anything. This
     # verifies template permissions without changing any campaign state. Try both
