@@ -34,8 +34,8 @@
         {% assign has_upcoming_children = false %}
         {% if upcoming_featured_children %}
           {% for child in upcoming_featured_children %}
-            {% assign child_ts = child.event_date | default: child.date | date: "%s" | plus: 0 %}
-            {% if child_ts >= now_ts %}
+            {% assign child_visible_until_ts = child.event_end_date | default: child.event_date | default: child.date | date: "%s" | plus: 0 %}
+            {% if child_visible_until_ts >= now_ts %}
               {% assign has_upcoming_children = true %}
               {% break %}
             {% endif %}
@@ -65,8 +65,8 @@
               {% if has_upcoming_children %}
                 {% assign shown_children = 0 %}
                 {% for child in upcoming_featured_children %}
-                  {% assign child_ts = child.event_date | default: child.date | date: "%s" | plus: 0 %}
-                  {% if child_ts >= now_ts and shown_children < 5 %}
+                  {% assign child_visible_until_ts = child.event_end_date | default: child.event_date | default: child.date | date: "%s" | plus: 0 %}
+                  {% if child_visible_until_ts >= now_ts and shown_children < 5 %}
                     <a href="{{ child.url | relative_url }}" {% if current == child.url %}aria-current="page"{% endif %}>
                       <span class="nav-mi">{{ child.title }}</span>
                       <span class="nav-en">{{ child.event_date | default: child.date | date: "%d %b %Y" }}</span>

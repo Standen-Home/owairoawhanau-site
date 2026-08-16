@@ -43,7 +43,15 @@ calendar_start: "2026-07-18"
 ```
 
 3. Write the full event details in the body.
-4. If you want the calendar card to link to this page automatically, make sure `calendar_summary` and `calendar_start` match the calendar event, or use `calendar_uid` instead.
+4. If you want the calendar card to link to this page automatically, make sure `calendar_summary` and `calendar_start` match the calendar event, or use `calendar_uid` instead. For a recurring event that has more than one calendar UID, use:
+
+```yaml
+calendar_uids:
+  - "first-series-uid@google.com"
+  - "next-series-uid@google.com"
+```
+
+5. Featured events normally disappear from the Featured Events list and nav after `event_date`. For evergreen/recurring pages, set `event_end_date` to the last date the page should stay listed.
 
 ### Edit navigation
 Edit `_data/navigation.yml`.

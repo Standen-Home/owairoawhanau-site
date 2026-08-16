@@ -10,8 +10,8 @@ permalink: /calendar/featured-events/
 {% assign has_upcoming = false %}
 
 {% for event in events %}
-  {% assign event_ts = event.event_date | default: event.date | date: "%s" | plus: 0 %}
-  {% if event_ts >= now_ts %}
+  {% assign event_visible_until_ts = event.event_end_date | default: event.event_date | default: event.date | date: "%s" | plus: 0 %}
+  {% if event_visible_until_ts >= now_ts %}
     {% assign has_upcoming = true %}
     {% break %}
   {% endif %}
@@ -20,14 +20,18 @@ permalink: /calendar/featured-events/
 {% if has_upcoming %}
 <div class="featured-events-grid">
   {% for event in events %}
-    {% assign event_ts = event.event_date | default: event.date | date: "%s" | plus: 0 %}
-    {% if event_ts >= now_ts %}
+    {% assign event_visible_until_ts = event.event_end_date | default: event.event_date | default: event.date | date: "%s" | plus: 0 %}
+    {% if event_visible_until_ts >= now_ts %}
       {% assign matched_calendar = nil %}
       {% assign summary_match = event.calendar_summary | append: "" | strip %}
       {% assign start_match = event.calendar_start | append: "" | strip %}
       {% assign uid_match = event.calendar_uid | append: "" | strip %}
       {% for calendar_event in site.data.calendar_events %}
         {% if uid_match != "" and calendar_event.uid == uid_match %}
+          {% assign matched_calendar = calendar_event %}
+          {% break %}
+        {% endif %}
+        {% if event.calendar_uids and event.calendar_uids contains calendar_event.uid %}
           {% assign matched_calendar = calendar_event %}
           {% break %}
         {% endif %}

@@ -112,10 +112,12 @@ module Jekyll
     def featured_event_matches?(event, doc)
       data = doc.data || {}
       uid_match = data["calendar_uid"].to_s.strip
+      uid_matches = Array(data["calendar_uids"]).map { |value| value.to_s.strip }.reject(&:empty?)
       summary_match = data["calendar_summary"].to_s.strip
       start_match = data["calendar_start"].to_s.strip
 
       return event["uid"].to_s == uid_match unless uid_match.empty?
+      return uid_matches.include?(event["uid"].to_s) unless uid_matches.empty?
 
       return false if summary_match.empty? || start_match.empty?
 
