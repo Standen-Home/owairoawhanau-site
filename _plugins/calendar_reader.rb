@@ -315,7 +315,10 @@ module Jekyll
 
       tzid = params["TZID"]
       if value.end_with?("Z")
-        return Time.strptime(value, "%Y%m%dT%H%M%SZ").utc
+        utc_value = value.delete_suffix("Z")
+        format = utc_value.length == 13 ? "%Y%m%dT%H%M" : "%Y%m%dT%H%M%S"
+        time = Time.strptime(utc_value, format)
+        return Time.utc(time.year, time.month, time.day, time.hour, time.min, time.sec)
       end
 
       format = value.length == 13 ? "%Y%m%dT%H%M" : "%Y%m%dT%H%M%S"
