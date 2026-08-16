@@ -552,6 +552,38 @@ input[type="search"], select{
 .featured-event-card p{
   margin:0 0 .8rem 0;
 }
+.next-event-card{
+  margin:0 0 1.2rem 0;
+  padding:1rem;
+  background:#fff;
+  border:1px solid var(--border);
+  border-left:6px solid var(--cyan);
+  border-radius:var(--radius);
+  box-shadow:0 10px 26px rgba(0,0,0,.05);
+}
+.next-event-kicker{
+  color:var(--muted);
+  font-size:.82rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.next-event-card h2{
+  margin:.15rem 0 .35rem 0;
+  font-size:1.25rem;
+  font-family:"Noto Serif", Inter, system-ui, serif;
+}
+.next-event-time,
+.next-event-location{
+  margin:.15rem 0;
+  color:var(--muted);
+}
+.next-event-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin:.8rem 0 0 0;
+}
 @media (max-width:760px){
   .featured-event-card{grid-column:span 12}
 }

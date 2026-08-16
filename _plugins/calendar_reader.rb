@@ -35,6 +35,7 @@ module Jekyll
       )
       events = apply_overrides(generator.events, site.data["calendar_event_overrides"])
       events = apply_featured_event_links(events, site)
+      apply_next_featured_events(events, site)
       Jekyll.logger.info("Calendar Reader:", "Loaded #{events.size} event(s) from #{calendar_url}")
       Jekyll.logger.warn("Calendar Reader:", "No upcoming events were found in the configured window.") if events.empty?
       site.data["calendar_events"] = events
@@ -106,6 +107,16 @@ module Jekyll
           "featured_page_url" => matched_doc.url,
           "featured_page_title" => featured_page_title(matched_doc)
         )
+      end
+    end
+
+    def apply_next_featured_events(events, site)
+      featured_docs = site.collections.fetch("featured_events", nil)&.docs || []
+      return if featured_docs.empty?
+
+      featured_docs.each do |doc|
+        next_event = events.find { |event| featured_event_matches?(event, doc) }
+        doc.data["next_calendar_event"] = next_event if next_event
       end
     end
 

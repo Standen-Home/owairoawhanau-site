@@ -52,6 +52,7 @@ calendar_uids:
 ```
 
 5. Featured events normally disappear from the Featured Events list and nav after `event_date`. For evergreen/recurring pages, set `event_end_date` to the last date the page should stay listed.
+6. Featured event pages automatically show a "Next event" card when their calendar matching fields find an upcoming Google Calendar event.
 
 ### Edit navigation
 Edit `_data/navigation.yml`.

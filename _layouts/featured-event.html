@@ -15,5 +15,29 @@ layout: default
 </section>
 
 <article class="prose">
+  {% assign next_event = page.next_calendar_event %}
+  {% if next_event %}
+    <aside class="next-event-card" aria-labelledby="next-event-heading">
+      <div class="next-event-kicker">Next event</div>
+      <h2 id="next-event-heading">{{ next_event.summary }}</h2>
+      <p class="next-event-time">
+        <time datetime="{{ next_event.start }}">{{ next_event.display_time | default: next_event.start }}</time>
+        {% if next_event.all_day and next_event.display_time == blank %}<span class="calendar-time-note">All day</span>{% endif %}
+      </p>
+      {% if next_event.location %}
+        <p class="next-event-location">{{ next_event.location }}</p>
+      {% endif %}
+      {% if next_event.teaser %}
+        <p>{{ next_event.teaser }}</p>
+      {% endif %}
+      <p class="next-event-actions">
+        <a class="btn" href="{{ '/calendar/' | relative_url }}">Open calendar</a>
+        {% if next_event.url %}
+          <a class="btn btn-ghost" href="{{ next_event.url }}" target="_blank" rel="noopener">View details</a>
+        {% endif %}
+      </p>
+    </aside>
+  {% endif %}
+
   {{ content }}
 </article>
