@@ -13,6 +13,11 @@ link_title: "Kaihaka Kapa Haka"
 
 Kia ora e te whānau — this page keeps the recurring Kaihaka Kapa Haka sessions easy to find from the calendar.
 
+<figure class="event-media">
+  <img src="{{ '/assets/images/panui/01kzmbd4p9etfjfbaw9hxys3xe/fa9bb57edf0de4c9.jpg' | relative_url }}" alt="Kaihaka Kapa Haka whānau practising tītī tōrea outside at Ō Wairoa Marae">
+  <figcaption>From the 9 August pānui: Kaihaka Kapa Haka tītī tōrea practice.</figcaption>
+</figure>
+
 These sessions are for kaihaka to practise together, strengthen the rōpū, and keep the waiata and kapa haka kaupapa moving.
 
 - **When:** Fortnightly Sundays from 23 August 2026
