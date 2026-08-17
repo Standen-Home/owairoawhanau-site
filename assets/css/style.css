@@ -584,8 +584,30 @@ input[type="search"], select{
   gap:.5rem;
   margin:.8rem 0 0 0;
 }
+.featured-event-summary-columns{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) minmax(280px, .9fr);
+  gap:1rem;
+  align-items:start;
+  margin:1rem 0;
+}
+.featured-event-summary-text,
+.featured-event-summary-photo{
+  margin:0;
+}
+.featured-event-summary-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+}
+.featured-event-summary-photo figcaption{
+  margin-top:.45rem;
+  color:var(--muted);
+  font-size:.9rem;
+}
 @media (max-width:760px){
   .featured-event-card{grid-column:span 12}
+  .featured-event-summary-columns{grid-template-columns:1fr}
 }
 
 /* Google Form embed */
