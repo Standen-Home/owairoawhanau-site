@@ -4,11 +4,15 @@ title: "Practice tips"
 title_en: "How to practise"
 slug: "practice-tips"
 tags:
-  - practice
-  - warmup
+  - "practice"
+  - "warmup"
 summary: "Simple ways to practise waiata between hui."
 keywords: "practice tips warmup breathing repetition"
 featured: true
+public: true
+order: 999
+notion_page_id: "3c6090a1-a19f-81c7-8d76-f8cc9d812a15"
+source_of_truth: notion
 ---
 
 ## A simple practice routine (10 minutes)

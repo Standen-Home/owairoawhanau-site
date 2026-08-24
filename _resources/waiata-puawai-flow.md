@@ -4,9 +4,14 @@ title: "Waiata Puāwai"
 title_en: "Session flow"
 slug: "waiata-puawai-flow"
 tags:
-  - programme
+  - "programme"
 summary: "Outline of how our hui/practice time often runs."
 keywords: "programme flow karakia himene whaikorero waiata tautoko pepeha panui poroporoaki"
+featured: false
+public: true
+order: 999
+notion_page_id: "3c6090a1-a19f-81a6-ae57-f85d1a7e9b75"
+source_of_truth: notion
 ---
 
 A simple outline of how our hui/practice time often runs. (This can be adapted depending on the kaupapa for the day.)

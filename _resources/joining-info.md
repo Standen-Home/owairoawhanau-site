@@ -4,11 +4,15 @@ title: "Joining the rōpū"
 title_en: "How to join"
 slug: "joining"
 tags:
-  - joining
-  - info
+  - "joining"
+  - "info"
 summary: "What to expect and how to get involved."
 keywords: "joining how to join practice times contact"
 featured: true
+public: true
+order: 999
+notion_page_id: "3c6090a1-a19f-813c-9bc5-f47d0aa5d29a"
+source_of_truth: notion
 ---
 
 ## Who it’s for

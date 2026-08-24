@@ -4,11 +4,16 @@ title: "Pepeha"
 title_en: "Introduction"
 slug: "pepeha"
 tags:
-  - pepeha
-  - template
-  - introduction
+  - "pepeha"
+  - "template"
+  - "introduction"
 summary: "Side-by-side pepeha templates (general + non-Māori options) with gentle tikanga guidance."
 keywords: "pepeha template tena koutou ko te maunga awa roto waka whenua tupu kainga marae tikanga"
+featured: false
+public: true
+order: 999
+notion_page_id: "3c6090a1-a19f-813d-8769-fdd08efe6a58"
+source_of_truth: notion
 ---
 
 ## Tikanga

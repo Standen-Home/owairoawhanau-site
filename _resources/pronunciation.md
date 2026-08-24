@@ -4,11 +4,15 @@ title: "Whakahua (pronunciation)"
 title_en: "Pronunciation"
 slug: "pronunciation"
 tags:
-  - reo
-  - pronunciation
+  - "reo"
+  - "pronunciation"
 summary: "Quick reminders for vowels, macrons, and pacing when learning kupu."
 keywords: "pronunciation whakahuatanga vowels macrons tohutō reo"
 featured: true
+public: true
+order: 999
+notion_page_id: "3c6090a1-a19f-8113-857a-f81d40525c1a"
+source_of_truth: notion
 ---
 
 ## Vowels (oropuare)

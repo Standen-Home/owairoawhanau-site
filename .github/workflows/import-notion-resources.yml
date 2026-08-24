@@ -1,0 +1,50 @@
+name: Import Notion Resources
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 16 * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "notion-resources-import"
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    env:
+      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stop if Notion secret is not configured
+        if: env.NOTION_API_KEY == ''
+        run: |
+          echo "NOTION_API_KEY is not configured; skipping Notion resource import."
+
+      - name: Pull public resources from Notion
+        if: env.NOTION_API_KEY != ''
+        run: python3 scripts/import_notion_resources.py --pull
+
+      - name: Commit generated resources
+        if: env.NOTION_API_KEY != ''
+        run: |
+          if [ -z "$(git status --porcelain -- _resources)" ]; then
+            echo "No generated resource changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _resources
+          git commit -m "chore: import resources from Notion"
+          git push
+          GH_TOKEN="${{ github.token }}" gh workflow run deploy.yml --ref main

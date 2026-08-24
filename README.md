@@ -25,6 +25,19 @@ NOTION_API_KEY=... python3 scripts/import_notion_waiata.py --pull
 The scheduled GitHub Action requires a repository secret named `NOTION_API_KEY`.
 It commits generated changes and dispatches the Pages deployment workflow.
 
+### Resource source of truth
+
+Public resource pages are maintained in the shared Notion **Waiata Resources**
+database and imported into `_resources/`:
+
+```bash
+NOTION_API_KEY=... python3 scripts/import_notion_resources.py --push-existing
+NOTION_API_KEY=... python3 scripts/import_notion_resources.py --pull
+```
+
+The resource importer preserves the page body Markdown, website path, and stable
+Notion page ID in generated front matter.
+
 ### Add a new waiata
 1. Create a new Markdown file in `_waiata/` (copy `_waiata/sample-waiata.md`).
 2. Fill in the front matter fields at the top.
