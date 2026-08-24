@@ -39,16 +39,20 @@ The resource importer preserves the page body Markdown, website path, and stable
 Notion page ID in generated front matter.
 
 ### Add a new waiata
-1. Create a new Markdown file in `_waiata/` (copy `_waiata/sample-waiata.md`).
-2. Fill in the front matter fields at the top.
-3. Add lyrics and notes in the body.
-4. (Optional) Upload files:
-   - audio → `assets/audio/`
-   - PDFs → `assets/pdfs/`
-   - images → `assets/images/waiata/`
-5. Commit and push.
+1. Create a new row in the Notion **Waiata Songs** database.
+2. Set `Public`, `Featured`, category, tags, and display order as needed.
+3. Put the full lyrics/notes into `Website Body Markdown`.
+4. Add media URLs in the matching Notion fields:
+   - `Audio URL`
+   - `PDF URL`
+   - `Video URL`
+   - `Image URL`
+5. Run the Notion import, or wait for the scheduled GitHub Action.
 
-**Tip:** set `public: true` to show it on the Waiata list page. If `public: false`, it will be hidden from the list.
+The Markdown files in `_waiata/` and `_resources/` are generated deploy output;
+edit the Notion records rather than editing those files directly.
+
+**Tip:** set the Notion `Public` checkbox to show a waiata on the website. Leave it unchecked for whānau-only content.
 
 ### Add a pānui (news post)
 1. Add a file to `_posts/` named like `YYYY-MM-DD-title.md`.
