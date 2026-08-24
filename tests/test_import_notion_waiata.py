@@ -34,7 +34,8 @@ class NotionWaiataTests(unittest.TestCase):
             "pdf": "/pdf/test.pdf",
             "video_url": "https://youtu.be/example",
             "image": "/images/test.jpg",
-            "_path": Path("_waiata/test-waiata.md"),
+            "_path": Path("/_waiata/test-waiata.md"),
+            "_repo_root": Path("/"),
             "_body": "x" * 4000,
         }
         properties = notion_waiata.page_properties(record)
@@ -80,6 +81,16 @@ class NotionWaiataTests(unittest.TestCase):
             (root / "_waiata" / "public.md").write_text("---\ntitle: Public\npublic: true\n---\nbody", encoding="utf-8")
             records = notion_waiata.read_existing_waiata(root)
             self.assertEqual([record["title"] for record in records], ["Public"])
+
+    def test_read_existing_waiata_can_include_nested_private_records(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "_waiata" / "_imports").mkdir(parents=True)
+            (root / "_waiata" / "_imports" / "private.md").write_text(
+                "---\ntitle: Private\npublic: false\n---\nbody", encoding="utf-8"
+            )
+            records = notion_waiata.read_existing_waiata(root, public_only=False)
+            self.assertEqual([record["title"] for record in records], ["Private"])
 
 
 if __name__ == "__main__":

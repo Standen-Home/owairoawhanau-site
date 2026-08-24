@@ -121,13 +121,14 @@ def split_front_matter(text: str) -> tuple[dict[str, Any], str]:
 
 def read_existing_waiata(repo_root: Path, public_only: bool = True) -> list[dict[str, Any]]:
     records = []
-    for path in sorted((repo_root / "_waiata").glob("*.md")):
+    for path in sorted((repo_root / "_waiata").rglob("*.md")):
         if path.name == "sample-waiata.md":
             continue
         metadata, body = split_front_matter(path.read_text(encoding="utf-8"))
         if public_only and metadata.get("public") is not True:
             continue
         metadata["_path"] = path
+        metadata["_repo_root"] = repo_root
         metadata["_body"] = body
         records.append(metadata)
     return records
@@ -140,7 +141,7 @@ def page_properties(record: dict[str, Any]) -> dict[str, Any]:
     return {
         "Name": title_property(str(record.get("title") or record.get("name") or "Untitled waiata")),
         "Website Slug": text_property(str(record.get("slug") or "")),
-        "Website Path": text_property(str(Path(record["_path"]).name)),
+        "Website Path": text_property(str(Path(record["_path"]).relative_to(record["_repo_root"] / "_waiata"))),
         "Public": {"checkbox": bool(record.get("public", False))},
         "Featured": {"checkbox": bool(record.get("featured", False))},
         "Display Order": {"number": record.get("order")},
@@ -174,13 +175,17 @@ def extract_lyrics(body: str) -> str:
 
 
 def push_existing(repo_root: Path, token: str, dry_run: bool = False) -> tuple[int, int]:
-    existing = read_existing_waiata(repo_root)
+    existing = read_existing_waiata(repo_root, public_only=False)
     rows = query_rows(token)
+    by_path = {property_value(row.get("properties", {}), "Website Path"): row for row in rows}
     by_title = {normalise_title(property_value(row.get("properties", {}), "Name")): row for row in rows}
     created = updated = 0
     for record in existing:
         title = str(record.get("title") or "")
-        match = by_title.get(normalise_title(title))
+        relative_path = str(Path(record["_path"]).relative_to(repo_root / "_waiata"))
+        match = by_path.get(relative_path)
+        if not match and not relative_path.startswith("_imports/"):
+            match = by_title.get(normalise_title(title))
         properties = page_properties(record)
         if match:
             if not dry_run:
@@ -195,6 +200,7 @@ def push_existing(repo_root: Path, token: str, dry_run: bool = False) -> tuple[i
                     {"parent": {"database_id": DATABASE_ID}, "properties": properties},
                 )
                 by_title[normalise_title(title)] = created_page
+                by_path[relative_path] = created_page
             created += 1
     return created, updated
 
