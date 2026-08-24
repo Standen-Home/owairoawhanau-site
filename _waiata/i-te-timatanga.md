@@ -1,11 +1,11 @@
 ---
 layout: waiata
 title: "I te tīmatanga"
-title_en: "In the beginning"
+title_en: ""
 slug: "i-te-tīmatanga"
-category: waiata-a-ringa
+category: "waiata-a-ringa"
 tags:
-  - Waiata Wednesday Rōpū
+  - "Waiata Wednesday Rōpū"
 composer: ""
 source: ""
 featured: true
@@ -15,7 +15,8 @@ pdf: ""
 video_url: ""
 image: ""
 order: 78
-keywords: ""
+notion_page_id: "3c6090a1-a19f-8111-b784-c5ea090df32a"
+source_of_truth: notion
 ---
 
 ## Kaupapa

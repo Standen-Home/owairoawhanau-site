@@ -1,20 +1,23 @@
 ---
-layout: 'waiata'
-title: 'Ka Waiata'
+layout: waiata
+title: "Ka Waiata"
+title_en: ""
 slug: "ka-waiata-68"
-category: 'hīmene'
+category: "hīmene"
 tags:
-  - hīmene
-  - Waiata Wednesday Rōpū
-composer: 'Richard Puanaki; Te Whetu o te Rawhiti'
-source: 'PowerPoint import'
+  - "hīmene"
+  - "Waiata Wednesday Rōpū"
+composer: "Richard Puanaki; Te Whetu o te Rawhiti"
+source: "PowerPoint import"
 featured: false
 public: true
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 68
+notion_page_id: "3c6090a1-a19f-81b3-9fba-d40c7e8dbc43"
+source_of_truth: notion
 ---
 
 ## Kupu

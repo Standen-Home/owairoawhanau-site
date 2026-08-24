@@ -4,6 +4,27 @@ This repo is a simple Jekyll site designed so whānau can add waiata and pānui 
 
 ## Editing content (the common tasks)
 
+### Waiata source of truth
+
+Public waiata are now maintained in the shared Notion **Waiata Songs** database and
+imported into `_waiata/` for the Jekyll build. The generated files retain the Notion
+page ID in front matter so records can be matched safely.
+
+To seed or refresh Notion from the existing public Markdown during migration:
+
+```bash
+NOTION_API_KEY=... python3 scripts/import_notion_waiata.py --push-existing
+```
+
+To pull public Notion records into the repository:
+
+```bash
+NOTION_API_KEY=... python3 scripts/import_notion_waiata.py --pull
+```
+
+The scheduled GitHub Action requires a repository secret named `NOTION_API_KEY`.
+It commits generated changes and dispatches the Pages deployment workflow.
+
 ### Add a new waiata
 1. Create a new Markdown file in `_waiata/` (copy `_waiata/sample-waiata.md`).
 2. Fill in the front matter fields at the top.

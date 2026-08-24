@@ -1,19 +1,22 @@
 ---
-layout: 'waiata'
-title: 'He hōnore'
+layout: waiata
+title: "He hōnore"
+title_en: ""
 slug: "he-honore"
-category: 'waiata'
+category: "Waiata"
 tags:
-  - ppt-import
-composer: ''
-source: 'PowerPoint import'
+  - "ppt-import"
+composer: ""
+source: "PowerPoint import"
 featured: true
 public: true
-audio: ''
-pdf: ''
-video_url: 'https://youtu.be/mAaBu5puEGc?si=5vx2jXRxsu2LTPzs'
-image: ''
+audio: ""
+pdf: ""
+video_url: "https://youtu.be/mAaBu5puEGc?si=5vx2jXRxsu2LTPzs"
+image: ""
 order: 25
+notion_page_id: "3c6090a1-a19f-81d1-8ec6-d89d5e44bf32"
+source_of_truth: notion
 ---
 
 ## Kupu

@@ -1,19 +1,22 @@
 ---
-layout: 'waiata'
-title: 'E te iwi'
+layout: waiata
+title: "E te iwi"
+title_en: ""
 slug: "e-te-iwi"
-category: 'haka'
+category: "haka"
 tags:
-  - ppt-import
-composer: 'Piripi Taylor nō: Tuhoe'
-source: 'PowerPoint import'
+  - "ppt-import"
+composer: "Piripi Taylor nō: Tuhoe"
+source: "PowerPoint import"
 featured: true
 public: true
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 52
+notion_page_id: "3c6090a1-a19f-811d-8a72-fd3a212f266e"
+source_of_truth: notion
 ---
 
 ## Kupu

@@ -1,20 +1,23 @@
 ---
-layout: 'waiata'
-title: 'Matariki'
+layout: waiata
+title: "Matariki"
+title_en: ""
 slug: "matariki"
-category: 'Waiata'
+category: "Waiata"
 tags:
-  - Matariki
-  - Waiata Wednesday Rōpū
-composer: ''
-source: 'PowerPoint import'
+  - "Matariki"
+  - "Waiata Wednesday Rōpū"
+composer: ""
+source: "PowerPoint import"
 featured: true
 public: true
-audio: ''
-pdf: ''
-video_url: 'https://www.youtube.com/watch?v=9323xZswdxc'
-image: ''
+audio: ""
+pdf: ""
+video_url: "https://www.youtube.com/watch?v=9323xZswdxc"
+image: ""
 order: 47
+notion_page_id: "3c6090a1-a19f-8155-9839-cf414b61031c"
+source_of_truth: notion
 ---
 
 ## Kupu

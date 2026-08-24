@@ -1,13 +1,13 @@
 ---
 layout: waiata
 title: "Toia Mai"
-title_en: "" 
+title_en: ""
 slug: "toia-mai"
-category: waiata
+category: "Waiata"
 tags:
-  - beginner
-  - practice-set
-  - cockle bay school kapa haka rōpū
+  - "beginner"
+  - "practice-set"
+  - "cockle bay school kapa haka rōpū"
 composer: "Piri Poutapu"
 source: ""
 featured: false
@@ -17,7 +17,8 @@ pdf: ""
 video_url: "https://www.youtube.com/watch?v=1G_hIxdHvJQ&t=2s"
 image: ""
 order: 10
-keywords: ""
+notion_page_id: "298090a1-a19f-8059-8db0-ed36b8f2d8c7"
+source_of_truth: notion
 ---
 
 ## Kaupapa

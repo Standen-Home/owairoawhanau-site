@@ -1,11 +1,12 @@
 ---
 layout: waiata
 title: "E kore te aroha"
+title_en: ""
 slug: "e-kore-te-aroha"
-category: waiata
+category: "Waiata"
 tags:
-  - waiata
-  - Waiata Wednesday Rōpū
+  - "waiata"
+  - "Waiata Wednesday Rōpū"
 composer: "Tuini Ngawai"
 source: "PowerPoint import"
 featured: false
@@ -15,6 +16,8 @@ pdf: ""
 video_url: ""
 image: ""
 order: 37
+notion_page_id: "3c6090a1-a19f-81e4-a346-cad783e69923"
+source_of_truth: notion
 ---
 
 ## Kupu

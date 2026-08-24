@@ -1,13 +1,13 @@
 ---
 layout: waiata
 title: "Noho Mai Kiwi Tamaki"
-title_en: "Noho Mai Kiwi Tamaki"
+title_en: ""
 slug: "noho-mai-kiwi-tamaki"
-category: 'waiata'
+category: "Waiata"
 tags:
-  - practice-set
-  - waiata-tautoko
-  - Waiata Wednesday Rōpū
+  - "practice-set"
+  - "waiata-tautoko"
+  - "Waiata Wednesday Rōpū"
 composer: ""
 source: ""
 featured: true
@@ -17,7 +17,8 @@ pdf: ""
 video_url: "https://youtu.be/2Hcd4zcDiqw?si=16_xKsYNb6iPQHnX"
 image: ""
 order: 75
-keywords: ""
+notion_page_id: "298090a1-a19f-8073-9e1c-c1810a47e5fd"
+source_of_truth: notion
 ---
 
 ## Kaupapa

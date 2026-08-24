@@ -1,12 +1,12 @@
 ---
 layout: waiata
 title: "Hei konei rā"
-title_en: "Hei konei rā"
+title_en: ""
 slug: "hei-konei-ra"
-category: poroporoaki
+category: "poroporoaki"
 tags:
-  - waiata poroporoaki
-  - Waiata Wednesday Rōpū
+  - "waiata poroporoaki"
+  - "Waiata Wednesday Rōpū"
 composer: ""
 source: "PowerPoint import"
 featured: false
@@ -16,6 +16,8 @@ pdf: ""
 video_url: ""
 image: ""
 order: 36
+notion_page_id: "3c6090a1-a19f-81af-b9a1-dfe1e6feec15"
+source_of_truth: notion
 ---
 
 ## Kupu

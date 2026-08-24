@@ -1,12 +1,13 @@
 ---
 layout: waiata
 title: "Te Tuhi a Manawatere"
+title_en: ""
 slug: "te-tuhi-a-manawatere-20"
-category: waiata-tautoko
+category: "waiata-tautoko"
 tags:
-  - local
-  - waiata tautoko
-  - Waiata Wednesday Rōpū
+  - "local"
+  - "Waiata Tautoko"
+  - "Waiata Wednesday Rōpū"
 composer: "Taini Drummond"
 source: "PowerPoint import"
 featured: true
@@ -16,6 +17,8 @@ pdf: ""
 video_url: ""
 image: ""
 order: 20
+notion_page_id: "3c6090a1-a19f-810c-8555-cf9a8edaa68f"
+source_of_truth: notion
 ---
 
 ## Kupu

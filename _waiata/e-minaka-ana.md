@@ -1,13 +1,14 @@
 ---
 layout: waiata
 title: "E minaka ana"
+title_en: ""
 slug: "e-minaka-ana"
-category: waiata
+category: "Waiata"
 tags:
-  - waiata
-  - waiata a ringa
-  - Waiata Wednesday Rōpū
-  - cockle bay school kapa haka rōpū
+  - "waiata"
+  - "waiata a ringa"
+  - "Waiata Wednesday Rōpū"
+  - "cockle bay school kapa haka rōpū"
 composer: ""
 source: "PowerPoint import"
 featured: false
@@ -17,6 +18,8 @@ pdf: ""
 video_url: "https://www.youtube.com/watch?v=IBsU1l3y0DM"
 image: ""
 order: 17
+notion_page_id: "298090a1-a19f-80cb-95bd-ec59eaedec11"
+source_of_truth: notion
 ---
 
 ## Kupu

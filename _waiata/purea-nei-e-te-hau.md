@@ -1,11 +1,12 @@
 ---
 layout: waiata
 title: "Purea nei e te hau"
+title_en: ""
 slug: "purea-nei-e-te-hau"
-category: waiata
+category: "Waiata"
 tags:
-  - waiata a ringa
-  - Waiata Wednesday Rōpū
+  - "waiata a ringa"
+  - "Waiata Wednesday Rōpū"
 composer: ""
 source: "PowerPoint import"
 featured: false
@@ -15,6 +16,8 @@ pdf: ""
 video_url: "https://www.youtube.com/watch?v=PlHxXz4yJvM"
 image: ""
 order: 45
+notion_page_id: "3c6090a1-a19f-8190-913d-d20326a69a2b"
+source_of_truth: notion
 ---
 
 ## Kupu

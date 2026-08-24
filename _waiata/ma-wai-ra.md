@@ -1,22 +1,25 @@
 ---
-layout: 'waiata'
-title: 'Ma wai ra'
+layout: waiata
+title: "Ma wai ra"
+title_en: ""
 slug: "ma-wai-ra"
-category: 'Waiata'
+category: "Waiata"
 tags:
-  - Waiata
-  - Waiata Tautoko
-  - Waiata Wednesday Rōpū
-  - Matariki
-composer: ''
-source: 'PowerPoint import'
+  - "waiata"
+  - "Waiata Tautoko"
+  - "Waiata Wednesday Rōpū"
+  - "Matariki"
+composer: ""
+source: "PowerPoint import"
 featured: true
 public: true
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 71
+notion_page_id: "3c6090a1-a19f-815c-b809-c815663f19f7"
+source_of_truth: notion
 ---
 
 ## Kupu

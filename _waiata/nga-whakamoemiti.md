@@ -1,19 +1,22 @@
 ---
-layout: 'waiata'
-title: 'Ngā Whakamoemiti'
+layout: waiata
+title: "Ngā Whakamoemiti"
+title_en: ""
 slug: "nga-whakamoemiti"
-category: 'waiata'
+category: "Waiata"
 tags:
-  - ppt-import
-composer: 'Pumi Taituha Maniapoto/Waikato'
-source: 'PowerPoint import'
+  - "ppt-import"
+composer: "Pumi Taituha Maniapoto/Waikato"
+source: "PowerPoint import"
 featured: true
 public: true
-audio: ''
-pdf: ''
-video_url: 'https://www.youtube.com/watch?v=379QXkjI2EA'
-image: ''
+audio: ""
+pdf: ""
+video_url: "https://www.youtube.com/watch?v=379QXkjI2EA"
+image: ""
 order: 27
+notion_page_id: "3c6090a1-a19f-810f-bc36-c705b1dc28da"
+source_of_truth: notion
 ---
 
 ## Kupu

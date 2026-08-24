@@ -1,0 +1,50 @@
+name: Import Notion Waiata
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 16 * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "notion-waiata-import"
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    env:
+      NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stop if Notion secret is not configured
+        if: env.NOTION_API_KEY == ''
+        run: |
+          echo "NOTION_API_KEY is not configured; skipping Notion waiata import."
+
+      - name: Pull public waiata from Notion
+        if: env.NOTION_API_KEY != ''
+        run: python3 scripts/import_notion_waiata.py --pull
+
+      - name: Commit generated waiata
+        if: env.NOTION_API_KEY != ''
+        run: |
+          if [ -z "$(git status --porcelain -- _waiata)" ]; then
+            echo "No generated waiata changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _waiata
+          git commit -m "chore: import waiata from Notion"
+          git push
+          GH_TOKEN="${{ github.token }}" gh workflow run deploy.yml --ref main

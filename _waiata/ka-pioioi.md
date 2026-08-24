@@ -1,20 +1,23 @@
 ---
-layout: 'waiata'
-title: 'Ka pioioi'
+layout: waiata
+title: "Ka pioioi"
+title_en: ""
 slug: "ka-pioioi"
-category: 'waiata'
+category: "Waiata"
 tags:
-  - waiata a ringa
-  - cockle bay school kapa haka rōpū
-composer: ''
-source: 'PowerPoint import'
+  - "waiata a ringa"
+  - "cockle bay school kapa haka rōpū"
+composer: ""
+source: "PowerPoint import"
 featured: false
 public: true
-audio: ''
-pdf: ''
-video_url: ''
-image: ''
+audio: ""
+pdf: ""
+video_url: ""
+image: ""
 order: 67
+notion_page_id: "3c6090a1-a19f-8136-957b-cee939c89c03"
+source_of_truth: notion
 ---
 
 ## Kupu
