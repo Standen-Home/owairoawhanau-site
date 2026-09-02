@@ -76,12 +76,14 @@ class NotionWaiataTests(unittest.TestCase):
         props = {
             "Kaupapa": {"type": "rich_text", "rich_text": [{"plain_text": "A welcome waiata."}]},
             "Kupu": {"type": "rich_text", "rich_text": [{"plain_text": "Kia ora\nKia ora"}]},
+            "Translation": {"type": "rich_text", "rich_text": [{"plain_text": "Hello."}]},
             "Meaning": {"type": "rich_text", "rich_text": [{"plain_text": "Welcome."}]},
             "Notes": {"type": "rich_text", "rich_text": [{"plain_text": "Repeat twice."}]},
         }
         body = notion_waiata.assembled_body(props)
         self.assertIn("## Kaupapa\nA welcome waiata.", body)
         self.assertIn('<pre class="lyrics">\nKia ora\nKia ora\n</pre>', body)
+        self.assertIn("## Translation\nHello.", body)
         self.assertIn('<div class="meaning">\nWelcome.\n</div>', body)
         self.assertIn("## Notes\nRepeat twice.", body)
 

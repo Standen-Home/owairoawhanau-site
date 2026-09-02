@@ -168,6 +168,7 @@ def page_properties(record: dict[str, Any]) -> dict[str, Any]:
         "Website Body Markdown": text_property(str(record.get("_body") or "")),
         "Kaupapa": section_property(str(record.get("_body") or ""), "Kaupapa"),
         "Kupu": text_property(extract_lyrics(str(record.get("_body") or ""))),
+        "Translation": section_property(str(record.get("_body") or ""), "Translation"),
         "Meaning": text_property(meaning_text(str(record.get("_body") or ""))),
         "Notes": section_property(str(record.get("_body") or ""), "Notes"),
         "Content Status": select_property("Published" if record.get("public") is True else "Draft"),
@@ -227,6 +228,7 @@ def assembled_body(props: dict[str, Any]) -> str:
     sections = [
         ("Kaupapa", property_value(props, "Kaupapa")),
         ("Kupu", property_value(props, "Kupu")),
+        ("Translation", property_value(props, "Translation")),
         ("Meaning", property_value(props, "Meaning")),
         ("Notes", property_value(props, "Notes")),
     ]
