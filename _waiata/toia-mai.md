@@ -60,9 +60,7 @@ Pipiwharauroa
   Hui e, Taiki e
 
   Hui e, Taiki e!
-
 </pre>
-
 
 ## Meaning
 <div class="meaning">
@@ -77,6 +75,3 @@ the shining cuckoo
 signal a change for the better.
 Draw together, become intertwined!
 </div>
-
-Notes
-

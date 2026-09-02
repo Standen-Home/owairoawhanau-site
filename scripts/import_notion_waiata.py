@@ -107,6 +107,17 @@ def url_property(value: str) -> dict[str, Any]:
     return {"url": value or None}
 
 
+def section_property(body: str, heading: str) -> dict[str, Any]:
+    return text_property(extract_section(body, heading))
+
+
+def meaning_text(body: str) -> str:
+    match = re.search(r"<div class=[\"']meaning[\"']>(.*?)</div>", body, re.DOTALL | re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return extract_section(body, "Meaning")
+
+
 def normalise_title(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
@@ -153,9 +164,12 @@ def page_properties(record: dict[str, Any]) -> dict[str, Any]:
         "PDF URL": url_property(str(record.get("pdf") or "")),
         "Video URL": url_property(str(record.get("video_url") or "")),
         "Image URL": url_property(str(record.get("image") or "")),
-        "Meaning": text_property(extract_section(str(record.get("_body") or ""), "Meaning")),
         "Everyone Lyrics": text_property(extract_lyrics(str(record.get("_body") or ""))),
         "Website Body Markdown": text_property(str(record.get("_body") or "")),
+        "Kaupapa": section_property(str(record.get("_body") or ""), "Kaupapa"),
+        "Kupu": text_property(extract_lyrics(str(record.get("_body") or ""))),
+        "Meaning": text_property(meaning_text(str(record.get("_body") or ""))),
+        "Notes": section_property(str(record.get("_body") or ""), "Notes"),
         "Content Status": select_property("Published" if record.get("public") is True else "Draft"),
     }
 
@@ -209,6 +223,28 @@ def yaml_scalar(value: Any) -> str:
     return json.dumps(value if value is not None else "", ensure_ascii=False)
 
 
+def assembled_body(props: dict[str, Any]) -> str:
+    sections = [
+        ("Kaupapa", property_value(props, "Kaupapa")),
+        ("Kupu", property_value(props, "Kupu")),
+        ("Meaning", property_value(props, "Meaning")),
+        ("Notes", property_value(props, "Notes")),
+    ]
+    if not any(str(value or "").strip() for _, value in sections):
+        return str(property_value(props, "Website Body Markdown") or "")
+    output = []
+    for heading, value in sections:
+        value = str(value or "").strip()
+        if not value:
+            continue
+        if heading == "Kupu" and not value.lstrip().lower().startswith("<pre"):
+            value = f'<pre class="lyrics">\n{value}\n</pre>'
+        elif heading == "Meaning" and not value.lstrip().lower().startswith("<div"):
+            value = f'<div class="meaning">\n{value}\n</div>'
+        output.append(f"## {heading}\n{value}")
+    return "\n\n" + "\n\n".join(output) + "\n"
+
+
 def build_markdown(row: dict[str, Any]) -> tuple[Path, str]:
     props = row.get("properties", {})
     title = str(property_value(props, "Name") or "Untitled waiata")
@@ -242,7 +278,7 @@ def build_markdown(row: dict[str, Any]) -> tuple[Path, str]:
         "source_of_truth: notion",
         "---",
     ]
-    body = str(property_value(props, "Website Body Markdown") or "")
+    body = assembled_body(props)
     return Path("_waiata") / filename, "\n".join(front_matter) + body
 
 

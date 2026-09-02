@@ -42,9 +42,7 @@ Ki te tangi o toku reo
 
 Whakahoki au ki te kaigna
   Hei whakāta ai
-
 </pre>
-
 
 ## Meaning
 <div class="meaning">

@@ -63,9 +63,7 @@ TANE/WAHINE - Hei hei hei konei rā x3
 
 E noho mai rā ee ee eee
 A HI!!!!!!
-
 </pre>
-
 
 ## Notes
 - The PowerPoint has extra performance notes (tāne/wāhine splits, kapa haka references).

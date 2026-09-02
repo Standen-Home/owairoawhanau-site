@@ -68,7 +68,6 @@ Kia kaha tātou
   Ki te kōrero Māori! (Hī!)
 </pre>
 
-
 ## Meaning
 <div class="meaning">
 Let us be staunch
@@ -86,6 +85,3 @@ when speaking Māori.
 Let us be staunch
 in speaking Māori.
 </div>
-
-Notes
-- Youtube video from Nerehana Whanau

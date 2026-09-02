@@ -66,9 +66,7 @@ He aroha e
   Uia e hine, he aha rā?
 He aroha e
   He aroha e
-
 </pre>
-
 
 ## Notes
 - Sing through twice, then end on "He aroha e"

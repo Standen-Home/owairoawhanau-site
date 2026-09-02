@@ -21,9 +21,6 @@ notion_page_id: "298090a1-a19f-8073-9e1c-c1810a47e5fd"
 source_of_truth: notion
 ---
 
-## Kaupapa
-
-
 ## Kupu
 <pre class="lyrics">
 Noho mai Kiwi Tamaki
@@ -40,12 +37,4 @@ Noho mai Kiwi Tamaki
   Tamaki Herehere 
   o nga waka-o 
   te iwi e
-
 </pre>
-
-## Meaning
-<div class="meaning">
-</div>
-
-## Notes
-

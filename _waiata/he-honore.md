@@ -42,10 +42,7 @@ Ake ake, ake ake
 Te atua, hei piringa
 Tōku oranga
 Tōku oranga
-
-
 </pre>
-
 
 ## Meaning
 <div class="meaning">
@@ -60,4 +57,3 @@ Amen.
 The higher being is the refuge
 and my life.
 </div>
-

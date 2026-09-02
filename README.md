@@ -41,7 +41,8 @@ Notion page ID in generated front matter.
 ### Add a new waiata
 1. Create a new row in the Notion **Waiata Songs** database.
 2. Set `Public`, `Featured`, category, tags, and display order as needed.
-3. Put the full lyrics/notes into `Website Body Markdown`.
+3. Fill the separate content fields: `Kaupapa`, `Kupu`, `Meaning`, and `Notes`.
+   `Kupu` is the lyrics field; the importer adds the website formatting around it.
 4. Add media URLs in the matching Notion fields:
    - `Audio URL`
    - `PDF URL`

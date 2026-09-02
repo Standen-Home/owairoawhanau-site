@@ -46,9 +46,8 @@ Pōraruraru
   Pōraruraru
   Makere ana ngā here,
 Makere
-  Makere ana ngā here.	
+  Makere ana ngā here.
 </pre>
-
 
 ## Meaning
 <div class="meaning">
@@ -65,5 +64,3 @@ with all troubles cleared away
 all restraints got rid of,
 all restrictions cast aside.
 </div>
-
-Notes

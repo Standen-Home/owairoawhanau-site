@@ -41,7 +41,3 @@ Matariki
 
   Matariki, Matariki e ara e
 </pre>
-
-
-## Notes
-

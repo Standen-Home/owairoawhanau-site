@@ -41,10 +41,3 @@ Ki ngā tangata Māori
 Nā Rangi rāua ko Papa
 Ko tēnei te tīmatanga o te ao x2
 </pre>
-
-## Meaning
-<div class="meaning">
-
-</div>
-
-## Notes

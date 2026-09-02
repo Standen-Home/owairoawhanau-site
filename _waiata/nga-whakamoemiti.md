@@ -43,7 +43,6 @@ E te Ariki
 Pai mārire
 </pre>
 
-
 ## Meaning
 <div class="meaning">
 Praising and giving thanks to Jesus
@@ -52,7 +51,3 @@ Up to the people who have assembled here
 You are the one that will bring us together
 And show us a better life
 </div>
-
-Notes
-Kaitito: Pumi Taituha Maniapoto/Waikato
-

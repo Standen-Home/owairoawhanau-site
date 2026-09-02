@@ -72,6 +72,19 @@ class NotionWaiataTests(unittest.TestCase):
         self.assertIn('source_of_truth: notion', content)
         self.assertIn("## Kupu\n\nKia ora", content)
 
+    def test_assembled_body_rebuilds_editable_sections(self):
+        props = {
+            "Kaupapa": {"type": "rich_text", "rich_text": [{"plain_text": "A welcome waiata."}]},
+            "Kupu": {"type": "rich_text", "rich_text": [{"plain_text": "Kia ora\nKia ora"}]},
+            "Meaning": {"type": "rich_text", "rich_text": [{"plain_text": "Welcome."}]},
+            "Notes": {"type": "rich_text", "rich_text": [{"plain_text": "Repeat twice."}]},
+        }
+        body = notion_waiata.assembled_body(props)
+        self.assertIn("## Kaupapa\nA welcome waiata.", body)
+        self.assertIn('<pre class="lyrics">\nKia ora\nKia ora\n</pre>', body)
+        self.assertIn('<div class="meaning">\nWelcome.\n</div>', body)
+        self.assertIn("## Notes\nRepeat twice.", body)
+
     def test_read_existing_waiata_excludes_sample_and_private_records(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
