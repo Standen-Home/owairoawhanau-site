@@ -87,6 +87,21 @@ class NotionWaiataTests(unittest.TestCase):
         self.assertIn('<div class="meaning">\nWelcome.\n</div>', body)
         self.assertIn("## Notes\nRepeat twice.", body)
 
+    def test_assembled_body_omits_empty_sections(self):
+        props = {
+            "Kaupapa": {"type": "rich_text", "rich_text": []},
+            "Kupu": {"type": "rich_text", "rich_text": [{"plain_text": "Kia ora"}]},
+            "Translation": {"type": "rich_text", "rich_text": []},
+            "Meaning": {"type": "rich_text", "rich_text": []},
+            "Notes": {"type": "rich_text", "rich_text": []},
+        }
+        body = notion_waiata.assembled_body(props)
+        self.assertIn("## Kupu", body)
+        self.assertNotIn("## Kaupapa", body)
+        self.assertNotIn("## Translation", body)
+        self.assertNotIn("## Meaning", body)
+        self.assertNotIn("## Notes", body)
+
     def test_read_existing_waiata_excludes_sample_and_private_records(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
