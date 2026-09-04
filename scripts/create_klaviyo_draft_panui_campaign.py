@@ -64,7 +64,7 @@ def text_content() -> str:
 Pānui for the week of 4 September 2026.
 
 This week:
-• Saturday 5 September — Koroneihana. We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn-off and head towards Ngaruawahia. The Hopuhopu base is on the right; the turn-off for Hopuhopu Base Road is on the right at the bridge as you leave Taupiri. There is free parking at Hopuhopu and a free bus to the marae every 15 minutes. We expect to be back in Auckland about 4pm, leaving about 2.45pm. Please bring warm clothes. To join us, call 021 112 9529.
+• Saturday 5 September — Koroneihana. We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.
 • Friday 11 September, 10am — Whakatau for Minister Ivicia at the marae. We will have a cup of tea and bikkies afterwards, or head to the cafe.
 
 We look forward to seeing you soon.
