@@ -73,7 +73,11 @@ def main() -> int:
             leaked = [word for word in forbidden_customer_words if word in lower_content]
             if leaked:
                 raise RuntimeError(f'Generated customer-facing content contains draft/scheduling wording: {leaked}')
-            update_payload={'data':{'type':'campaign-message','id':msg_id,'attributes':{'definition':{'channel':'email','label':'Main email','content':{'subject':subject,'preview_text':preview,'body':html_body}}}}}
+            template_id = info.get('template_id') or ''
+            if editor == 'SYSTEM_DRAGGABLE' and template_id:
+                template_payload={'data':{'type':'template','id':template_id,'attributes':{'definition':__import__('create_klaviyo_draft_panui_campaign').campaign_definition(),'text':plain_body}}}
+                api_request('PATCH', f'/api/templates/{urllib.parse.quote(str(template_id))}', key, template_payload)
+            update_payload={'data':{'type':'campaign-message','id':msg_id,'attributes':{'definition':{'channel':'email','label':'Main email','content':{'subject':subject,'preview_text':preview}}}}}
             api_request('PATCH', f'/api/campaign-messages/{urllib.parse.quote(str(msg_id))}', key, update_payload)
             verified=api_request('GET', f'/api/campaigns/{urllib.parse.quote(campaign_id)}', key, query={'fields[campaign]':'id,name,status,scheduled_at,send_time'}).get('data',{})
             attrs=verified.get('attributes') or {}
