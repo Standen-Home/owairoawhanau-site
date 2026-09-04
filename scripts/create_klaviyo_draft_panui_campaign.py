@@ -132,7 +132,7 @@ def campaign_html() -> str:
 
         <p><span class="event-title">Saturday | 5 September 2026</span></p>
         <p><span style="font-size:18px;">Koroneihana</span></p>
-        <p><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. There is free parking and a free bus to the marae every 15 minutes. We expect to be back in Auckland about 4pm, leaving about 2.45pm. Please bring warm clothes. To join us, call 021 112 9529.</span></p>
+        <p><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.</span></p>
 
         <p><span class="event-title">Friday | 11 September 2026</span></p>
         <p><span style="font-size:18px;">Whakatau for Minister Ivicia — 10am at the marae</span></p>
@@ -291,11 +291,8 @@ def campaign_definition() -> dict[str, Any]:
     calendar_url = f"{SITE_URL}/calendar/"
     event_text = """
 <div style="text-align:center;"><strong style="font-size:28px;">Panui o te wiki!</strong></div>
-<p style="text-align:center;"><br><strong><u>Tuesday | 18 August 2026</u></strong><br>Howick Intermediate School Hui at Ō Wairoa Marae<br><span style="font-size:16px;">Pōwhiri starts at 5.30pm. If you can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.</span></p>
-<p style="text-align:center;"><strong><u>Wednesday | 19 August 2026</u></strong><br>Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.</p>
-<p style="text-align:center;"><strong><u>Thursday | 20 August 2026</u></strong><br>Whakatika Te Reo</p>
-<p style="text-align:center;"><strong><u>Friday | 21 August 2026</u></strong><br>Mahi Ngahere - 9am to 10am</p>
-<p style="text-align:center;"><strong><u>Sunday | 23 August 2026</u></strong><br>Kaihaka Kapa Haka</p>
+<p style="text-align:center;"><br><strong><u>Saturday | 5 September 2026</u></strong><br>Koroneihana<br><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.</span></p>
+<p style="text-align:center;"><strong><u>Friday | 11 September 2026</u></strong><br>Whakatau for Minister Ivicia at the marae — 10am<br><span style="font-size:16px;">We will have a cup of tea and bikkies afterwards, or head to the cafe.</span></p>
 """.strip()
     waiata_text = """
 <div style="text-align:center;"><strong style="color:#85200E; font-size:18px;">Te Tuhi </strong><strong style="font-size:18px;">Lyrics</strong><br><br><strong>Mā te rāpa ka kitea</strong><br>Te Tuhi a Manawatere<br>Nō Ngāi Tai... te tupuna e<br>Te Waka... he huruhuru<br>Te Pōhutukawa ..i Wairoa<br>He tohu... he whaka-taukī<br>Mā te rāpa .. ka kitea x2</div>
@@ -375,6 +372,29 @@ def main() -> int:
     if missing_tokens:
         raise RuntimeError(f"Generated campaign content is missing merge fields: {missing_tokens}")
 
+    failures: list[str] = []
+    existing_campaign_id = os.environ.get("KLAVIYO_EXISTING_CAMPAIGN_ID", "").strip()
+    existing_message_id = os.environ.get("KLAVIYO_EXISTING_MESSAGE_ID", "").strip()
+    existing_template_id = os.environ.get("KLAVIYO_EXISTING_TEMPLATE_ID", "").strip()
+    if existing_campaign_id and existing_message_id and existing_template_id:
+        for key_name, candidate_api_key in candidate_keys:
+            try:
+                api_request("PATCH", f"/api/templates/{urllib.parse.quote(existing_template_id)}", candidate_api_key, {"data": {"type": "template", "id": existing_template_id, "attributes": {"definition": campaign_definition(), "text": plain_body}}})
+                api_request("PATCH", f"/api/campaign-messages/{urllib.parse.quote(existing_message_id)}", candidate_api_key, {"data": {"type": "campaign-message", "id": existing_message_id, "attributes": {"definition": {"channel": "email", "label": "Main email", "content": {"subject": subject, "preview_text": preview}}}}})
+                verified = api_request("GET", f"/api/campaigns/{urllib.parse.quote(existing_campaign_id)}", candidate_api_key, query={"fields[campaign]": "id,name,status,scheduled_at,send_time"}).get("data", {})
+                attrs = verified.get("attributes", {})
+                if str(attrs.get("status", "")).lower() not in {"draft", ""} or attrs.get("scheduled_at") or attrs.get("send_time"):
+                    raise RuntimeError(f"Existing campaign is not an unscheduled draft: {attrs}")
+                summary = {"campaign_id": existing_campaign_id, "campaign_name": attrs.get("name"), "message_id": existing_message_id, "template_id": existing_template_id, "template_editor_type": "SYSTEM_DRAGGABLE", "status": attrs.get("status"), "scheduled_at": attrs.get("scheduled_at"), "send_time": attrs.get("send_time"), "api_key_used": key_name}
+                print(json.dumps(summary, ensure_ascii=False, indent=2))
+                if github_output := os.environ.get("GITHUB_OUTPUT"):
+                    with Path(github_output).open("a", encoding="utf-8") as fh:
+                        for key, value in summary.items(): fh.write(f"{key}={value or ''}\n")
+                return 0
+            except RuntimeError as exc:
+                failures.append(f"{key_name}: {exc}")
+        raise RuntimeError("Could not update existing Klaviyo draft. " + " | ".join(failures))
+
     template_editor_type = os.environ.get("KLAVIYO_TEMPLATE_EDITOR_TYPE", "SYSTEM_DRAGGABLE").strip().upper()
     if template_editor_type not in {"CODE", "USER_DRAGGABLE", "SYSTEM_DRAGGABLE"}:
         raise RuntimeError("KLAVIYO_TEMPLATE_EDITOR_TYPE must be CODE, USER_DRAGGABLE, or SYSTEM_DRAGGABLE")
@@ -393,7 +413,6 @@ def main() -> int:
     template = None
     template_id = ""
     api_key = ""
-    failures: list[str] = []
     for key_name, candidate_api_key in candidate_keys:
         try:
             template = api_request("POST", "/api/templates", candidate_api_key, template_payload, {"fields[template]": "id,name,editor_type"})

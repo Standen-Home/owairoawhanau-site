@@ -10,7 +10,19 @@ on:
       campaign_name:
         description: "Draft campaign name"
         required: false
-        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 17 Aug 2026"
+        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 4 Sep 2026"
+      existing_campaign_id:
+        description: "Existing draft campaign ID to update in place"
+        required: false
+        default: ""
+      existing_message_id:
+        description: "Existing campaign message ID"
+        required: false
+        default: ""
+      existing_template_id:
+        description: "Existing editable template ID"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -30,6 +42,9 @@ jobs:
       KLAVIYO_DRAFT_CAMPAIGN_NAME: ${{ inputs.campaign_name }}
       KLAVIYO_TEMPLATE_EDITOR_TYPE: "SYSTEM_DRAGGABLE"
       SITE_URL: "https://owairoawhanau.co.nz"
+      KLAVIYO_EXISTING_CAMPAIGN_ID: ${{ inputs.existing_campaign_id }}
+      KLAVIYO_EXISTING_MESSAGE_ID: ${{ inputs.existing_message_id }}
+      KLAVIYO_EXISTING_TEMPLATE_ID: ${{ inputs.existing_template_id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
