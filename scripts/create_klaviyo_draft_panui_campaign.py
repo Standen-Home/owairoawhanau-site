@@ -61,16 +61,13 @@ def api_request(method: str, path: str, api_key: str, payload: dict[str, Any] | 
 def text_content() -> str:
     return """Kia ora {{ person.first_name|default:'e hoa' }},
 
-Pānui for the week of 17 August 2026.
+Pānui for the week of 4 September 2026.
 
 This week:
-• Tuesday 18 August, before 5.30pm — Howick Intermediate School Hui at Ō Wairoa Marae. Pōwhiri starts at 5.30pm; those who can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.
-• Wednesday 19 August — Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.
-• Thursday 20 August — Whakatika Te Reo
-• Friday 21 August, 9am-10am — Mahi Ngahere
-• Sunday 23 August — Kaihaka Kapa Haka
+• Saturday 5 September — Koroneihana. We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn-off and head towards Ngaruawahia. The Hopuhopu base is on the right; the turn-off for Hopuhopu Base Road is on the right at the bridge as you leave Taupiri. There is free parking at Hopuhopu and a free bus to the marae every 15 minutes. We expect to be back in Auckland about 4pm, leaving about 2.45pm. Please bring warm clothes. To join us, call 021 112 9529.
+• Friday 11 September, 10am — Whakatau for Minister Ivicia at the marae. We will have a cup of tea and bikkies afterwards, or head to the cafe.
 
-Thank you to everyone who can come along and support the kaupapa on Tuesday.
+We look forward to seeing you soon.
 
 No longer want to receive these emails? {% unsubscribe %}
 Manage preferences: {% manage_preferences %}
@@ -119,7 +116,7 @@ def campaign_html() -> str:
   </style>
 </head>
 <body>
-  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s events, including Waiata Wednesday moving to Tuesday for the Howick Intermediate School Hui.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s whānau notices, including the Koroneihana and the whakatau for Minister Ivicia.</div>
   <div class="wrapper">
     <table role="presentation" class="container" align="center" width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
@@ -133,21 +130,13 @@ def campaign_html() -> str:
       <tr><td class="text center" style="padding:9px 18px; font-family:Arial, Helvetica, sans-serif;">
         <div style="font-size:28px; font-weight:700; padding-bottom:18px;">Panui o te wiki!</div>
 
-        <p><span class="event-title">Tuesday | 18 August 2026</span></p>
-        <p><span style="font-size:18px;">Howick Intermediate School Hui at Ō Wairoa Marae</span></p>
-        <p><span style="font-size:16px;">Pōwhiri starts at 5.30pm. If you can support, please arrive before then. Waiata will support the whaikōrero, koha, and hui.</span></p>
+        <p><span class="event-title">Saturday | 5 September 2026</span></p>
+        <p><span style="font-size:18px;">Koroneihana</span></p>
+        <p><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. There is free parking and a free bus to the marae every 15 minutes. We expect to be back in Auckland about 4pm, leaving about 2.45pm. Please bring warm clothes. To join us, call 021 112 9529.</span></p>
 
-        <p><span class="event-title">Wednesday | 19 August 2026</span></p>
-        <p><span style="font-size:18px;">Waiata Wednesday has moved to Tuesday this week to support the hui at the marae.</span></p>
-
-        <p><span class="event-title">Thursday | 20 August 2026</span></p>
-        <p><span style="font-size:18px;">Whakatika Te Reo</span></p>
-
-        <p><span class="event-title">Friday | 21 August 2026</span></p>
-        <p><span style="font-size:18px;">Mahi Ngahere - 9am to 10am</span></p>
-
-        <p><span class="event-title">Sunday | 23 August 2026</span></p>
-        <p><span style="font-size:18px;">Kaihaka Kapa Haka</span></p>
+        <p><span class="event-title">Friday | 11 September 2026</span></p>
+        <p><span style="font-size:18px;">Whakatau for Minister Ivicia — 10am at the marae</span></p>
+        <p><span style="font-size:16px;">We will have a cup of tea and bikkies afterwards, or head to the cafe.</span></p>
         <p><a href="{calendar_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Open the full calendar</span></a></p>
       </td></tr>
 

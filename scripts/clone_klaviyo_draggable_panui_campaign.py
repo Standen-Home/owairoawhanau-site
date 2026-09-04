@@ -47,9 +47,9 @@ def main() -> int:
     keys=key_candidates()
     if not keys:
         print('ERROR: Klaviyo key required', file=sys.stderr); return 2
-    campaign_name=os.environ.get('KLAVIYO_DRAFT_CAMPAIGN_NAME','DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 17 Aug 2026 - draggable')
-    subject=os.environ.get('KLAVIYO_DRAFT_SUBJECT','Ō Wairoa Whānau Pānui | Week of 17 August')
-    preview=os.environ.get('KLAVIYO_DRAFT_PREVIEW','This week: Waiata Wednesday moves to Tuesday for the Howick Intermediate School Hui, plus Whakatika Te Reo, Mahi Ngahere, and Kaihaka Kapa Haka.')
+    campaign_name=os.environ.get('KLAVIYO_DRAFT_CAMPAIGN_NAME','DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 4 Sep 2026 - draggable')
+    subject=os.environ.get('KLAVIYO_DRAFT_SUBJECT','Ō Wairoa Whānau Pānui | Week of 4 September')
+    preview=os.environ.get('KLAVIYO_DRAFT_PREVIEW','This week: the Koroneihana on 5 September and the whakatau for Minister Ivicia on 11 September.')
     failures=[]
     for key_name,key in keys:
         try:
