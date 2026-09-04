@@ -355,9 +355,9 @@ def main() -> int:
         return 2
 
     date_label = dt.datetime.now(TZ).strftime("%Y-%m-%d")
-    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 17 Aug 2026 ({date_label})")
-    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 17 August")
-    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: Waiata Wednesday moves to Tuesday for the Howick Intermediate School Hui, plus Whakatika Te Reo, Mahi Ngahere, and Kaihaka Kapa Haka.")
+    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 4 Sep 2026 ({date_label})")
+    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 4 September")
+    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: the Koroneihana on 5 September and the whakatau for Minister Ivicia on 11 September.")
 
     # Create and assign the HTML template before cloning/sending anything. This
     # verifies template permissions without changing any campaign state. Try both
