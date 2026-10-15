@@ -181,7 +181,7 @@ def build_payload(list_id: str) -> dict[str, Any]:
                                 },
                             },
                             "properties": {
-                                "show_close_button": False,
+                                "show_close_button": True,
                                 "click_outside_to_close": ["both"],
                                 "record_utm_params_on_submit": True,
                                 "accessible_name": FORM_NAME,
