@@ -5,13 +5,14 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from typing import Any
 
 API_BASE = "https://a.klaviyo.com"
-REVISION = os.environ.get("KLAVIYO_REVISION", "2026-07-15")
+REVISION = os.environ.get("KLAVIYO_REVISION", "2026-10-15")
 FORM_NAME = os.environ.get(
     "KLAVIYO_FORM_NAME", "Waiata Wednesday WhatsApp Group Signup Embed"
 )
@@ -268,27 +269,38 @@ def existing_form_id() -> str | None:
 
 
 def publish_form(form_id: str) -> None:
-    status, parsed, body = api_request(
-        "POST", f"/api/forms/{urllib.parse.quote(form_id)}/actions/publish/"
-    )
-    if status not in {200, 202, 204}:
+    payload = {
+        "data": {
+            "type": "form-publish-job",
+            "relationships": {
+                "form": {"data": {"type": "form", "id": form_id}}
+            },
+        }
+    }
+    status, parsed, body = api_request("POST", "/api/form-publish-jobs", payload)
+    if status != 202:
         print(f"Publish form failed with status {status}")
         print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
         raise SystemExit(1)
 
 
 def verify_form(form_id: str) -> str:
-    status, parsed, body = api_request(
-        "GET", f"/api/forms/{urllib.parse.quote(form_id)}?fields[form]=id,name,status"
-    )
-    if status != 200 or not parsed:
-        print(f"Verify form failed with status {status}")
-        print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
-        raise SystemExit(1)
-    form_status = str(parsed["data"]["attributes"].get("status", ""))
-    if form_status.lower() not in {"live", "published"}:
-        raise SystemExit(f"Expected live/published form, got status {form_status!r}")
-    return form_status
+    form_status = ""
+    for attempt in range(10):
+        status, parsed, body = api_request(
+            "GET",
+            f"/api/forms/{urllib.parse.quote(form_id)}?fields[form]=id,name,status",
+        )
+        if status != 200 or not parsed:
+            print(f"Verify form failed with status {status}")
+            print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
+            raise SystemExit(1)
+        form_status = str(parsed["data"]["attributes"].get("status", ""))
+        if form_status.lower() in {"live", "published"}:
+            return form_status
+        if attempt < 9:
+            time.sleep(2)
+    raise SystemExit(f"Expected live/published form, got status {form_status!r}")
 
 
 def set_outputs(form_id: str, status: str) -> None:
