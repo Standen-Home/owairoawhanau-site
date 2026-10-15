@@ -1,0 +1,40 @@
+name: Create Waiata WhatsApp Klaviyo Form
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-and-publish-form:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_FORM_LIST_ID: "RPbsS6"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stop if Klaviyo API secret is not configured
+        if: env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "KLAVIYO_API_CREATE_KEY secret is not configured."
+          exit 1
+
+      - name: Create and publish Waiata Wednesday WhatsApp form
+        id: create_form
+        run: python3 scripts/create_klaviyo_waiata_whatsapp_form.py
+
+      - name: Summary
+        run: |
+          {
+            echo "Waiata Wednesday WhatsApp signup form"
+            echo "Form ID: ${{ steps.create_form.outputs.form_id }}"
+            echo "Status: ${{ steps.create_form.outputs.status }}"
+          } >> "$GITHUB_STEP_SUMMARY"
