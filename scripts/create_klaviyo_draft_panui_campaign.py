@@ -59,20 +59,39 @@ def api_request(method: str, path: str, api_key: str, payload: dict[str, Any] | 
 
 
 def text_content() -> str:
-    return """Kia ora {{ person.first_name|default:'e hoa' }},
+    whatsapp_url = f"{SITE_URL}/waiata-wednesday-whatsapp/"
+    return f"""Kia ora {{{{ person.first_name|default:'e hoa' }}}},
 
-Pānui for the week of 4 September 2026.
+Pānui for 15–25 October 2026.
 
-This week:
-• Saturday 5 September — Koroneihana. We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.
-• Friday 11 September, 10am — Whakatau for Minister Ivicia at the marae. We will have a cup of tea and bikkies afterwards, or head to the cafe.
+Upcoming events:
+• Thursday 15 October — Whakatika Te Reo.
+• Friday 16 October, 9.00am–10.00am — Mahi Ngahere.
+• Friday 16 October, 9.30am — Whānau of the marae hui to organise setting up the marae for next Saturday’s pōwhiri.
+• Saturday 17 October, 6.00am — Whakatuwheratanga for Uxbridge, for those who wish to support.
+• Wednesday 21 October, 6.00pm–7.00pm — Ō Wairoa Marae Waiata Group / Waiata Wednesday.
+• Thursday 22 October — Whakatika Te Reo.
+• Friday 23 October, 9.00am–10.00am — Mahi Ngahere.
+• Saturday 24 October — Pōwhiri. Please practise Noho Mai Kiwi Tāmaki, Ngā Whakamoemiti, Mā Wai Rā, and Te Tuhi a Manawatere.
+• Sunday 25 October — Kaihaka Kapa Haka.
+
+Waiata practice links:
+• Noho Mai Kiwi Tāmaki: {SITE_URL}/waiata/noho-mai-kiwi-tamaki/
+• Ngā Whakamoemiti: {SITE_URL}/waiata/nga-whakamoemiti/
+• Mā Wai Rā: {SITE_URL}/waiata/ma-wai-ra/
+• Te Tuhi a Manawatere: {SITE_URL}/waiata/te-tuhi-a-manawatere-20/
+
+Join the Waiata Wednesday WhatsApp group:
+{whatsapp_url}
+
+The signup page collects your name and mobile number by opening an email to Ō Wairoa Whānau with your details filled in.
 
 We look forward to seeing you soon.
 
-No longer want to receive these emails? {% unsubscribe %}
-Manage preferences: {% manage_preferences %}
-{{ organization.name }}
-{{ organization.full_address }}
+No longer want to receive these emails? {{% unsubscribe %}}
+Manage preferences: {{% manage_preferences %}}
+{{{{ organization.name }}}}
+{{{{ organization.full_address }}}}
 """.strip()
 
 
@@ -89,6 +108,7 @@ def campaign_html() -> str:
     register_url = f"{SITE_URL}/uenuku-rainbow-wananga/register/"
     calendar_url = f"{SITE_URL}/calendar/"
     contact_url = f"{SITE_URL}/contact/"
+    whatsapp_url = f"{SITE_URL}/waiata-wednesday-whatsapp/"
     facebook_icon = f"{SITE_URL}/assets/images/panui/01kwknzstzg8kaqzj32jt93fmx/311d80d6bdd83b45.png"
     email_icon = f"{SITE_URL}/assets/images/panui/01kwknzstzg8kaqzj32jt93fmx/6d549562fa389c2e.png"
     return f"""<!doctype html>
@@ -116,7 +136,7 @@ def campaign_html() -> str:
   </style>
 </head>
 <body>
-  <div style="display:none;max-height:0;overflow:hidden;">Pānui o te wiki with this week’s whānau notices, including the Koroneihana and the whakatau for Minister Ivicia.</div>
+  <div style="display:none;max-height:0;overflow:hidden;">Upcoming whānau events, pōwhiri waiata practice links, and the Waiata Wednesday WhatsApp signup.</div>
   <div class="wrapper">
     <table role="presentation" class="container" align="center" width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background-color:#EFCE2B; padding:32px 20px 8px 20px;">&nbsp;</td></tr>
@@ -130,13 +150,38 @@ def campaign_html() -> str:
       <tr><td class="text center" style="padding:9px 18px; font-family:Arial, Helvetica, sans-serif;">
         <div style="font-size:28px; font-weight:700; padding-bottom:18px;">Panui o te wiki!</div>
 
-        <p><span class="event-title">Saturday | 5 September 2026</span></p>
-        <p><span style="font-size:18px;">Koroneihana</span></p>
-        <p><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.</span></p>
+        <p><span class="event-title">Thursday | 15 October 2026</span></p>
+        <p><span style="font-size:18px;">Whakatika Te Reo</span></p>
 
-        <p><span class="event-title">Friday | 11 September 2026</span></p>
-        <p><span style="font-size:18px;">Whakatau for Minister Ivicia — 10am at the marae</span></p>
-        <p><span style="font-size:16px;">We will have a cup of tea and bikkies afterwards, or head to the cafe.</span></p>
+        <p><span class="event-title">Friday | 16 October 2026</span></p>
+        <p><span style="font-size:18px;">Mahi Ngahere — 9.00am–10.00am</span></p>
+        <p><span style="font-size:18px;">Whānau of the marae hui — 9.30am</span></p>
+        <p><span style="font-size:16px;">We will organise setting up the marae for next Saturday’s pōwhiri.</span></p>
+
+        <p><span class="event-title">Saturday | 17 October 2026</span></p>
+        <p><span style="font-size:18px;">Whakatuwheratanga for Uxbridge — 6.00am</span></p>
+        <p><span style="font-size:16px;">For those who wish to support.</span></p>
+
+        <p><span class="event-title">Wednesday | 21 October 2026</span></p>
+        <p><span style="font-size:18px;">Ō Wairoa Marae Waiata Group / Waiata Wednesday — 6.00pm–7.00pm</span></p>
+        <p><a href="{whatsapp_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Join the Waiata Wednesday WhatsApp group</span></a></p>
+
+        <p><span class="event-title">Thursday | 22 October 2026</span></p>
+        <p><span style="font-size:18px;">Whakatika Te Reo</span></p>
+
+        <p><span class="event-title">Friday | 23 October 2026</span></p>
+        <p><span style="font-size:18px;">Mahi Ngahere — 9.00am–10.00am</span></p>
+
+        <p><span class="event-title">Saturday | 24 October 2026</span></p>
+        <p><span style="font-size:18px;">Pōwhiri</span></p>
+        <p><span style="font-size:16px;">Please practise the waiata for the event:</span></p>
+        <p><a href="{SITE_URL}/waiata/noho-mai-kiwi-tamaki/" target="_blank" rel="noopener noreferrer nofollow">Noho Mai Kiwi Tāmaki</a><br>
+        <a href="{SITE_URL}/waiata/nga-whakamoemiti/" target="_blank" rel="noopener noreferrer nofollow">Ngā Whakamoemiti</a><br>
+        <a href="{SITE_URL}/waiata/ma-wai-ra/" target="_blank" rel="noopener noreferrer nofollow">Mā Wai Rā</a><br>
+        <a href="{SITE_URL}/waiata/te-tuhi-a-manawatere-20/" target="_blank" rel="noopener noreferrer nofollow">Te Tuhi a Manawatere</a></p>
+
+        <p><span class="event-title">Sunday | 25 October 2026</span></p>
+        <p><span style="font-size:18px;">Kaihaka Kapa Haka</span></p>
         <p><a href="{calendar_url}" target="_blank" rel="noopener noreferrer nofollow"><span style="font-size:16px;">Open the full calendar</span></a></p>
       </td></tr>
 
@@ -289,13 +334,20 @@ def dnd_section(blocks: list[dict[str, Any]], *, background: str = "#FFFFFF") ->
 def campaign_definition() -> dict[str, Any]:
     """Build a Klaviyo SYSTEM_DRAGGABLE definition with editable blocks."""
     calendar_url = f"{SITE_URL}/calendar/"
-    event_text = """
+    whatsapp_url = f"{SITE_URL}/waiata-wednesday-whatsapp/"
+    event_text = f"""
 <div style="text-align:center;"><strong style="font-size:28px;">Panui o te wiki!</strong></div>
-<p style="text-align:center;"><br><strong><u>Saturday | 5 September 2026</u></strong><br>Koroneihana<br><span style="font-size:16px;">We are leaving Tain's at 8.30am and driving to Hopuhopu. Take the Taupiri turn off and head towards Ngaruawahia. The Hopuhopu base is on the right. The turnoff for the Hopuhopu Base road is on the right at the bridge as you leave Taupiri. At Hopuhopu you get free parking and can catch a free bus to the marae; they are at 15 minute intervals. We will be back in Auckland about 4pm (so we leave about 2.45pm). If people wish to join us, we recommend warm clothes. If people wish to come they can call 0211129529.</span></p>
-<p style="text-align:center;"><strong><u>Friday | 11 September 2026</u></strong><br>Whakatau for Minister Ivicia at the marae — 10am<br><span style="font-size:16px;">We will have a cup of tea and bikkies afterwards, or head to the cafe.</span></p>
+<p style="text-align:center;"><br><strong><u>Thursday | 15 October 2026</u></strong><br>Whakatika Te Reo</p>
+<p style="text-align:center;"><strong><u>Friday | 16 October 2026</u></strong><br>Mahi Ngahere — 9.00am–10.00am<br><br>Whānau of the marae hui — 9.30am<br><span style="font-size:16px;">We will organise setting up the marae for next Saturday’s pōwhiri.</span></p>
+<p style="text-align:center;"><strong><u>Saturday | 17 October 2026</u></strong><br>Whakatuwheratanga for Uxbridge — 6.00am<br><span style="font-size:16px;">For those who wish to support.</span></p>
+<p style="text-align:center;"><strong><u>Wednesday | 21 October 2026</u></strong><br>Ō Wairoa Marae Waiata Group / Waiata Wednesday — 6.00pm–7.00pm<br><br><a href="{whatsapp_url}">Join the Waiata Wednesday WhatsApp group</a></p>
+<p style="text-align:center;"><strong><u>Thursday | 22 October 2026</u></strong><br>Whakatika Te Reo</p>
+<p style="text-align:center;"><strong><u>Friday | 23 October 2026</u></strong><br>Mahi Ngahere — 9.00am–10.00am</p>
+<p style="text-align:center;"><strong><u>Saturday | 24 October 2026</u></strong><br>Pōwhiri<br><span style="font-size:16px;">Please practise the waiata for the event:</span><br><br><a href="{SITE_URL}/waiata/noho-mai-kiwi-tamaki/">Noho Mai Kiwi Tāmaki</a><br><a href="{SITE_URL}/waiata/nga-whakamoemiti/">Ngā Whakamoemiti</a><br><a href="{SITE_URL}/waiata/ma-wai-ra/">Mā Wai Rā</a><br><a href="{SITE_URL}/waiata/te-tuhi-a-manawatere-20/">Te Tuhi a Manawatere</a></p>
+<p style="text-align:center;"><strong><u>Sunday | 25 October 2026</u></strong><br>Kaihaka Kapa Haka</p>
 """.strip()
-    waiata_text = """
-<div style="text-align:center;"><strong style="color:#85200E; font-size:18px;">Te Tuhi </strong><strong style="font-size:18px;">Lyrics</strong><br><br><strong>Mā te rāpa ka kitea</strong><br>Te Tuhi a Manawatere<br>Nō Ngāi Tai... te tupuna e<br>Te Waka... he huruhuru<br>Te Pōhutukawa ..i Wairoa<br>He tohu... he whaka-taukī<br>Mā te rāpa .. ka kitea x2</div>
+    waiata_text = f"""
+<div style="text-align:center;"><strong style="color:#85200E; font-size:18px;">Pōwhiri waiata practice</strong><br><br><a href="{SITE_URL}/waiata/noho-mai-kiwi-tamaki/">Noho Mai Kiwi Tāmaki</a><br><a href="{SITE_URL}/waiata/nga-whakamoemiti/">Ngā Whakamoemiti</a><br><a href="{SITE_URL}/waiata/ma-wai-ra/">Mā Wai Rā</a><br><a href="{SITE_URL}/waiata/te-tuhi-a-manawatere-20/">Te Tuhi a Manawatere</a></div>
 """.strip()
     footer_text = """
 <div style="text-align:center; font-size:12px;">No longer want to receive these emails? <a href="{% unsubscribe %}">Unsubscribe</a><br><a href="{% manage_preferences %}">Manage preferences</a><br>{{ organization.name }}<br>{{ organization.full_address }}</div>
@@ -352,9 +404,9 @@ def main() -> int:
         return 2
 
     date_label = dt.datetime.now(TZ).strftime("%Y-%m-%d")
-    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 4 Sep 2026 ({date_label})")
-    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | Week of 4 September")
-    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "This week: the Koroneihana on 5 September and the whakatau for Minister Ivicia on 11 September.")
+    draft_name = os.environ.get("KLAVIYO_DRAFT_CAMPAIGN_NAME", f"DRAFT ONLY - Ō Wairoa Whānau Pānui - 15 to 25 Oct 2026 ({date_label})")
+    subject = os.environ.get("KLAVIYO_DRAFT_SUBJECT", "Ō Wairoa Whānau Pānui | 15–25 October")
+    preview = os.environ.get("KLAVIYO_DRAFT_PREVIEW", "Upcoming whānau events, pōwhiri waiata practice, and the Waiata Wednesday WhatsApp group.")
 
     # Create and assign the HTML template before cloning/sending anything. This
     # verifies template permissions without changing any campaign state. Try both

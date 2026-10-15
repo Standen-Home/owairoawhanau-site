@@ -10,7 +10,7 @@ on:
       campaign_name:
         description: "Draft campaign name"
         required: false
-        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - Week of 4 Sep 2026"
+        default: "DRAFT ONLY - Ō Wairoa Whānau Pānui - 15 to 25 Oct 2026"
       existing_campaign_id:
         description: "Existing draft campaign ID to update in place"
         required: false
