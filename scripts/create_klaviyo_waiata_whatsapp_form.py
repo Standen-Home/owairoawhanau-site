@@ -278,6 +278,7 @@ def publish_form(form_id: str) -> None:
         }
     }
     status, parsed, body = api_request("POST", "/api/form-publish-jobs", payload)
+    print("Publish job response:", json.dumps(parsed, ensure_ascii=False) if parsed else body)
     if status != 202:
         print(f"Publish form failed with status {status}")
         print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
@@ -286,7 +287,7 @@ def publish_form(form_id: str) -> None:
 
 def verify_form(form_id: str) -> str:
     form_status = ""
-    for attempt in range(10):
+    for attempt in range(40):
         status, parsed, body = api_request(
             "GET",
             f"/api/forms/{urllib.parse.quote(form_id)}?fields[form]=id,name,status",
@@ -298,8 +299,8 @@ def verify_form(form_id: str) -> str:
         form_status = str(parsed["data"]["attributes"].get("status", ""))
         if form_status.lower() in {"live", "published"}:
             return form_status
-        if attempt < 9:
-            time.sleep(2)
+        if attempt < 39:
+            time.sleep(3)
     raise SystemExit(f"Expected live/published form, got status {form_status!r}")
 
 
