@@ -269,7 +269,7 @@ def existing_form_id() -> str | None:
 
 def publish_form(form_id: str) -> None:
     status, parsed, body = api_request(
-        "POST", f"/api/forms/{urllib.parse.quote(form_id)}/actions/publish"
+        "POST", f"/api/forms/{urllib.parse.quote(form_id)}/actions/publish/"
     )
     if status not in {200, 202, 204}:
         print(f"Publish form failed with status {status}")
