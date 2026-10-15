@@ -268,7 +268,7 @@ def existing_form_id() -> str | None:
     return None
 
 
-def publish_form(form_id: str) -> None:
+def publish_form(form_id: str) -> str:
     payload = {
         "data": {
             "type": "form-publish-job",
@@ -283,6 +283,34 @@ def publish_form(form_id: str) -> None:
         print(f"Publish form failed with status {status}")
         print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
         raise SystemExit(1)
+    job_id = str((parsed or {}).get("data", {}).get("id", ""))
+    if not job_id:
+        raise SystemExit("Publish job response did not include a job ID")
+    return job_id
+
+
+def wait_for_publish_job(job_id: str) -> None:
+    job_status = ""
+    for attempt in range(40):
+        status, parsed, body = api_request(
+            "GET", f"/api/form-publish-jobs/{urllib.parse.quote(job_id)}"
+        )
+        if status != 200 or not parsed:
+            print(f"Publish job lookup failed with status {status}")
+            print(json.dumps(parsed, indent=2)[:4000] if parsed else body[:4000])
+            raise SystemExit(1)
+        attributes = parsed.get("data", {}).get("attributes", {})
+        job_status = str(attributes.get("status", ""))
+        if job_status.lower() in {"completed", "complete", "succeeded", "success"}:
+            return
+        if job_status.lower() in {"failed", "error", "cancelled", "canceled"}:
+            raise SystemExit(
+                "Klaviyo form publish job failed: "
+                + json.dumps(attributes, ensure_ascii=False)
+            )
+        if attempt < 39:
+            time.sleep(3)
+    raise SystemExit(f"Klaviyo form publish job did not complete: {job_status!r}")
 
 
 def verify_form(form_id: str) -> str:
@@ -329,7 +357,8 @@ def main() -> int:
         form_id = parsed["data"]["id"]
         print(f"Created Klaviyo form: {form_id}")
 
-    publish_form(form_id)
+    publish_job_id = publish_form(form_id)
+    wait_for_publish_job(publish_job_id)
     form_status = verify_form(form_id)
     print(f"Form ID: {form_id}")
     print(f"Status: {form_status}")
