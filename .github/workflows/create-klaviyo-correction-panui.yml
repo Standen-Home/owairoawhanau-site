@@ -1,0 +1,50 @@
+name: Create Klaviyo Correction Pānui Campaign
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create-correction-draft:
+    runs-on: ubuntu-latest
+    env:
+      KLAVIYO_API_CREATE_KEY: ${{ secrets.KLAVIYO_API_CREATE_KEY }}
+      KLAVIYO_API_KEY: ${{ secrets.KLAVIYO_API_KEY }}
+      KLAVIYO_REVISION: "2026-07-15"
+      KLAVIYO_SOURCE_CAMPAIGN_ID: "01M4ZAT24PTA2MT3V2TJ020Y02"
+      KLAVIYO_DRAFT_CAMPAIGN_NAME: "DRAFT ONLY - Correction - Kaihaka Kapa Haka - 18 Oct 2026"
+      KLAVIYO_DRAFT_SUBJECT: "Correction | Kaihaka Kapa Haka today at 3pm"
+      KLAVIYO_DRAFT_PREVIEW: "Kaihaka Kapa Haka is on today, Sunday 18 October, at 3.00pm."
+      KLAVIYO_TEMPLATE_EDITOR_TYPE: "SYSTEM_DRAGGABLE"
+      SITE_URL: "https://owairoawhanau.co.nz"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stop if Klaviyo API secret is not configured
+        if: env.KLAVIYO_API_CREATE_KEY == '' && env.KLAVIYO_API_KEY == ''
+        run: |
+          echo "Klaviyo API secret is not configured."
+          exit 1
+
+      - name: Create correction draft
+        id: create_campaign
+        run: python3 scripts/create_klaviyo_correction_campaign.py
+
+      - name: Summary
+        run: |
+          {
+            echo "Created correction campaign draft."
+            echo "Campaign ID: ${{ steps.create_campaign.outputs.campaign_id }}"
+            echo "Campaign name: ${{ steps.create_campaign.outputs.campaign_name }}"
+            echo "Status: ${{ steps.create_campaign.outputs.status }}"
+            echo "Scheduled at: ${{ steps.create_campaign.outputs.scheduled_at }}"
+            echo "Send time: ${{ steps.create_campaign.outputs.send_time }}"
+            echo "Template ID: ${{ steps.create_campaign.outputs.template_id }}"
+          } >> "$GITHUB_STEP_SUMMARY"
