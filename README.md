@@ -43,14 +43,14 @@ Notion page ID in generated front matter.
 2. Set `Public`, `Featured`, category, tags, and display order as needed.
 3. Fill the separate content fields: `Kaupapa`, `Kupu`, `Translation`, `Meaning`, and `Notes`.
    `Kupu` is the lyrics field; the importer adds the website formatting around it.
-   Put `**double asterisks**` around kāea/caller text that should appear bold, for example:
+   Format kāea/caller text as **bold directly in Notion**, for example:
 
    ```text
-   **Kāea: Tīhei mauri ora**
+   Kāea: Tīhei mauri ora
    Katoa: Tīhei mauri ora
    ```
 
-   Keep the asterisks as literal text in the Notion field; the importer converts them to bold on the website.
+   Select the kāea line (or only the `Kāea:` label) and apply Notion's **Bold** formatting. Typing double asterisks may cause Notion to apply the bold formatting and remove the visible asterisks; that is expected, and the importer preserves the resulting Notion bold annotation on the website.
 4. Add media URLs in the matching Notion fields:
    - `Audio URL`
    - `PDF URL`

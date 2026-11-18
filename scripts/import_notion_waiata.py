@@ -230,10 +230,22 @@ def render_kupu_markdown(value: str) -> str:
     return re.sub(r"\*\*([^*\n]+)\*\*", r"<strong>\1</strong>", escaped)
 
 
+def render_kupu_property(property_data: dict[str, Any] | None) -> str:
+    if not property_data:
+        return ""
+    output = []
+    for item in property_data.get("rich_text", []):
+        value = render_kupu_markdown(str(item.get("plain_text", "")))
+        if item.get("annotations", {}).get("bold"):
+            value = f"<strong>{value}</strong>"
+        output.append(value)
+    return "".join(output)
+
+
 def assembled_body(props: dict[str, Any]) -> str:
     sections = [
         ("Kaupapa", property_value(props, "Kaupapa")),
-        ("Kupu", property_value(props, "Kupu")),
+        ("Kupu", render_kupu_property(props.get("Kupu"))),
         ("Translation", property_value(props, "Translation")),
         ("Meaning", property_value(props, "Meaning")),
         ("Notes", property_value(props, "Notes")),
@@ -246,7 +258,7 @@ def assembled_body(props: dict[str, Any]) -> str:
         if not value:
             continue
         if heading == "Kupu" and not value.lstrip().lower().startswith("<pre"):
-            value = f'<pre class="lyrics">\n{render_kupu_markdown(value)}\n</pre>'
+            value = f'<pre class="lyrics">\n{value}\n</pre>'
         elif heading == "Meaning" and not value.lstrip().lower().startswith("<div"):
             value = f'<div class="meaning">\n{value}\n</div>'
         output.append(f"## {heading}\n{value}")

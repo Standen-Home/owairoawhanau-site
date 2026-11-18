@@ -102,6 +102,29 @@ class NotionWaiataTests(unittest.TestCase):
         self.assertIn("<strong>Kāea: Tīhei mauri ora</strong>", body)
         self.assertNotIn("**Kāea", body)
 
+    def test_assembled_body_preserves_notion_bold_annotations_in_kupu(self):
+        props = {
+            "Kaupapa": {"type": "rich_text", "rich_text": []},
+            "Kupu": {
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "plain_text": "Mā te rāpa ka kitea",
+                        "annotations": {"bold": True},
+                    },
+                    {
+                        "plain_text": "\nTe Tuhi a Manawatere",
+                        "annotations": {"bold": False},
+                    },
+                ],
+            },
+            "Translation": {"type": "rich_text", "rich_text": []},
+            "Meaning": {"type": "rich_text", "rich_text": []},
+            "Notes": {"type": "rich_text", "rich_text": []},
+        }
+        body = notion_waiata.assembled_body(props)
+        self.assertIn("<strong>Mā te rāpa ka kitea</strong>\nTe Tuhi a Manawatere", body)
+
     def test_assembled_body_omits_empty_sections(self):
         props = {
             "Kaupapa": {"type": "rich_text", "rich_text": []},
