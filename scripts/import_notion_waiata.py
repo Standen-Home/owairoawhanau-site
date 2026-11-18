@@ -7,6 +7,7 @@ The repository remains the deployable output. Notion is the editable source once
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -224,6 +225,11 @@ def yaml_scalar(value: Any) -> str:
     return json.dumps(value if value is not None else "", ensure_ascii=False)
 
 
+def render_kupu_markdown(value: str) -> str:
+    escaped = html.escape(value, quote=False)
+    return re.sub(r"\*\*([^*\n]+)\*\*", r"<strong>\1</strong>", escaped)
+
+
 def assembled_body(props: dict[str, Any]) -> str:
     sections = [
         ("Kaupapa", property_value(props, "Kaupapa")),
@@ -240,7 +246,7 @@ def assembled_body(props: dict[str, Any]) -> str:
         if not value:
             continue
         if heading == "Kupu" and not value.lstrip().lower().startswith("<pre"):
-            value = f'<pre class="lyrics">\n{value}\n</pre>'
+            value = f'<pre class="lyrics">\n{render_kupu_markdown(value)}\n</pre>'
         elif heading == "Meaning" and not value.lstrip().lower().startswith("<div"):
             value = f'<div class="meaning">\n{value}\n</div>'
         output.append(f"## {heading}\n{value}")

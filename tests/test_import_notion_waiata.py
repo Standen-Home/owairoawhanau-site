@@ -87,6 +87,21 @@ class NotionWaiataTests(unittest.TestCase):
         self.assertIn('<div class="meaning">\nWelcome.\n</div>', body)
         self.assertIn("## Notes\nRepeat twice.", body)
 
+    def test_assembled_body_renders_bold_markdown_in_kupu_for_kaea(self):
+        props = {
+            "Kaupapa": {"type": "rich_text", "rich_text": []},
+            "Kupu": {
+                "type": "rich_text",
+                "rich_text": [{"plain_text": "**Kāea: Tīhei mauri ora**\nKatoa: Tīhei mauri ora"}],
+            },
+            "Translation": {"type": "rich_text", "rich_text": []},
+            "Meaning": {"type": "rich_text", "rich_text": []},
+            "Notes": {"type": "rich_text", "rich_text": []},
+        }
+        body = notion_waiata.assembled_body(props)
+        self.assertIn("<strong>Kāea: Tīhei mauri ora</strong>", body)
+        self.assertNotIn("**Kāea", body)
+
     def test_assembled_body_omits_empty_sections(self):
         props = {
             "Kaupapa": {"type": "rich_text", "rich_text": []},
