@@ -33,7 +33,7 @@ source_of_truth: notion
 
   Mā te rāpa ka kitea
 
-Te Tuhi 
+<strong>Te Tuhi </strong>
 
   Te Tuhi a Manawatere
   Nō Ngāi Tai te tupuna e
@@ -41,7 +41,7 @@ Te Tuhi
   Te pōhutukawa i Wairoa
   He tohu, he whakataukī
 
-Mā te rā
+<strong>Mā te rā</strong>
 
   Mā te rāpa ka kitea 
   Mā te rāpa ka kitea

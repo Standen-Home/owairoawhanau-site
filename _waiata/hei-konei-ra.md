@@ -22,14 +22,15 @@ source_of_truth: notion
 
 ## Kupu
 <pre class="lyrics">
-Ki ngā tini aituā e
+<strong>Ki ngā tini aituā e
 Kua haere ki te kainga e    
 Mahi i o tupuna rā                 
-Haere rā haere rā                  
+Haere rā haere rā     </strong>             
 
 Hei hei hei konei rā        x3 Katoa
 
-E noho mai rā
+<strong>E noho mai rā
+</strong>
 Nō reira ki ngā rōpū kapahaka
 Kia u kia mau kia kaha rā
 Ki ngā wāhi whakangahau
@@ -41,8 +42,7 @@ WAHINE: Hei e kui e koro mā
 Homai to aroha 
 Nō reira whakanuia
 
-E noho mai rā
-
+<strong>E noho mai rā</strong>
 
 Tenei matou ko te rōpū o 
 O Wairoa e
@@ -52,8 +52,9 @@ Kei te mihi atu hei konei rā
                   
 TANE/WAHINE - Hei hei hei konei rā x3
 
-E nōho mai rā
-Me i aku raurangatira ma
+<strong>E nōho mai rā
+
+</strong>Me i aku raurangatira ma
 tenei te waiata whakamutunga
 Ki ngā hapū   Ki ngā waka
 Ki ngā iwi o ngā hau e whā

@@ -22,30 +22,30 @@ source_of_truth: notion
 
 ## Kupu
 <pre class="lyrics">
-Mākere ana ngā here
+<strong>Mākere ana ngā here</strong>
 
   Purea nei e te hau
-Hororia
+<strong>Hororia</strong>
   Hororia e te ua
-Whitiwhitia
+<strong>Whitiwhitia</strong>
   Whitiwhitia e te rā
   Mahea ake ngā 
-Pōraruraru
+<strong>Pōraruraru</strong>
   Pōraruraru  
-Makere
+<strong>Makere</strong>
   Makere ana ngā here.
 
-E rere
+<strong>E rere</strong>
   E rere wairua, e rere
-Ki ngā ao
+<strong>Ki ngā ao</strong>
   Ki ngā ao o te rangi
-Whitiwhitia
+<strong>Whitiwhitia</strong>
   Whitiwhitia e te rā
   Mahea ake ngā 
-Pōraruraru
+<strong>Pōraruraru</strong>
   Pōraruraru
   Makere ana ngā here,
-Makere
+<strong>Makere</strong>
   Makere ana ngā here.
 </pre>
 
