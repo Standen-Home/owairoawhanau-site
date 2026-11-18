@@ -23,7 +23,7 @@ source_of_truth: notion
 
 ## Kupu
 <pre class="lyrics">
-Mā te rāpa ka kitea
+<strong>Mā te rāpa ka kitea</strong>
 
   Te Tuhi a Manawatere
   Nō Ngāi Tai te tupuna e
