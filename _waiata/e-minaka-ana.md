@@ -24,47 +24,47 @@ source_of_truth: notion
 
 ## Kupu
 <pre class="lyrics">
-Kia kaha tātou
-Ki te (Hī!) kōrero Māori
+<strong>Kia kaha tātou
+Ki te </strong>(Hī!) <strong>kōrero Māori</strong>
 
-E minaka ana
+<strong>E minaka ana</strong>
   E minaka ana taku waha
   Ki te kai a te rangatira,
 
-Taku reo rangatira
-  Taku reo rangatira
+<strong>Taku reo rangatira
+</strong>  Taku reo rangatira
   Taku kuru pounamu tuku iho.
 
-Mīharo kē ana
-  Mīharo kē ana
+<strong>Mīharo kē ana
+</strong>  Mīharo kē ana
   Ki tōna pakari kia ora
 
-Tē memeha
-  Tē memeha, te wairua
+<strong>Tē memeha
+</strong>  Tē memeha, te wairua
   Ki te kōrero Māori.
 
-Kia kaha tātou
-  Kia kaha tātou
+<strong>Kia kaha tātou
+</strong>  Kia kaha tātou
   Ki te kōrero Māori!
   
-E minaka ana
-  E minaka ana taku waha
+<strong>E minaka ana
+</strong>  E minaka ana taku waha
   Ki te kai a te rangatira,
 
-Taku reo rangatira
-  Taku reo rangatira
+<strong>Taku reo rangatira
+</strong>  Taku reo rangatira
   Taku kuru pounamu tuku iho.
 
-Mīharo kē ana
-  Mīharo kē ana
+<strong>Mīharo kē ana
+</strong>  Mīharo kē ana
   Ki tōna pakari kia ora
 
-Tē memeha
-  Tē memeha, te wairua
+<strong>Tē memeha
+</strong>  Tē memeha, te wairua
   Ki te kōrero Māori.
 
-Kia kaha tātou
-  Kia kaha tātou
+<strong>Kia kaha tātou
+</strong>  Kia kaha tātou
   Ki te kōrero Māori! (Hī!)
 </pre>
 
